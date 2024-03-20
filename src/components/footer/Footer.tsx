@@ -31,7 +31,11 @@ const Footer = () => {
                     </li>
                     <li className="footer__item-list">
                         <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
-                        <TextFooterList text={'Duefocus. Time tracking'} classNames={'footer__list-text'} />
+                        <TextFooterList
+                            text={'Duefocus. Time tracking'}
+                            classNames={'footer__list-text'}
+                            wrapFirstWordInStrong={true}
+                        />
                     </li>
                     <li className="footer__item-list"></li>
                     <li className="footer__item-list"></li>
