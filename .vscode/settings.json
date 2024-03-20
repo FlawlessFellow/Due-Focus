@@ -17,6 +17,8 @@
         "Duetask",
         "leaderboard",
         "timetracking",
-        "tsbuildinfo"
+        "tsbuildinfo",
+        "Typegen",
+        "webfonts"
     ]
 }
