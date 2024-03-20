@@ -1,0 +1,10 @@
+.footer__list-subtitleLink {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 129%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+}
