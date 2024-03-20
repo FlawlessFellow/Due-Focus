@@ -3,13 +3,12 @@
 }
 
 .footer__wrapper {
-    display: flex;
-    justify-content: space-around;  
     padding: 80px 0 50px;
 }
 
-.footer__list {
+.footer__content {
     display: flex;
+    justify-content: space-around;
 }
 
 .first__block-text {

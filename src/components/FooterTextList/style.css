@@ -1,3 +1,4 @@
+/* ~ */
 .footer__list-text {
     font-family: var(--third-family);
     margin-bottom: 16px;
@@ -7,3 +8,14 @@
     letter-spacing: 0.13em;
     color: #fff;
 }
+
+.footer__list-lastText {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.13em;
+    color: #fff;
+}
+/* ~ */
+

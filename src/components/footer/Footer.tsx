@@ -10,8 +10,8 @@ const Footer = () => {
     return (
         <section className="footer">
             <div className="footer__wrapper container">
-                <ul className="footer__list">
-                    <li className="footer__item-list">
+                <div className="footer__content">
+                    <div className="footer__first-block">
                         <a href="#!" className="first__block-linkLogo">
                             <img src={FooterLinkLogo} alt="footer link logo" />
                         </a>
@@ -28,19 +28,41 @@ const Footer = () => {
                                 </a>
                             </div>
                         </div>
-                    </li>
-                    <li className="footer__item-list">
+                    </div>
+                    <div className="footer__second-block">
                         <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
                         <TextFooterList
                             text={'Duefocus. Time tracking'}
                             classNames={'footer__list-text'}
                             wrapFirstWordInStrong={true}
                         />
-                        
-                    </li>
-                    <li className="footer__item-list"></li>
-                    <li className="footer__item-list"></li>
-                </ul>
+                        <TextFooterList
+                            text={'Duecode. Engineering metrics'}
+                            classNames={'footer__list-text'}
+                            wrapFirstWordInStrong={true}
+                        />
+                        <TextFooterList
+                            text={'Duecode. Engineering metrics'}
+                            classNames={'footer__list-text'}
+                            wrapFirstWordInStrong={true}
+                        />
+                        <TextFooterList
+                            text={'Duerank. Global developers leaderboard'}
+                            classNames={'footer__list-text'}
+                            wrapFirstWordInStrong={true}
+                        />
+                        <TextFooterList
+                            text={'Duelearn. Writing better code'}
+                            classNames={'footer__list-text'}
+                            wrapFirstWordInStrong={true}
+                        />
+                        <TextFooterList
+                            text={'Duetask. Set realistic estimates'}
+                            classNames={'footer__list-lastText'}
+                            wrapFirstWordInStrong={true}
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );
