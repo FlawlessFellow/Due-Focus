@@ -36,6 +36,7 @@ const Footer = () => {
                             classNames={'footer__list-text'}
                             wrapFirstWordInStrong={true}
                         />
+                        
                     </li>
                     <li className="footer__item-list"></li>
                     <li className="footer__item-list"></li>

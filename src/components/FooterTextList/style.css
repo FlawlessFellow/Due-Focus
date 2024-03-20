@@ -1,5 +1,6 @@
 .footer__list-text {
     font-family: var(--third-family);
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 14px;
     line-height: 120%;

@@ -1,5 +1,6 @@
 .footer__list-subtitleLink {
     font-family: var(--third-family);
+    margin-bottom: 50px;
     font-weight: 400;
     font-size: 17px;
     line-height: 129%;
