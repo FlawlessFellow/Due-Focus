@@ -9,6 +9,11 @@
 .footer__content {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 56px;
+}
+
+.footer__first-block {
+    margin-top: -20px;
 }
 
 .first__block-text {
@@ -30,4 +35,26 @@
 .first__block-images {
     width: 30px;
     height: 30px;
+}
+
+.footer__lastBlock-images {
+    display: flex;
+    margin-top: 40px;
+    column-gap: 10px;
+}
+
+.footer__bottom-border {
+    margin: 0 auto 42px;
+    border-top: 1px solid rgba(168, 168, 168, 0.3);
+    width: 1340px;
+    height: 1px;
+}
+
+.footer-copyright {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 147%;
+    text-align: center;
+    color: #fff;
 }

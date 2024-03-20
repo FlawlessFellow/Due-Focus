@@ -5,6 +5,8 @@ import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
 import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkContent';
 import TextFooterList from '../FooterTextList/TextFooterContent';
+import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
+import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
 
 const Footer = () => {
     return (
@@ -57,7 +59,33 @@ const Footer = () => {
                             wrapFirstWordInStrong={true}
                         />
                     </div>
+                    <div className="footer__third-block">
+                        <SubtitleFooterList text={'ABOUT'} classNames={'footer__list-subtitleLink'} />
+                        <TextFooterList text={'Terms of Use'} classNames={'footer__list-text'} />
+                        <TextFooterList text={'Privacy Policy'} classNames={'footer__list-text'} />
+                        <TextFooterList text={'Cookie Policy'} classNames={'footer__list-lastText'} />
+                    </div>
+                    <div className="footer__fourth-block">
+                        <SubtitleFooterList text={'CONTACT US'} classNames={'footer__list-subtitleLink'} />
+                        <TextFooterList text={'297 NV-207 Stateline, NV 89449 USA'} classNames={'footer__list-text'} />
+                        <TextFooterList text={'+1 310-388-9334'} classNames={'footer__list-text'} />
+                        <TextFooterList text={'support@diligences.com'} classNames={'footer__list-lastText'} />
+                        <div className="footer__lastBlock-images">
+                            <div className="lastBlock__first-img">
+                                <a href="#!" target={'_blank'}>
+                                    <img src={LastBlockFirstImg} alt="footer logo" />
+                                </a>
+                            </div>
+                            <div className="lastBlock__second-img">
+                                <a href="#!" target={'_blank'}>
+                                    <img src={LastBlockSecondImg} alt="footer logo" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div className="footer__bottom-border"></div>
+                <p className="footer-copyright">© 2022 Duefocus.com., all rights reserved.</p>
             </div>
         </section>
     );
