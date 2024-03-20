@@ -4,6 +4,7 @@ import FooterLinkLogo from '../../assets/images/footer-link-img.png';
 import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
 import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkList';
+import TextFooterList from '../FooterTextList/TextFooterList';
 
 const Footer = () => {
     return (
@@ -30,6 +31,7 @@ const Footer = () => {
                     </li>
                     <li className="footer__item-list">
                         <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
+                        <TextFooterList text={'Duefocus. Time tracking'} classNames={'footer__list-text'} />
                     </li>
                     <li className="footer__item-list"></li>
                     <li className="footer__item-list"></li>
