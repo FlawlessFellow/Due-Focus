@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import ProductTitle from '../ProductTitle/ProductTitle';
-import RecommendationDescImg from './../../../assets/images/recommendation-section.png';
+import RecommendationDescImg from '../../../assets/images/recommendation-section.png';
 
 const Recommendation = () => {
     return (

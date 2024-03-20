@@ -28,3 +28,12 @@
     text-align: center;
     color: #2b323e;
 }
+
+.recommendation__title {
+    font-family: var(--first-family);
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 120%;
+    text-align: center;
+    color: #2b323e;
+}
