@@ -1,0 +1,30 @@
+.footer {
+    background-color: #16143d;
+}
+
+.footer__wrapper {
+    display: flex;
+    /* justify-content: space-around; */
+    padding: 80px 0 50px;
+}
+
+.first__block-text {
+    font-family: var(--third-family);
+    max-width: 150px;
+    padding-top: 32px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 178%;
+    color: #fff;
+}
+
+.first__block-imagesWrapper {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 60px;
+}
+
+.first__block-images {
+    width: 30px;
+    height: 30px;
+}

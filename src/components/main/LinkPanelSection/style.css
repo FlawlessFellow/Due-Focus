@@ -1,0 +1,43 @@
+.link__panel-topBlock {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4f2fd;
+}
+
+.top__block-img {
+    margin: 71.5px 0 30px;
+}
+
+.link__panel-blueBtn {
+    width: 320px;
+    height: 72px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 71.5px;
+    font-family: var(--first-family);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1991eb;
+    color: #fff;
+}
+
+.link__panel-bottomBlock {
+    background-color: #488eff;
+}
+
+.link__panel-listBlock {
+    padding: 25px 0;
+}
+
+.link__panel-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link__panel-listItem {
+    display: flex;
+}
