@@ -3,7 +3,7 @@ import './style.css';
 import FooterLinkLogo from '../../assets/images/footer-link-img.png';
 import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
-import SubtitleFooterList from '../subtitleFooterList/SubtitleLinkList';
+import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkList';
 
 const Footer = () => {
     return (
