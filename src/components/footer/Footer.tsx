@@ -3,8 +3,8 @@ import './style.css';
 import FooterLinkLogo from '../../assets/images/footer-link-img.png';
 import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
-import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkList';
-import TextFooterList from '../FooterTextList/TextFooterList';
+import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkContent';
+import TextFooterList from '../FooterTextList/TextFooterContent';
 
 const Footer = () => {
     return (
@@ -33,11 +33,6 @@ const Footer = () => {
                         <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
                         <TextFooterList
                             text={'Duefocus. Time tracking'}
-                            classNames={'footer__list-text'}
-                            wrapFirstWordInStrong={true}
-                        />
-                        <TextFooterList
-                            text={'Duecode. Engineering metrics'}
                             classNames={'footer__list-text'}
                             wrapFirstWordInStrong={true}
                         />
