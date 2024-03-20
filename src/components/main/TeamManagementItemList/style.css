@@ -1,0 +1,31 @@
+.management__item-list {
+    border-bottom: 1px solid #73787c;
+}
+
+.management__item-desc {
+    padding: 20px 0;
+    cursor: pointer;
+    font-family: var(--first-family);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    color: #2b323e;
+}
+
+.management__item-text {
+    padding: 20px 0 50px;
+    display: none;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #73787c;
+}
+
+.management__item-text.visible {
+    display: block;
+}
+
+.management__item-text.hidden {
+    display: none;
+}

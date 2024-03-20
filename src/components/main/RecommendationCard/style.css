@@ -1,0 +1,23 @@
+.specialist__name {
+    display: block;
+    margin-bottom: 7.75px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #2b323e;
+}
+
+.specialist__position {
+    font-family: var(--first-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #73787c;
+}
+
+.specialist__img {
+    width: 62px;
+    height: 62px;
+    margin-left: 60px;
+}

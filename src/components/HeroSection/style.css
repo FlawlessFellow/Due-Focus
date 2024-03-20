@@ -1,0 +1,46 @@
+.hero__wrapper {
+    display: flex;
+    height: calc(100vh - 120px); /* LEARN: screen height - header height */
+    padding-top: 60px;
+}
+
+.hero__left-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 930px;
+    height: 540px;
+    padding: 64px 80px 0 0;
+}
+
+.hero__left-title {
+    padding-right: 61px;
+    margin-bottom: 32px;
+    max-width: 850px;
+    height: 240px;
+    font-family: var(--first-family);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: #00112c;
+}
+
+.hero__left-text {
+    height: 30px;
+    margin-bottom: 109px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.03em;
+    color: #394249;
+}
+
+.hero__right-block {
+    height: 540px;
+    padding-top: 64px;
+}
+
+.hero__img {
+    max-width: 100%;
+}

@@ -1,0 +1,30 @@
+.presentation__title {
+    max-width: 886px;
+    margin: 0 auto 132px;
+    font-family: var(--first-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #2b323e;
+}
+
+.management__title {
+    margin: 0 auto 95px;
+    font-family: var(--first-family);
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 120%;
+    text-align: center;
+    color: #2b323e;
+}
+
+.timetracking__title {
+    margin: 0 auto 100px;
+    font-family: var(--first-family);
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 120%;
+    text-align: center;
+    color: #2b323e;
+}

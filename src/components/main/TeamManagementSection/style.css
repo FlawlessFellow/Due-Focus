@@ -1,0 +1,31 @@
+.management {
+    margin-bottom: 165px;
+}
+
+.management__wrapper {
+    padding-top: 100px;
+}
+
+.management__dual-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
+    grid-gap: 47px; /* Расстояние между блоками */
+}
+
+.management__leftBlock-img {
+    width: 95%;
+    margin-left: 4%;
+    margin-top: -2%;
+}
+
+.management__right-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.management__list {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}

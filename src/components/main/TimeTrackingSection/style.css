@@ -1,0 +1,51 @@
+.time__tracking {
+    padding-top: 120px;
+    margin-bottom: 155px;
+}
+
+.content__blocks {
+    display: flex;
+    column-gap: 80px;
+}
+
+.content__items-left {
+    display: flex;
+    width: 50%;
+}
+
+.card__wrapper {
+    min-height: 460px;
+    width: 50%;
+    box-shadow: 2px 1px 24px 0 #eaeaea;
+}
+
+.card__text {
+    margin: 41.5px auto 0;
+    max-width: 80%;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #73787c;
+}
+
+.stars {
+    display: flex;
+    height: 30px;
+    margin: 20px 0 0 60px;
+    gap: 6px;
+}
+
+.card__items-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card__items {
+    min-height: 83px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
