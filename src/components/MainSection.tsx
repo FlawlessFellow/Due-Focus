@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Hero from './main/HeroSection/Hero';
 import Presentation from './main/PresentationSection/Presentation';
-import Layout from './Layout';
+// import Layout from './Layout';
 import Management from './main/TeamManagementSection/Management';
 import GetStarted from './main/GetStartedSection/GetStarted';
 import TimeTracking from './main/TimeTrackingSection/TimeTracking';
@@ -18,16 +18,12 @@ const MainSection: FC = () => {
     return (
         <>
             <Header />
-            <Layout>
-                <Hero />
-                <Presentation />
-                <Management />
-            </Layout>
+            <Hero />
+            <Presentation />
+            <Management />
             <GetStarted />
-            <Layout>
-                <TimeTracking />
-                <DataSecurity />
-            </Layout>
+            <TimeTracking />
+            <DataSecurity />
             <Recommendation />
             <LinkPanel />
             <Footer />

@@ -15,8 +15,13 @@
     --third-family: Roboto, sans-serif;
 }
 
+:root {
+    font-size: 16px;
+  }
+
 /* Common styles */
 body {
+    font-size: 1rem;
     background-color: #fff;
 }
 
