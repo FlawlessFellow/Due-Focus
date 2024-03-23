@@ -1,15 +1,15 @@
 .management {
-    margin-bottom: 165px;
+    margin-bottom: 10.3125rem;
 }
 
 .management__wrapper {
-    padding-top: 100px;
+    padding-top: 6.25rem;
 }
 
 .management__dual-block {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
-    grid-gap: 47px; /* Расстояние между блоками */
+    grid-gap: 2.9375rem; /* Расстояние между блоками */
 }
 
 .management__leftBlock-img {

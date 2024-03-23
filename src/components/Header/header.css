@@ -37,12 +37,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;
-    height: 55px;
+    width: 7.5rem;
+    height: 3.4375rem;
     background-color: #f0f0f0;
     display: none;
     text-align: center;
-    line-height: 64px;
+    line-height: 4rem;
     z-index: -1;
 }
 
@@ -57,21 +57,21 @@
 
 .header__nav-actions {
     width: 31%;
-    margin-left: 50px;
+    margin-left: 3.125rem;
     display: flex;
     justify-content: flex-end;
-    column-gap: 15px;
+    column-gap: 0.9375rem;
     align-items: center;
 }
 
 .header__nav-greyBtn {
     border: 2px solid #a0abba;
-    border-radius: 4px;
-    width: 120px;
-    height: 48px;
+    border-radius: 0.25rem;
+    width: 7.5rem;
+    height: 3rem;
     text-align: center;
     font-family: var(--first-family);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     background: #fff;

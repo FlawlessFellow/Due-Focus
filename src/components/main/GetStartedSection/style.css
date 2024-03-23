@@ -1,10 +1,10 @@
 .get__started-section {
-    padding: 70px 0;
+    padding: 4.375rem 0;
     background-color: #e9f5ff;
 }
 
 .started__wrapper {
-    height: 120px;
+    height: 7.5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -16,20 +16,20 @@
 
 .started__logo {
     display: flex;
-    margin-right: 40px;
+    margin-right: 2.5rem;
 }
 
 .started__content {
     display: flex;
     flex-direction: column;
-    padding-left: 60px;
+    padding-left: 3.75rem;
     border-left: 1px solid #d8dce3;
 }
 
 .started__desc {
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 38px;
+    font-size: 2.375rem;
     line-height: 150%;
     color: #212529;
 }
@@ -38,7 +38,7 @@
     text-decoration: none;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 150%;
     color: #212529;
 }

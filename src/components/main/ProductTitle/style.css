@@ -1,29 +1,29 @@
 .presentation__title {
-    max-width: 886px;
-    margin: 0 auto 132px;
+    max-width: 55.375rem;
+    margin: 0 auto 8.25rem;
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 120%;
     text-align: center;
     color: #2b323e;
 }
 
 .management__title {
-    margin: 0 auto 95px;
+    margin: 0 auto 5.9375rem;
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 52px;
+    font-size: 3.25rem;
     line-height: 120%;
     text-align: center;
     color: #2b323e;
 }
 
 .timetracking__title {
-    margin: 0 auto 100px;
+    margin: 0 auto 6.25rem;
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 52px;
+    font-size: 3.25rem;
     line-height: 120%;
     text-align: center;
     color: #2b323e;
@@ -32,7 +32,7 @@
 .recommendation__title {
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 52px;
+    font-size: 3.25rem;
     line-height: 120%;
     text-align: center;
     color: #2b323e;

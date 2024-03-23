@@ -1,5 +1,5 @@
 .recommendation__section {
-    padding: 45px 0 112px;
+    padding: 2.8125rem 0 7rem;
     background-color: #f8f8f8;
 }
 
@@ -12,8 +12,8 @@
 .recommendation__desc-text {
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 150%;
     color: #999;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }

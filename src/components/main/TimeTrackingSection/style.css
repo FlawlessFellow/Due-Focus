@@ -1,11 +1,11 @@
 .time__tracking {
-    padding-top: 120px;
-    margin-bottom: 155px;
+    padding-top: 7.5rem;
+    margin-bottom: 9.6875rem;
 }
 
 .content__blocks {
     display: flex;
-    column-gap: 80px;
+    column-gap: 5rem;
 }
 
 .content__items-left {
@@ -14,38 +14,38 @@
 }
 
 .card__wrapper {
-    min-height: 460px;
+    min-height: 28.75rem;
     width: 50%;
     box-shadow: 2px 1px 24px 0 #eaeaea;
 }
 
 .card__text {
-    margin: 41.5px auto 0;
+    margin: 2.59375rem auto 0;
     max-width: 80%;
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 150%;
     color: #73787c;
 }
 
 .stars {
     display: flex;
-    height: 30px;
-    margin: 20px 0 0 60px;
-    gap: 6px;
+    height: 1.875rem;
+    margin: 1.25rem 0 0 3.75rem;
+    gap: .375rem;
 }
 
 .card__items-wrapper {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .card__items {
-    min-height: 83px;
+    min-height: 5.1875rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 30px;
+    margin-left: 1.875rem;
 }
