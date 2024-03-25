@@ -1,6 +1,10 @@
+.hero {
+    margin-top: 100px;
+}
+
 .hero__wrapper {
     display: flex;
-    height: calc(100vh - 7.5rem); /* LEARN: screen height - header height */
+    min-height: calc(100vh - 7.5rem); /* LEARN: screen height - header height */
     padding-top: 3.75rem;
 }
 

@@ -12,7 +12,7 @@ import '../assets/styles/main.css';
 import '../assets/styles/hover.css';
 import Recommendation from './main/RecommendationSection/Recommendation';
 import LinkPanel from './main/LinkPanelSection/LinkPanel';
-import Footer from './footer/Footer';
+import Footer from './Footer/Footer';
 
 const MainSection: FC = () => {
     return (

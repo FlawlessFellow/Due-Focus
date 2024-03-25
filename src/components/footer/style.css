@@ -46,7 +46,7 @@
 .footer__bottom-border {
     margin: 0 auto 2.625rem;
     border-top: 1px solid rgba(168, 168, 168, 0.3);
-    width: 83.75rem;
+    max-width: 83.75rem;
     height: 1px;
 }
 
