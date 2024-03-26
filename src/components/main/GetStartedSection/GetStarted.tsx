@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import './style.css';
 import getStartedLogo from './../../../assets/images/get-started-logo.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
@@ -16,12 +17,14 @@ const GetStarted = () => {
                             <p>Get started with DueFocus</p>
                         </div>
                         <div className="started__link">
-                            <a href="#!">Download for Free on Google Web Store</a>
+                            <Link to="#!" target={'_blank'}>
+                                Download for Free on Google Web Store
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className="started__button">
-                    <BlueBtn text={'Start Now'} classNames={'header__nav-blueBtn'} onClick={() => null}/>
+                    <BlueBtn text={'Start Now'} classNames={'header__nav-blueBtn'} onClick={() => null} />
                 </div>
             </div>
         </section>

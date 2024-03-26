@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import './style.css';
 import LinkPanelTopBlockImg from '../../../assets/images/link-panel-topBlock.png';
 import BlueBtn from '../../BlueBtn/BlueBtn';
@@ -19,29 +20,29 @@ const LinkPanel = () => {
                 <div className="link__panel-listBlock container">
                     <ul className="link__panel-list">
                         <li className="link__panel-listItem">
-                            <a href="" className="link__panel-linkItem">
+                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
                                 <img src={linkItem1} alt="time tracking image" />
-                            </a>
+                            </Link>
                         </li>
                         <li className="link__panel-listItem">
-                            <a href="" className="link__panel-linkItem">
+                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
                                 <img src={linkItem2} alt="engineering metrics" />
-                            </a>
+                            </Link>
                         </li>
                         <li className="link__panel-listItem">
-                            <a href="" className="link__panel-linkItem">
+                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
                                 <img src={linkItem3} alt="code quality ranking" />
-                            </a>
+                            </Link>
                         </li>
                         <li className="link__panel-listItem">
-                            <a href="" className="link__panel-linkItem">
+                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
                                 <img src={linkItem4} alt="writing better code" />
-                            </a>
+                            </Link>
                         </li>
                         <li className="link__panel-listItem">
-                            <a href="" className="link__panel-linkItem">
+                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
                                 <img src={linkItem5} alt="set realistic estimates" />
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

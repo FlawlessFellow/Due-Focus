@@ -7,6 +7,7 @@ import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkContent';
 import TextFooterList from '../FooterTextList/TextFooterContent';
 import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
+import { Link } from 'gatsby';
 
 const Footer = () => {
     return (
@@ -14,20 +15,20 @@ const Footer = () => {
             <div className="footer__wrapper container">
                 <div className="footer__content">
                     <div className="footer__first-block">
-                        <a href="#!" className="first__block-linkLogo">
+                        <Link to="#!" target={'_blank'}>
                             <img src={FooterLinkLogo} alt="footer link logo" />
-                        </a>
+                        </Link>
                         <p className="first__block-text">Track work hours with a single button</p>
                         <div className="first__block-imagesWrapper">
                             <div className="first__block-images">
-                                <a href="#!">
+                                <Link to="#!" target={'_blank'}>
                                     <img src={FooterFacebookImg} alt="" />
-                                </a>
+                                </Link>
                             </div>
                             <div className="first__block-images">
-                                <a href="#!">
+                                <Link to="#!" target={'_blank'}>
                                     <img src={FooterTwitterImg} alt="" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -72,14 +73,14 @@ const Footer = () => {
                         <TextFooterList text={'support@diligences.com'} classNames={'footer__list-lastText'} />
                         <div className="footer__lastBlock-images">
                             <div className="lastBlock__first-img">
-                                <a href="#!" target={'_blank'}>
+                                <Link to="#!" target={'_blank'}>
                                     <img src={LastBlockFirstImg} alt="footer logo" />
-                                </a>
+                                </Link>
                             </div>
                             <div className="lastBlock__second-img">
-                                <a href="#!" target={'_blank'}>
+                                <Link to="#!" target={'_blank'}>
                                     <img src={LastBlockSecondImg} alt="footer logo" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

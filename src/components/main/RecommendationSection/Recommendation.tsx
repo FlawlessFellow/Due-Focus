@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import './style.css';
 import ProductTitle from '../ProductTitle/ProductTitle';
 import RecommendationDescImg from '../../../assets/images/recommendation-section.png';
@@ -9,9 +10,9 @@ const Recommendation = () => {
             <div className="recommendation__wrapper">
                 <div className="recommendation__desc">
                     <ProductTitle text={'What Professionals Say'} classNames={'recommendation__title'} />
-                    <a href="" className="recommendation__img-link">
+                    <Link to="#!" className="recommendation__img-link">
                         <img src={RecommendationDescImg} alt="product hunt image link" />
-                    </a>
+                    </Link>
                     <p className="recommendation__desc-text">Join the company of successful people</p>
                 </div>
             </div>
