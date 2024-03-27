@@ -1,0 +1,48 @@
+.new__card-wrapper {
+    margin: 0 35px;
+    padding: 59px 0;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 400px;
+    background-color: #fff;
+}
+
+.new__card-text {
+    margin: 0 auto;
+    width: 80%;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #73787c;
+}
+
+.new__card-stars-wrapper {
+    display: flex;
+    align-items: center;
+    margin: auto 0 1.25rem 3.5rem;
+}
+
+.new__card-stars {
+    height: 30px;
+}
+
+.card__specialist-name {
+    margin-left: 4rem;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #2b323e;
+}
+
+.card__specialist-position {
+    margin-left: 4rem;
+    font-family: var(--first-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #73787c;
+}

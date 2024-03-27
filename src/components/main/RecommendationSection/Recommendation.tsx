@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import './style.css';
 import ProductTitle from '../ProductTitle/ProductTitle';
 import RecommendationDescImg from '../../../assets/images/recommendation-section.png';
+import RecommendationSlider from '../Slider/SlickSlider';
 
 const Recommendation = () => {
     return (
@@ -15,6 +16,7 @@ const Recommendation = () => {
                     </Link>
                     <p className="recommendation__desc-text">Join the company of successful people</p>
                 </div>
+                <RecommendationSlider />
             </div>
         </section>
     );

@@ -39,15 +39,18 @@ const TimeTracking = () => {
                         </ul>
                     </div>
                     <RecommendationCard
-                        CardText={
+                        cardText={
                             '"Efficient productivity management in quality assurance enables you to save a ton of money on development. And that’s exactly what we get with DueFocus. This practical tool gives us a clear view of our KPIs and workflows. We get concise performance statistics that enables us to improve our project planning and establish transparent communication with clients."'
                         }
+                        cardWrapperClassName="card__wrapper"
+                        cardTextClassName="card__text"
+                        starsClassName="stars"
                     >
                         <div className="card__items-wrapper">
                             <img src={SpecialistImg} alt="specialist image" className="specialist__img" />
                             <div className="card__items">
                                 <CardSpecialistName text="Victoria V." />
-                                <CardSpecialistPosition text="Lead of Testing Department at ..." />
+                                <CardSpecialistPosition text="Lead of Testing Department at ..." classNames='specialist__position' />
                             </div>
                         </div>
                     </RecommendationCard>

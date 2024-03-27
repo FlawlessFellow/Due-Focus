@@ -1,10 +1,12 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-const CardSpecialistPosition: FC<{ text: string; classNames?: string }> = ({
-  text,
-  classNames,
-}) => {
-  return <span className={`specialist__position ${classNames}`}>{text}</span>;
+type Props = {
+    text?: string;
+    classNames?: string;
+};
+
+const CardSpecialistPosition: FC<Props> = ({ text, classNames }) => {
+    return <span className={classNames}>{text}</span>;
 };
 
 export default CardSpecialistPosition;

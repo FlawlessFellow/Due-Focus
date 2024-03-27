@@ -1,43 +1,43 @@
 {
-  "name": "my-gatsby-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "my-gatsby-site",
-  "author": "Parabellum577",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@mdx-js/react": "^3.0.1",
-    "@types/react-slick": "^0.23.13",
-    "gatsby": "^5.13.3",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-mdx": "^5.13.1",
-    "gatsby-plugin-sass": "^6.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-webfonts": "^2.3.2",
-    "gatsby-source-contentful": "^8.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-slick": "^0.30.2",
-    "sass": "^1.72.0",
-    "slick-carousel": "^1.8.1"
-  },
-  "devDependencies": {
-    "@types/acorn": "^6.0.0",
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "typescript": "^5.3.3"
-  }
+    "name": "my-gatsby-site",
+    "version": "1.0.0",
+    "private": true,
+    "description": "my-gatsby-site",
+    "author": "Parabellum577",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@mdx-js/react": "^3.0.1",
+        "@types/react-slick": "^0.23.13",
+        "gatsby": "^5.13.3",
+        "gatsby-plugin-image": "^3.13.1",
+        "gatsby-plugin-mdx": "^5.13.1",
+        "gatsby-plugin-sass": "^6.13.1",
+        "gatsby-plugin-sharp": "^5.13.1",
+        "gatsby-plugin-webfonts": "^2.3.2",
+        "gatsby-source-contentful": "^8.13.1",
+        "gatsby-source-filesystem": "^5.13.1",
+        "gatsby-transformer-sharp": "^5.13.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-slick": "^0.30.2",
+        "sass": "^1.72.0",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "@types/acorn": "^6.0.0",
+        "@types/node": "^20.11.19",
+        "@types/react": "^18.2.55",
+        "@types/react-dom": "^18.2.19",
+        "typescript": "^5.3.3"
+    }
 }
