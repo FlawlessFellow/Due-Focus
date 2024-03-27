@@ -1,7 +1,13 @@
-import React, { FC } from "react";
+import { type } from 'os';
+import React, { FC } from 'react';
 
-const CardSpecialistName: FC<{ text: string; classNames?: string }> = ({ text, classNames }) => {
-    return <strong className={`specialist__name ${classNames}`}>{text}</strong>;
+type Props = {
+    text: string;
+    classNames?: string;
+};
+
+const CardSpecialistName: FC<Props> = ({ text, classNames }) => {
+    return <strong className={classNames}>{text}</strong>;
 };
 
 export default CardSpecialistName;

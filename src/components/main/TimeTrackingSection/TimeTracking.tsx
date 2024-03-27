@@ -49,7 +49,7 @@ const TimeTracking = () => {
                         <div className="card__items-wrapper">
                             <img src={SpecialistImg} alt="specialist image" className="specialist__img" />
                             <div className="card__items">
-                                <CardSpecialistName text="Victoria V." />
+                                <CardSpecialistName text="Victoria V." classNames="specialist__name" />
                                 <CardSpecialistPosition
                                     text="Lead of Testing Department at ..."
                                     classNames="specialist__position"
