@@ -1,7 +1,7 @@
 export type TimeTrackingItems = {
-    id: number,
-    itemDesc: string,
-    itemText: string,
+    id: number;
+    itemDesc: string;
+    itemText: string;
 };
 
 const TimeTrackingItems: TimeTrackingItems[] = [
