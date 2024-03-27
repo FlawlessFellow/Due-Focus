@@ -1,8 +1,7 @@
-import { type } from 'os';
 import React, { FC } from 'react';
 
 type Props = {
-    text: string;
+    text?: string;
     classNames?: string;
 };
 
