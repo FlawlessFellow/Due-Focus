@@ -50,7 +50,10 @@ const TimeTracking = () => {
                             <img src={SpecialistImg} alt="specialist image" className="specialist__img" />
                             <div className="card__items">
                                 <CardSpecialistName text="Victoria V." />
-                                <CardSpecialistPosition text="Lead of Testing Department at ..." classNames='specialist__position' />
+                                <CardSpecialistPosition
+                                    text="Lead of Testing Department at ..."
+                                    classNames="specialist__position"
+                                />
                             </div>
                         </div>
                     </RecommendationCard>
