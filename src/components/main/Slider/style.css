@@ -31,6 +31,7 @@
 
 .card__specialist-name {
     margin-left: 4rem;
+    margin-bottom: 0.55rem;
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 20px;

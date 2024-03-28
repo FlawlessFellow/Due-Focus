@@ -9,6 +9,7 @@ type Props = {
     cardTextClassName?: string;
     starsClassName?: string;
     starsImgClassName?: string;
+    stars: (boolean | null)[];
     children: ReactNode;
 };
 
@@ -18,18 +19,18 @@ const RecommendationCard: FC<Props> = ({
     cardTextClassName,
     starsClassName,
     starsImgClassName,
+    stars,
     children,
 }) => {
     return (
         <div className={cardWrapperClassName}>
             <p className={cardTextClassName}>{cardText}</p>
-                <div className={starsClassName}>
-                    <img src={CardStars} alt="star img" className={starsImgClassName} />
-                    <img src={CardStars} alt="star img" className={starsImgClassName} />
-                    <img src={CardStars} alt="star img" className={starsImgClassName} />
-                    <img src={CardStars} alt="star img" className={starsImgClassName} />
-                    <img src={CardEmptyStar} alt="star img" className={starsImgClassName} />
-                </div>
+            <div className={starsClassName}>
+                {stars &&
+                    stars.map((star, index) => (
+                        <img key={index} src={star ? CardStars : CardEmptyStar} alt="star img" className={starsImgClassName} />
+                    ))}
+            </div>
             {children}
         </div>
     );
