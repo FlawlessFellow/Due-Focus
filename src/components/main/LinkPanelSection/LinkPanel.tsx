@@ -17,34 +17,36 @@ const LinkPanel = () => {
                 <BlueBtn text={'Get Started'} classNames={'link__panel-blueBtn hvr-float-shadow'} onClick={() => null} />
             </div>
             <div className="link__panel-bottomBlock">
-                <div className="link__panel-listBlock container">
-                    <ul className="link__panel-list">
-                        <li className="link__panel-listItem">
-                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                <img src={linkItem1} alt="time tracking image" />
-                            </Link>
-                        </li>
-                        <li className="link__panel-listItem">
-                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                <img src={linkItem2} alt="engineering metrics" />
-                            </Link>
-                        </li>
-                        <li className="link__panel-listItem">
-                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                <img src={linkItem3} alt="code quality ranking" />
-                            </Link>
-                        </li>
-                        <li className="link__panel-listItem">
-                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                <img src={linkItem4} alt="writing better code" />
-                            </Link>
-                        </li>
-                        <li className="link__panel-listItem">
-                            <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                <img src={linkItem5} alt="set realistic estimates" />
-                            </Link>
-                        </li>
-                    </ul>
+                <div className="container">
+                    <div className="link__panel-listBlock">
+                        <ul className="link__panel-list">
+                            <li className="link__panel-listItem">
+                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
+                                    <img src={linkItem1} alt="time tracking image" />
+                                </Link>
+                            </li>
+                            <li className="link__panel-listItem">
+                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
+                                    <img src={linkItem2} alt="engineering metrics" />
+                                </Link>
+                            </li>
+                            <li className="link__panel-listItem">
+                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
+                                    <img src={linkItem3} alt="code quality ranking" />
+                                </Link>
+                            </li>
+                            <li className="link__panel-listItem">
+                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
+                                    <img src={linkItem4} alt="writing better code" />
+                                </Link>
+                            </li>
+                            <li className="link__panel-listItem">
+                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
+                                    <img src={linkItem5} alt="set realistic estimates" />
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>

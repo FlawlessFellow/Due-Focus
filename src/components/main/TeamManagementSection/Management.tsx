@@ -19,26 +19,28 @@ const Management = () => {
 
     return (
         <section className="management">
-            <div className="management__wrapper container">
-                <ProductTitle text={'Managing Teams Has Never Been Easier'} classNames={`management__title`} />
-                <div className="management__dual-block">
-                    <div className="management__left-block">
-                        <img src={ManagementLeftBlockImg} alt="Management image" className="management__leftBlock-img" />
-                    </div>
-                    <div className="management__right-block">
-                        <div>
-                            <ul className="management__list">
-                                {managementItems.map((el, index: number) => (
-                                    <ManagementItemList
-                                        key={index}
-                                        itemDesc={el.itemDesc}
-                                        itemText={el.itemText}
-                                        classNames={'management__item-list'}
-                                        handleClick={() => handleItemClick(el.id)}
-                                        textVisible={selectedItemId === el.id}
-                                    />
-                                ))}
-                            </ul>
+            <div className="container">
+                <div className="management__wrapper">
+                    <ProductTitle text={'Managing Teams Has Never Been Easier'} classNames={`management__title`} />
+                    <div className="management__dual-block">
+                        <div className="management__left-block">
+                            <img src={ManagementLeftBlockImg} alt="Management image" className="management__leftBlock-img" />
+                        </div>
+                        <div className="management__right-block">
+                            <div>
+                                <ul className="management__list">
+                                    {managementItems.map((el, index: number) => (
+                                        <ManagementItemList
+                                            key={index}
+                                            itemDesc={el.itemDesc}
+                                            itemText={el.itemText}
+                                            classNames={'management__item-list'}
+                                            handleClick={() => handleItemClick(el.id)}
+                                            textVisible={selectedItemId === el.id}
+                                        />
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

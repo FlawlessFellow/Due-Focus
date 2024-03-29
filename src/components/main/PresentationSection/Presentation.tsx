@@ -46,14 +46,21 @@ const presentationItems = [
 const Presentation = () => {
     return (
         <section id="presentation" className="presentation">
-            <div className="presentation__wrapper container">
-                <ProductTitle text={'What Makes DueFocus an Innovative Time Tracker'} classNames={`presentation__title`} />
-                <div className='presentation__list-wrapper'>
-                    <ul className="presentation__list">
-                        {presentationItems.map((el, index) => (
-                            <PresentationList key={index} imageUrl={el.imageUrl} itemDesc={el.itemDesc} itemText={el.itemText} />
-                        ))}
-                    </ul>
+            <div className="container">
+                <div className="presentation__wrapper">
+                    <ProductTitle text={'What Makes DueFocus an Innovative Time Tracker'} classNames={`presentation__title`} />
+                    <div className="presentation__list-wrapper">
+                        <ul className="presentation__list">
+                            {presentationItems.map((el, index) => (
+                                <PresentationList
+                                    key={index}
+                                    imageUrl={el.imageUrl}
+                                    itemDesc={el.itemDesc}
+                                    itemText={el.itemText}
+                                />
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>

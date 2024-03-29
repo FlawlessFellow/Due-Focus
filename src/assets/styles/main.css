@@ -26,8 +26,9 @@ body {
 }
 
 .container {
-    max-width: 1470px;
+    max-width: 1570px;
     margin: 0 auto;
+    padding: 0 50px;
 }
 
 ul,
