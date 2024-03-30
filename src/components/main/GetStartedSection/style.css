@@ -11,6 +11,7 @@
 }
 
 .started__items {
+    min-height: 7.5rem;
     display: flex;
 }
 
@@ -21,6 +22,7 @@
 
 .started__content {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding-left: 3.75rem;
     border-left: 1px solid #d8dce3;
