@@ -9,6 +9,14 @@ import linkItem3 from '../../../assets/images/link3-image.png';
 import linkItem4 from '../../../assets/images/link4-image.png';
 import linkItem5 from '../../../assets/images/link5-image.png';
 
+const linkItems = [
+    { img: linkItem1, alt: 'time tracking image' },
+    { img: linkItem2, alt: 'engineering metrics' },
+    { img: linkItem3, alt: 'code quality ranking' },
+    { img: linkItem4, alt: 'writing better code' },
+    { img: linkItem5, alt: 'set realistic estimates' },
+];
+
 const LinkPanel = () => {
     return (
         <section className="link__panel">
@@ -20,31 +28,13 @@ const LinkPanel = () => {
                 <div className="container">
                     <div className="link__panel-listBlock">
                         <ul className="link__panel-list">
-                            <li className="link__panel-listItem">
-                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                    <img src={linkItem1} alt="time tracking image" />
-                                </Link>
-                            </li>
-                            <li className="link__panel-listItem">
-                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                    <img src={linkItem2} alt="engineering metrics" />
-                                </Link>
-                            </li>
-                            <li className="link__panel-listItem">
-                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                    <img src={linkItem3} alt="code quality ranking" />
-                                </Link>
-                            </li>
-                            <li className="link__panel-listItem">
-                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                    <img src={linkItem4} alt="writing better code" />
-                                </Link>
-                            </li>
-                            <li className="link__panel-listItem">
-                                <Link to="#!" target={'_blank'} className="link__panel-linkItem">
-                                    <img src={linkItem5} alt="set realistic estimates" />
-                                </Link>
-                            </li>
+                            {linkItems.map((item, index) => (
+                                <li key={index} className="link__panel-listItem">
+                                    <Link to="#!" target={'_blank'} className="link__panel-linkItem">
+                                        <img src={item.img} alt={item.alt} />
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
