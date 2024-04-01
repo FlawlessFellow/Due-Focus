@@ -49,3 +49,17 @@
     justify-content: center;
     margin-left: 1.875rem;
 }
+
+@media (max-width: 56.25rem) {
+    .content__blocks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content__items-left {
+        width: 100%;
+    }
+    .card__wrapper {
+        width: 100%;
+        margin-top: 4.375rem;
+    }
+}

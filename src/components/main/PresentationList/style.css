@@ -36,9 +36,23 @@
     object-fit: cover;
 }
 
-@media (max-width: 72.75rem) {
+@media (max-width: 56.25rem) {
+    .hero__left-title {
+        width: 80%;
+        line-height: 51px;
+        font-size: 48px;
+    }
+    .hero__left-text {
+        margin-bottom: 9.875rem;
+    }
+    .hero__right-block {
+        padding-top: 3rem;
+        min-width: 40%;
+        padding-left: 0;
+    }
     .presentation__list {
         grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
     }
     .item__desc {
         font-size: 1.25rem;

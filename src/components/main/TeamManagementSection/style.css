@@ -29,3 +29,14 @@
     flex-direction: column;
     list-style-type: none;
 }
+
+@media (max-width: 56.25rem) {
+    .management {
+        margin-bottom: 2.3125rem;
+    }
+    .management__dual-block {
+        display: flex;
+        flex-direction: column;
+        gap: 190px;
+    }
+}

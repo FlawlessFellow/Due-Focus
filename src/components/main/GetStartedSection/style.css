@@ -4,7 +4,6 @@
 }
 
 .started__wrapper {
-    height: 7.5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -43,4 +42,17 @@
     font-size: 1.25rem;
     line-height: 150%;
     color: #212529;
+}
+
+@media (max-width: 56.25rem) {
+    .started__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .started__link {
+        margin-bottom: 1rem;
+    }
+    .started__button {
+        display: flex;
+    }
 }
