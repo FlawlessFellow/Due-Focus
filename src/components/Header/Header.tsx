@@ -35,6 +35,9 @@ const Header = () => {
                         <Link to="#!" target={'_blank'} className="header__nav-download hvr-grow">
                             Downloads
                         </Link>
+                        <div className="header__burger">
+                            <span></span>
+                        </div>
                     </div>
                     <div className="header__nav-actions">
                         <button type="button" className="header__nav-greyBtn">
