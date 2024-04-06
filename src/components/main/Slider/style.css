@@ -26,6 +26,7 @@
 }
 
 .new__card-stars {
+    margin-right: 6px;
     height: 30px;
 }
 
@@ -46,4 +47,22 @@
     font-size: 15px;
     line-height: 150%;
     color: #73787c;
+}
+
+@media screen and (max-width: 1505px) {
+    .new__card-wrapper {
+        min-height: 400px;
+    }
+    .new__card-text {
+        font-size: 14px;
+    }
+    .new__card-stars-wrapper {
+        margin: auto 0 1.25rem 5rem;
+    }
+    .card__specialist-name {
+        margin-left: 5rem;
+    }
+    .card__specialist-position {
+        margin-left: 5rem;
+    }
 }

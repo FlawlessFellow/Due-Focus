@@ -58,3 +58,22 @@
     text-align: center;
     color: #fff;
 }
+
+@media screen and (max-width: 1410px) {
+    .adaptive__container {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .footer__first-block,
+    .footer__second-block,
+    .footer__third-block,
+    .footer__fourth-block {
+        padding: 0 25px;
+    }
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+    }
+}

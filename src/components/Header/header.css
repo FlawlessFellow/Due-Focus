@@ -148,6 +148,9 @@
 }
 
 @media (max-width: 1290px) {
+    .header__nav-logo {
+        max-width: 156px;
+    }
     .header__burger {
         display: flex;
     }

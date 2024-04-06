@@ -30,7 +30,17 @@
     list-style-type: none;
 }
 
-@media (max-width: 56.25rem) {
+@media screen and (max-width: 1285px) {
+    .management__dual-block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .management__left-block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 56.25rem) /*900px*/ {
     .management {
         margin-bottom: 2.3125rem;
     }

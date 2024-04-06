@@ -46,7 +46,7 @@ const presentationItems = [
 const Presentation = () => {
     return (
         <section id="presentation" className="presentation">
-            <div className="container">
+            <div className="presentation__container">
                 <div className="presentation__wrapper">
                     <ProductTitle text={'What Makes DueFocus an Innovative Time Tracker'} classNames={`presentation__title`} />
                     <div className="presentation__list-wrapper">

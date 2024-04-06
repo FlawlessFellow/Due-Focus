@@ -25,7 +25,7 @@ const LinkPanel = () => {
                 <BlueBtn text={'Get Started'} classNames={'link__panel-blueBtn hvr-float-shadow'} onClick={() => null} />
             </div>
             <div className="link__panel-bottomBlock">
-                <div className="container">
+                <div className="container adaptive__container">
                     <div className="link__panel-listBlock">
                         <ul className="link__panel-list">
                             {linkItems.map((item, index) => (

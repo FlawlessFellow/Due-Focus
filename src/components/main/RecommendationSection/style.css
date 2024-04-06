@@ -9,7 +9,12 @@
     align-items: center;
 }
 
+.recommendation__img-link {
+    margin-top: 5px;
+}
+
 .recommendation__desc-text {
+    margin-top: 5px;
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 1.25rem;

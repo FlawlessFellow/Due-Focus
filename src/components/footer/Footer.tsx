@@ -12,7 +12,7 @@ import { Link } from 'gatsby';
 const Footer = () => {
     return (
         <section className="footer">
-            <div className="container">
+            <div className="container adaptive__container">
                 <div className="footer__wrapper">
                     <div className="footer__content">
                         <div className="footer__first-block">

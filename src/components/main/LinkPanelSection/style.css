@@ -41,3 +41,9 @@
 .link__panel-listItem {
     display: flex;
 }
+
+@media (max-width: 56.25rem) /* 900px */ {
+    .adaptive__container {
+        padding: 0 25px !important;
+    }
+}

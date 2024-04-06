@@ -27,8 +27,6 @@
     color: #00112c;
 }
 
-
-
 .hero__left-text {
     height: 1.875rem;
     margin-bottom: 6.875rem;
@@ -83,5 +81,21 @@
     }
     .hero__img {
         max-height: 100vh;
+    }
+}
+
+@media (max-width: 56.25rem) /* 900px */ {
+    .hero__left-title {
+        width: 80%;
+        line-height: 51px;
+        font-size: 48px;
+    }
+    .hero__left-text {
+        margin-bottom: 9.875rem;
+    }
+    .hero__right-block {
+        padding-top: 3rem;
+        min-width: 40%;
+        padding-left: 0;
     }
 }
