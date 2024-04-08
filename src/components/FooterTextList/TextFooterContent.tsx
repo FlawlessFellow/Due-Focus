@@ -5,7 +5,7 @@ interface TextFooterListProps {
     text: string;
     classNames: string;
     wrapFirstWordInStrong?: boolean;
-}   
+}
 
 const TextFooterList: FC<TextFooterListProps> = ({ text, classNames, wrapFirstWordInStrong = false }) => {
     let content: React.ReactNode;

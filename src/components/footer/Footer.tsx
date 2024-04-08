@@ -7,7 +7,20 @@ import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkContent';
 import TextFooterList from '../FooterTextList/TextFooterContent';
 import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
+import textFooterListItems from '../FooterTextList/TextFooterListItems';
 import { Link } from 'gatsby';
+
+const thirdBlockTextFooterList = [
+    { text: 'Terms of Use', classNames: 'footer__list-text' },
+    { text: 'Privacy Policy', classNames: 'footer__list-text' },
+    { text: 'Cookie Policy', classNames: 'footer__list-lastText' },
+];
+
+const fourthBlockTextFooterList = [
+    { text: '297 NV-207 Stateline, NV 89449 USA', classNames: 'footer__list-text' },
+    { text: '+1 310-388-9334', classNames: 'footer__list-text' },
+    { text: 'support@diligences.com', classNames: 'footer__list-lastText' },
+];
 
 const Footer = () => {
     return (
@@ -35,43 +48,26 @@ const Footer = () => {
                         </div>
                         <div className="footer__second-block">
                             <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
-                            <TextFooterList
-                                text={'Duefocus. Time tracking'}
-                                classNames={'footer__list-text'}
-                                wrapFirstWordInStrong={true}
-                            />
-                            <TextFooterList
-                                text={'Duecode. Engineering metrics'}
-                                classNames={'footer__list-text'}
-                                wrapFirstWordInStrong={true}
-                            />
-                            <TextFooterList
-                                text={'Duerank. Global developers leaderboard'}
-                                classNames={'footer__list-text'}
-                                wrapFirstWordInStrong={true}
-                            />
-                            <TextFooterList
-                                text={'Duelearn. Writing better code'}
-                                classNames={'footer__list-text'}
-                                wrapFirstWordInStrong={true}
-                            />
-                            <TextFooterList
-                                text={'Duetask. Set realistic estimates'}
-                                classNames={'footer__list-lastText'}
-                                wrapFirstWordInStrong={true}
-                            />
+                            {textFooterListItems.map((el, index: number) => (
+                                <TextFooterList
+                                    key={index}
+                                    text={el.text}
+                                    classNames="footer__list"
+                                    wrapFirstWordInStrong={false}
+                                />
+                            ))}
                         </div>
                         <div className="footer__third-block">
                             <SubtitleFooterList text={'ABOUT'} classNames={'footer__list-subtitleLink'} />
-                            <TextFooterList text={'Terms of Use'} classNames={'footer__list-text'} />
-                            <TextFooterList text={'Privacy Policy'} classNames={'footer__list-text'} />
-                            <TextFooterList text={'Cookie Policy'} classNames={'footer__list-lastText'} />
+                            {thirdBlockTextFooterList.map((items, index) => (
+                                <TextFooterList key={index} text={items.text} classNames={items.classNames} />
+                            ))}
                         </div>
                         <div className="footer__fourth-block">
                             <SubtitleFooterList text={'CONTACT US'} classNames={'footer__list-subtitleLink'} />
-                            <TextFooterList text={'297 NV-207 Stateline, NV 89449 USA'} classNames={'footer__list-text'} />
-                            <TextFooterList text={'+1 310-388-9334'} classNames={'footer__list-text'} />
-                            <TextFooterList text={'support@diligences.com'} classNames={'footer__list-lastText'} />
+                            {fourthBlockTextFooterList.map((items, index) => (
+                                <TextFooterList key={index} text={items.text} classNames={items.classNames} />
+                            ))}
                             <div className="footer__lastBlock-images">
                                 <div className="lastBlock__first-img">
                                     <Link to="#!" target={'_blank'}>
