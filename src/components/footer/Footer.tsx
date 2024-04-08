@@ -52,8 +52,8 @@ const Footer = () => {
                                 <TextFooterList
                                     key={index}
                                     text={el.text}
-                                    classNames="footer__list"
-                                    wrapFirstWordInStrong={false}
+                                    classNames={el.classNames}
+                                    wrapFirstWordInStrong={true}
                                 />
                             ))}
                         </div>
