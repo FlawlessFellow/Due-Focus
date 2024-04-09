@@ -38,6 +38,10 @@
     .management__left-block {
         width: 100%;
     }
+    .management__right-block {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 56.25rem) /*900px*/ {

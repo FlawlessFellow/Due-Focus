@@ -27,20 +27,18 @@ const Management = () => {
                             <img src={ManagementLeftBlockImg} alt="Management image" className="management__leftBlock-img" />
                         </div>
                         <div className="management__right-block">
-                            <div>
-                                <ul className="management__list">
-                                    {managementItems.map((el, index: number) => (
-                                        <ManagementItemList
-                                            key={index}
-                                            itemDesc={el.itemDesc}
-                                            itemText={el.itemText}
-                                            classNames={'management__item-list'}
-                                            handleClick={() => handleItemClick(el.id)}
-                                            textVisible={selectedItemId === el.id}
-                                        />
-                                    ))}
-                                </ul>
-                            </div>
+                            <ul className="management__list">
+                                {managementItems.map((el, index: number) => (
+                                    <ManagementItemList
+                                        key={index}
+                                        itemDesc={el.itemDesc}
+                                        itemText={el.itemText}
+                                        classNames={'management__item-list'}
+                                        handleClick={() => handleItemClick(el.id)}
+                                        textVisible={selectedItemId === el.id}
+                                    />
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
