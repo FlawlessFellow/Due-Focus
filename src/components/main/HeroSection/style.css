@@ -45,7 +45,6 @@
 }
 
 .hero__img {
-    height: 100%;
     max-width: 100%;
 }
 
@@ -87,14 +86,23 @@
     }
 }
 
+@media screen and (max-width: 1175px) {
+    .hero__left-title {
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .hero__left-text {
+        margin-bottom: 9.875rem;
+    }
+}
+
 @media (max-width: 56.25rem) /* 900px */ {
     .hero__left-title {
         width: 80%;
         line-height: 51px;
         font-size: 48px;
-    }
-    .hero__left-text {
-        margin-bottom: 9.875rem;
     }
     .hero__right-block {
         padding-top: 3rem;
