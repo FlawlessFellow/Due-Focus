@@ -1,5 +1,8 @@
 .hero {
     margin-top: 100px;
+    background-image: url('../../../assets/images/back.png');
+    background-repeat: no-repeat;
+    background-size: 100% 95%, 100%;
 }
 
 .hero__wrapper {
