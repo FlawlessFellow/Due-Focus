@@ -23,6 +23,7 @@
 body {
     font-size: 1rem;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 .container {

@@ -1,8 +1,8 @@
 .hero {
-    margin-top: 100px;
+    padding-top: 100px;
     background-image: url('../../../assets/images/back.png');
     background-repeat: no-repeat;
-    background-size: 100% 95%, 100%;
+    background-size: 100%;
 }
 
 .hero__wrapper {
@@ -14,7 +14,6 @@
 .hero__left-block {
     display: flex;
     flex-direction: column;
-    max-width: 58.125rem;
     padding: 4rem 5rem 0 0;
 }
 
@@ -31,7 +30,6 @@
 }
 
 .hero__left-text {
-    height: 1.875rem;
     margin-bottom: 6.875rem;
     font-family: var(--second-family); /* rename first-family to --montserrat */
     font-weight: 500;
@@ -42,10 +40,12 @@
 }
 
 .hero__right-block {
+    height: 705px;
     padding-top: 4rem;
 }
 
 .hero__img {
+    height: 100%;
     max-width: 100%;
 }
 
