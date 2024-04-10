@@ -3,24 +3,9 @@ import './style.css';
 import FooterLinkLogo from '../../assets/images/footer-link-img.png';
 import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
-import SubtitleFooterList from '../FooterSubtitleList/SubtitleLinkContent';
-import TextFooterList from '../FooterTextList/TextFooterContent';
 import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
-import textFooterListItems from '../FooterTextList/TextFooterListItems';
 import { Link } from 'gatsby';
-
-const thirdBlockTextFooterList = [
-    { id: 1, text: 'Terms of Use', classNames: 'footer__list-text' },
-    { id: 2, text: 'Privacy Policy', classNames: 'footer__list-text' },
-    { id: 3, text: 'Cookie Policy', classNames: 'footer__list-lastText' },
-];
-
-const fourthBlockTextFooterList = [
-    { id: 1, text: '297 NV-207 Stateline, NV 89449 USA', classNames: 'footer__list-text' },
-    { id: 2, text: '+1 310-388-9334', classNames: 'footer__list-text' },
-    { id: 3, text: 'support@diligences.com', classNames: 'footer__list-lastText' },
-];
 
 const Footer = () => {
     return (
@@ -47,27 +32,40 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="footer__second-block">
-                            <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
-                            {textFooterListItems.map((el) => (
-                                <TextFooterList
-                                    key={el.id}
-                                    text={el.text}
-                                    classNames={el.classNames}
-                                    wrapFirstWordInStrong={true}
-                                />
-                            ))}
+                            <p className="footer__list-subtitleLink">
+                                <a href="">Diligences family</a>
+                            </p>
+                            <p className="footer__list-text">
+                                <strong>Duefocus</strong>. Time tracking
+                            </p>
+                            <p className="footer__list-text">
+                                <strong>Duecode</strong>. Engineering metrics
+                            </p>
+                            <p className="footer__list-text">
+                                <strong>Duerank</strong>. Global developers leaderboard
+                            </p>
+                            <p className="footer__list-text">
+                                <strong>Duelearn</strong>. Writing better code
+                            </p>
+                            <p className="footer__list-lastText">
+                                <strong>Duetask</strong>. Set realistic estimates
+                            </p>
                         </div>
                         <div className="footer__third-block">
-                            <SubtitleFooterList text={'ABOUT'} classNames={'footer__list-subtitleLink'} />
-                            {thirdBlockTextFooterList.map((el) => (
-                                <TextFooterList key={el.id} text={el.text} classNames={el.classNames} />
-                            ))}
+                            <p className="footer__list-subtitleLink">
+                                <a href="">About</a>
+                            </p>
+                            <p className="footer__list-text">Terms of Use</p>
+                            <p className="footer__list-text">Privacy Policy</p>
+                            <p className="footer__list-lastText">Cookie Policy</p>
                         </div>
                         <div className="footer__fourth-block">
-                            <SubtitleFooterList text={'CONTACT US'} classNames={'footer__list-subtitleLink'} />
-                            {fourthBlockTextFooterList.map((el) => (
-                                <TextFooterList key={el.id} text={el.text} classNames={el.classNames} />
-                            ))}
+                            <p className="footer__list-subtitleLink">
+                                <a href="">Contact us</a>
+                            </p>
+                            <p className="footer__list-text">297 NV-207 Stateline, NV 89449 USA</p>
+                            <p className="footer__list-text">+1 310-388-9334</p>
+                            <p className="footer__list-lastText">support@diligences.com</p>
                             <div className="footer__lastBlock-images">
                                 <div className="lastBlock__first-img">
                                     <Link to="#!" target={'_blank'}>

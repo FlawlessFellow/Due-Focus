@@ -18,11 +18,11 @@
 
 .first__block-text {
     font-family: var(--third-family);
-    max-width: 9.375rem;
-    padding-top: 2.5rem;
+    max-width: 150px;
+    margin-top: 2.5rem;
     font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 178%;
+    font-size: 16px;
+    line-height: 1.75;
     color: #fff;
 }
 
@@ -35,6 +35,37 @@
 .first__block-images {
     width: 1.875rem;
     height: 1.875rem;
+}
+
+.footer__list-subtitleLink {
+    font-family: var(--third-family);
+    margin-bottom: 3.125rem;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 129%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+}
+
+.footer__list-text {
+    font-family: var(--third-family);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 120%;
+    letter-spacing: 0.13em;
+    color: #fff;
+}
+
+.footer__list-lastText {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 120%;
+    letter-spacing: 0.13em;
+    color: #fff;
 }
 
 .footer__lastBlock-images {
