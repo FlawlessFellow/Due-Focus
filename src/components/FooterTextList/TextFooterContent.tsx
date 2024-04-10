@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import './style.css';
 
 interface TextFooterListProps {
+    id?: number;
     text: string;
     classNames: string;
     wrapFirstWordInStrong?: boolean;

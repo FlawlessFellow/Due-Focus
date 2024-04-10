@@ -11,15 +11,15 @@ import textFooterListItems from '../FooterTextList/TextFooterListItems';
 import { Link } from 'gatsby';
 
 const thirdBlockTextFooterList = [
-    { text: 'Terms of Use', classNames: 'footer__list-text' },
-    { text: 'Privacy Policy', classNames: 'footer__list-text' },
-    { text: 'Cookie Policy', classNames: 'footer__list-lastText' },
+    { id: 1, text: 'Terms of Use', classNames: 'footer__list-text' },
+    { id: 2, text: 'Privacy Policy', classNames: 'footer__list-text' },
+    { id: 3, text: 'Cookie Policy', classNames: 'footer__list-lastText' },
 ];
 
 const fourthBlockTextFooterList = [
-    { text: '297 NV-207 Stateline, NV 89449 USA', classNames: 'footer__list-text' },
-    { text: '+1 310-388-9334', classNames: 'footer__list-text' },
-    { text: 'support@diligences.com', classNames: 'footer__list-lastText' },
+    { id: 1, text: '297 NV-207 Stateline, NV 89449 USA', classNames: 'footer__list-text' },
+    { id: 2, text: '+1 310-388-9334', classNames: 'footer__list-text' },
+    { id: 3, text: 'support@diligences.com', classNames: 'footer__list-lastText' },
 ];
 
 const Footer = () => {
@@ -48,9 +48,9 @@ const Footer = () => {
                         </div>
                         <div className="footer__second-block">
                             <SubtitleFooterList text={'Diligences family'} classNames={'footer__list-subtitleLink'} />
-                            {textFooterListItems.map((el, index: number) => (
+                            {textFooterListItems.map((el) => (
                                 <TextFooterList
-                                    key={index}
+                                    key={el.id}
                                     text={el.text}
                                     classNames={el.classNames}
                                     wrapFirstWordInStrong={true}
@@ -59,14 +59,14 @@ const Footer = () => {
                         </div>
                         <div className="footer__third-block">
                             <SubtitleFooterList text={'ABOUT'} classNames={'footer__list-subtitleLink'} />
-                            {thirdBlockTextFooterList.map((items, index) => (
-                                <TextFooterList key={index} text={items.text} classNames={items.classNames} />
+                            {thirdBlockTextFooterList.map((el) => (
+                                <TextFooterList key={el.id} text={el.text} classNames={el.classNames} />
                             ))}
                         </div>
                         <div className="footer__fourth-block">
                             <SubtitleFooterList text={'CONTACT US'} classNames={'footer__list-subtitleLink'} />
-                            {fourthBlockTextFooterList.map((items, index) => (
-                                <TextFooterList key={index} text={items.text} classNames={items.classNames} />
+                            {fourthBlockTextFooterList.map((el) => (
+                                <TextFooterList key={el.id} text={el.text} classNames={el.classNames} />
                             ))}
                             <div className="footer__lastBlock-images">
                                 <div className="lastBlock__first-img">
