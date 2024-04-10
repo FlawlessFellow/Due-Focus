@@ -80,7 +80,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="footer__bottom-border"></div>
+                    <div className="border__container">
+                        <div className="footer__bottom-border"></div>
+                    </div>
                     <p className="footer-copyright">© 2022 Duefocus.com., all rights reserved.</p>
                 </div>
             </div>
