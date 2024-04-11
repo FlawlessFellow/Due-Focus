@@ -3,43 +3,43 @@
 }
 
 .footer__wrapper {
-    padding: 5rem 0 3.125rem;
+    padding: 80px 0 50px;
 }
 
 .footer__content {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 3.5rem;
+    padding-bottom: 56px;
 }
 
 .footer__first-block {
-    margin-top: -1.25rem;
+    margin-top: -20px;
 }
 
 .first__block-text {
     font-family: var(--third-family);
     max-width: 150px;
-    margin-top: 2.5rem;
+    margin-top: 40px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.75;
     color: #fff;
 }
 
 .first__block-imagesWrapper {
     display: flex;
-    column-gap: 0.625rem;
-    margin-top: 3.75rem;
+    column-gap: 10px;
+    margin-top: 60px;
 }
 
 .first__block-images {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 30px;
+    height: 30px;
 }
 
 .footer__list-subtitleLink {
     font-family: var(--third-family);
-    margin-bottom: 3.125rem;
+    margin-bottom: 50px;
     font-weight: 400;
     font-size: 1.0625rem;
     line-height: 129%;
@@ -51,7 +51,7 @@
 
 .footer__list-text {
     font-family: var(--third-family);
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 120%;
@@ -70,8 +70,8 @@
 
 .footer__lastBlock-images {
     display: flex;
-    margin-top: 2.5rem;
-    column-gap: 0.625rem;
+    margin-top: 40px;
+    column-gap: 10px;
 }
 
 .border__container {
@@ -80,7 +80,7 @@
 }
 
 .footer__bottom-border {
-    margin: 0 auto 2.625rem;
+    margin: 0 auto 42px;
     border-top: 1px solid rgba(168, 168, 168, 0.3);
     max-width: 100%;
     height: 1px;
@@ -117,7 +117,7 @@
 @media screen and (max-width: 1025px) {
     .footer__content {
         flex-direction: column;
-        padding-bottom: 1.625rem; /*26px*/
+        padding-bottom: 26px;
     }
     .footer__first-block {
         display: flex;
@@ -126,27 +126,27 @@
     }
     .first__block-text {
         max-width: none;
-        margin-top: 0.75rem;
+        margin-top: 12px;
     }
     .footer__second-block {
-        margin-top: 2.375rem; /*38px*/
+        margin-top: 38px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .footer__third-block {
-        margin-top: 2.375rem; /*38px*/
+        margin-top: 38px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .footer__fourth-block {
-        margin-top: 1.625rem; /*26px*/
+        margin-top: 26px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .footer__list-lastText {
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
     }
 }

@@ -52,8 +52,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 7.5rem;
-    height: 3.4375rem;
+    width: 120px;
+    height: 55px;
     background-color: #f0f0f0;
     display: none;
     text-align: center;
@@ -72,18 +72,18 @@
 
 .header__nav-actions {
     width: 31%;
-    margin-left: 3.125rem;
+    margin-left: 50px;
     display: flex;
     justify-content: flex-end;
-    column-gap: 0.9375rem;
+    column-gap: 15px;
     align-items: center;
 }
 
 .header__nav-greyBtn {
     border: 2px solid #a0abba;
-    border-radius: 0.25rem;
-    width: 7.5rem;
-    height: 3rem;
+    border-radius: 4px;
+    width: 120px;
+    height: 48px;
     text-align: center;
     font-family: var(--first-family);
     font-size: 1rem;

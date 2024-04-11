@@ -7,15 +7,15 @@
 }
 
 .top__block-img {
-    margin: 4.46875rem 0 1.875rem;
+    margin: 71.5px 0 30px;
 }
 
 .link__panel-blueBtn {
-    width: 20rem;
-    height: 4.5rem;
+    width: 320px;
+    height: 72px;
     border: none;
-    border-radius: 0.25rem;
-    margin-bottom: 4.46875rem;
+    border-radius: 4px;
+    margin-bottom: 71.5px;
     font-family: var(--first-family);
     font-size: 1.25rem;
     font-weight: 700;
@@ -30,7 +30,7 @@
 }
 
 .link__panel-listBlock {
-    padding: 1.5625rem 0;
+    padding: 25px 0;
 }
 
 .link__panel-list {
@@ -42,7 +42,7 @@
     display: flex;
 }
 
-@media (max-width: 56.25rem) /* 900px */ {
+@media (max-width: 900px) {
     .adaptive__container {
         padding: 0 25px !important;
     }

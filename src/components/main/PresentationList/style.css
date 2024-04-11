@@ -17,28 +17,28 @@
     font-size: 1.5rem;
     line-height: 150%;
     color: #2b323e;
-    margin-top: 1.25rem; /*20px*/
+    margin-top: 20px;
 }
 
 .item__text {
     font-family: var(--second-family);
-    margin-bottom: 1rem; /*16px*/
+    margin-bottom: 16px;
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 150%;
     color: #73787c;
-    max-width: 19.375rem; /*310px*/
+    max-width: 310px;
 }
 
 .presentation__item-list {
-    margin: 3.125rem; /*50px*/
+    margin: 50px;
     display: flex;
     justify-content: center;
 }
 
 .presentation__item-list img {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 88px;
+    height: 88px;
     object-fit: cover;
 }
 
@@ -48,7 +48,7 @@
     }
 }
 
-@media (max-width: 56.25rem) /* 900px */ {
+@media (max-width: 900px) {
     .presentation__list-wrapper {
         margin: 0 auto;
     }

@@ -1,15 +1,15 @@
 .management {
-    margin-bottom: 10.3125rem;
+    margin-bottom: 165px;
 }
 
 .management__wrapper {
-    padding-top: 6.25rem;
+    padding-top: 100px;
 }
 
 .management__dual-block {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
-    grid-gap: 2.9375rem; /* Расстояние между блоками */
+    grid-gap: 47px; 
 }
 
 .management__leftBlock-img {
@@ -44,9 +44,15 @@
     }
 }
 
-@media (max-width: 56.25rem) /*900px*/ {
+@media screen and (max-width: 1150px) {
+    .management__wrapper {
+        padding-top: 52px;
+    }
+}
+
+@media (max-width: 900px) {
     .management {
-        margin-bottom: 2.3125rem;
+        margin-bottom: 37px;
     }
     .management__dual-block {
         display: flex;

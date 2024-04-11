@@ -1,6 +1,6 @@
 .presentation__title {
-    max-width: 55.375rem;
-    margin: 0 auto 8.25rem;
+    max-width: 886px;
+    margin: 0 auto 132px;
     font-family: var(--first-family);
     font-weight: 700;
     font-size: 3rem;
@@ -10,17 +10,17 @@
 }
 
 .management__title {
-    margin: 0 auto 5.9375rem;
+    margin: 0 auto 95px;
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 3.25rem;
+    font-size: 52px;
     line-height: 120%;
     text-align: center;
     color: #2b323e;
 }
 
 .timetracking__title {
-    margin: 0 auto 6.25rem;
+    margin: 0 auto 100px;
     font-family: var(--first-family);
     font-weight: 700;
     font-size: 3.25rem;

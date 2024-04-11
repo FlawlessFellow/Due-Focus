@@ -22,7 +22,7 @@
 .new__card-stars-wrapper {
     display: flex;
     align-items: center;
-    margin: auto 0 1.25rem 3.5rem;
+    margin: auto 0 20px 56px;
 }
 
 .new__card-stars {
@@ -31,20 +31,20 @@
 }
 
 .card__specialist-name {
-    margin-left: 4rem;
-    margin-bottom: 0.55rem;
+    margin-left: 64px;
+    margin-bottom: 8.8px;
     font-family: var(--second-family);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 120%;
     color: #2b323e;
 }
 
 .card__specialist-position {
-    margin-left: 4rem;
+    margin-left: 64px;
     font-family: var(--first-family);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 150%;
     color: #73787c;
 }
@@ -54,15 +54,15 @@
         min-height: 400px;
     }
     .new__card-text {
-        font-size: 14px;
+        font-size: 0.875rem; /* 14px */
     }
     .new__card-stars-wrapper {
-        margin: auto 0 1.25rem 5rem;
+        margin: auto 0 20px 80px;
     }
     .card__specialist-name {
-        margin-left: 5rem;
+        margin-left: 80px;
     }
     .card__specialist-position {
-        margin-left: 5rem;
+        margin-left: 80px;
     }
 }

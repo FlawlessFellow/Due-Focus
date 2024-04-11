@@ -1,5 +1,5 @@
 .get__started-section {
-    padding: 4.375rem 0;
+    padding: 70px 0;
     background-color: #e9f5ff;
 }
 
@@ -10,20 +10,20 @@
 }
 
 .started__items {
-    min-height: 7.5rem;
+    min-height: 120px;
     display: flex;
 }
 
 .started__logo {
     display: flex;
-    margin-right: 2.5rem;
+    margin-right: 40px;
 }
 
 .started__content {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 3.75rem;
+    padding-left: 60px;
     border-left: 1px solid #d8dce3;
 }
 
@@ -44,13 +44,13 @@
     color: #212529;
 }
 
-@media (max-width: 56.25rem) {
+@media (max-width: 900px) {
     .started__wrapper {
         display: flex;
         flex-direction: column;
     }
     .started__link {
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
     }
     .started__button {
         display: flex;

@@ -1,9 +1,9 @@
 /* HEADER BLUE BUTTON */
 .header__nav-blueBtn {
-    width: 11.25rem;
-    height: 3rem;
+    width: 180px;
+    height: 48px;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     font-family: var(--first-family);
     font-size: 1rem;
     font-weight: 700;
@@ -22,10 +22,10 @@
 /* HERO BLUE BUTTON */
 .hero__blue-btn {
     width: 100%;
-    max-width: 27.5rem;
-    height: 4.5rem;
+    max-width: 440px;
+    height: 72px;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     font-family: var(--first-family);
     font-size: 1.25rem;
     font-weight: 700;
