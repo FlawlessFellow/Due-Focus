@@ -52,5 +52,8 @@ a {
 } */
 
 img {
-    vertical-align: top;
+    vertical-align: middle;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }

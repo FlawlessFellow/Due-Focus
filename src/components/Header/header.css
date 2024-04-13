@@ -1,6 +1,5 @@
 #header {
     width: 100%;
-    background-color: #f2f9ff;
     z-index: 1000;
     position: fixed;
     top: 0;
@@ -151,10 +150,13 @@
     transform: rotate(45deg) translate(0, 50%);
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1435px) {
     .header__nav-logo {
-        max-width: 156px;
+        width: 156px;
     }
+}
+
+@media (max-width: 1290px) {
     .header__burger {
         display: flex;
     }
@@ -164,6 +166,12 @@
     }
     .header__nav-actions {
         display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .header__nav-logo {
+        width: 165px;
     }
 }
 

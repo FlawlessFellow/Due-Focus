@@ -18,15 +18,15 @@ const MainSection: FC = () => {
     return (
         <>
             <Header />
-            {/* <Hero />
-            <Presentation />
-            <Management />
-            <GetStarted />
-            <TimeTracking />
-            <DataSecurity />
-            <Recommendation />
-            <LinkPanel />
-            <Footer /> */}
+            <Hero />
+            {/* <Presentation /> */}
+            {/* <Management /> */}
+            {/* <GetStarted /> */}
+            {/* <TimeTracking /> */}
+            {/* <DataSecurity /> */}
+            {/* <Recommendation /> */}
+            {/* <LinkPanel /> */}
+            {/* <Footer /> */}
         </>
     );
 };
