@@ -19,7 +19,7 @@ const MainSection: FC = () => {
         <>
             <Header />
             <Hero />
-            {/* <Presentation /> */}
+            <Presentation />
             {/* <Management /> */}
             {/* <GetStarted /> */}
             {/* <TimeTracking /> */}

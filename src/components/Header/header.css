@@ -1,4 +1,7 @@
 #header {
+    display: flex;
+    align-items: center;
+    height: 120px;
     width: 100%;
     z-index: 1000;
     position: fixed;
@@ -18,7 +21,6 @@
 }
 
 .header__wrapper {
-    height: 120px;
     max-width: 1470px;
     width: 80%;
     margin: 0 auto;
