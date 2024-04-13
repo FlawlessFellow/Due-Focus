@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
         <header id="header" ref={headerRef}>
-            <div className="header__wrapper container">
+            <div className="header__wrapper">
                 <nav className="header__nav">
                     <div className="header__nav-links">
                         <Link to="#!" target={'_blank'}>

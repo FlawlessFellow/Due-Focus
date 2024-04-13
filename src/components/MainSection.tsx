@@ -18,7 +18,7 @@ const MainSection: FC = () => {
     return (
         <>
             <Header />
-            <Hero />
+            {/* <Hero />
             <Presentation />
             <Management />
             <GetStarted />
@@ -26,7 +26,7 @@ const MainSection: FC = () => {
             <DataSecurity />
             <Recommendation />
             <LinkPanel />
-            <Footer />
+            <Footer /> */}
         </>
     );
 };
