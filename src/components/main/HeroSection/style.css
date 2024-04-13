@@ -100,13 +100,22 @@
 
 @media (max-width: 900px) {
     .hero__left-title {
-        width: 80%;
         line-height: 51px;
         font-size: 48px;
     }
     .hero__right-block {
         padding-top: 48px;
-        min-width: 40%;
+        min-width: 50%;
         padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .hero__left-title {
+        font-size: 42px;
+        padding-right: 10px;
+    }
+    .hero__right-block {
+        min-width: 40%;
     }
 }

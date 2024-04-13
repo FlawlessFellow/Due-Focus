@@ -7,7 +7,7 @@ import BlueBtn from '../../BlueBtn/BlueBtn';
 const GetStarted = () => {
     return (
         <section className="get__started-section">
-            <div className="container">
+            <div className="get__started-container">
                 <div className="started__wrapper">
                     <div className="started__items">
                         <div className="started__logo">
