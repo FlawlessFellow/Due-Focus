@@ -10,13 +10,15 @@
 }
 
 .management__title {
-    margin: 0 auto 95px;
-    font-family: var(--first-family);
-    font-weight: 700;
+    min-height: 64px;
+    font-family: Open Sans, sans-serif;
     font-size: 52px;
-    line-height: 120%;
-    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
     color: #2b323e;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 56px;
 }
 
 .timetracking__title {

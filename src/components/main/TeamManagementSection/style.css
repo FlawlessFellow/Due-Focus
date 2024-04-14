@@ -1,68 +1,76 @@
 .management {
-    margin-bottom: 165px;
+    padding: 50px 0 0;
+    width: 80%;
+    max-width: 1470px;
+    margin: 0 auto;
 }
 
-.management__wrapper {
+/* .management__wrapper {
     padding-top: 100px;
-}
+} */
 
 .management__dual-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
-    grid-gap: 47px;
+    display: flex;
 }
 
 .management__left-block {
-    background-image: url('../../../assets/images/management-background-iamge.png');
+    background-image: url('../../../assets/images/management__back.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    height: 600px;
+    width: 50%;
 }
 
 .management__leftBlock-img {
-    width: 100%;
-    /* margin-left: 4%; */
+    max-width: 92%;
+    margin-left: 4%;
     margin-top: -2%;
+    box-shadow: 5px 1px 24px 0 hsla(0, 2%, 40%, 0.6509803921568628);
 }
 
 .management__right-block {
-    display: flex;
-    flex-direction: column;
-}
-
-.management__list {
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
+    margin-left: 2%;
+    width: 50%;
 }
 
 @media screen and (max-width: 1285px) {
     .management__dual-block {
-        display: flex;
         flex-wrap: wrap;
         gap: 0;
     }
     .management__left-block {
         width: 100%;
+        background-size: contain;
     }
     .management__right-block {
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 1150px) {
-    .management__wrapper {
-        padding-top: 52px;
+@media screen and (max-width: 800px) {
+    .management__title {
+        font-size: 42px;
+        margin-top: 20px;
+    }
+    .management__left-block {
+        height: 450px;
     }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 560px) {
     .management {
-        margin-bottom: 37px;
+        width: 90%;
     }
-    .management__dual-block {
-        display: flex;
-        flex-direction: column;
+    .management__title {
+        font-size: 38px;
+    }
+    .management__left-block {
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .management__item-desc {
+        font-size: 19px !important;
     }
 }

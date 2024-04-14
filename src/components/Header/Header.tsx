@@ -43,7 +43,7 @@ const Header = () => {
                         <button type="button" className="header__nav-greyBtn">
                             Log In
                         </button>
-                        <BlueBtn text={'Sign In'} classNames={'header__nav-blueBtn'} onClick={() => null} />
+                        <BlueBtn text={'Sign Up'} classNames={'header__nav-blueBtn'} onClick={() => null} />
                     </div>
                 </nav>
             </div>
