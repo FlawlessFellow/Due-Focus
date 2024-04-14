@@ -55,10 +55,28 @@
     .presentation__list {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+@media (max-width: 785px) {
+    .presentation__title {
+        font-size: 32px;
+        margin-top: 50px;
+    }
     .item__desc {
-        font-size: 1.25rem;
+        font-size: 21px;
     }
     .item__text {
-        font-size: 1.125rem;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 485px) {
+    .presentation__list {
+        display: flex;
+        flex-direction: column;
+    }
+    .presentation__item-list {
+        width: 100%;
+        margin: 12px;
     }
 }

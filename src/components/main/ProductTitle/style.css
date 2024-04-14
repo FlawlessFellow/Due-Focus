@@ -1,12 +1,12 @@
 .presentation__title {
     max-width: 886px;
-    margin: 0 auto 132px;
     font-family: var(--first-family);
     font-weight: 700;
     font-size: 3rem;
     line-height: 120%;
     text-align: center;
     color: #2b323e;
+    margin: 100px 0 42px;
 }
 
 .management__title {

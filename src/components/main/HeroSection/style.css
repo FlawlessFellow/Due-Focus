@@ -220,6 +220,7 @@
         min-width: 90%;
     }
     .hero__left-block {
+        min-width: 135px;
         margin-right: 30px;
     }
     .hero__left-title {
