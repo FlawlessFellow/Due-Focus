@@ -21,49 +21,47 @@ const TimeTracking = () => {
 
     return (
         <section className="time__tracking">
-            <div className="container">
-                <div className="time__tracking-wrapper">
-                    <ProductTitle text={'Time Tracking Software That Suits Everyone'} classNames={'timetracking__title'} />
-                    <div className="content__blocks">
-                        <div className="content__items-left">
-                            <ul className="management__list">
-                                {TimeTrackingItems.map((el, index: number) => (
-                                    <ManagementItemList
-                                        key={index}
-                                        itemDesc={el.itemDesc}
-                                        itemText={el.itemText}
-                                        classNames={'management__item-list'}
-                                        handleClick={() => handleItemClick(el.id)}
-                                        textVisible={selectedItemId === el.id}
-                                    />
-                                ))}
-                            </ul>
-                        </div>
-                        <RecommendationCard
-                            cardText={
-                                '"Efficient productivity management in quality assurance enables you to save a ton of money on development. And that’s exactly what we get with DueFocus. This practical tool gives us a clear view of our KPIs and workflows. We get concise performance statistics that enables us to improve our project planning and establish transparent communication with clients."'
-                            }
-                            cardWrapperClassName="card__wrapper"
-                            cardTextClassName="card__text"
-                            starsClassName="stars"
-                            stars={[true, true, true, true, false]}
-                        >
-                            <div className="card__items-wrapper">
-                                <img src={SpecialistImg} alt="specialist image" className="specialist__img" />
-                                <div className="card__items">
-                                    <CardSpecialistName text="Victoria V." classNames="specialist__name" />
-                                    <CardSpecialistPosition
-                                        text={
-                                            <>
-                                                <span>Lead of Testing Department at</span> <a href="#!">TestFort</a>
-                                            </>
-                                        }
-                                        classNames="specialist__position"
-                                    />
-                                </div>
-                            </div>
-                        </RecommendationCard>
+            <div className="time__tracking-wrapper">
+                <ProductTitle text={'Time Tracking Software That Suits Everyone'} classNames={'timetracking__title'} />
+                <div className="content__blocks">
+                    <div className="content__items-left">
+                        <ul className="management__list">
+                            {TimeTrackingItems.map((el, index: number) => (
+                                <ManagementItemList
+                                    key={index}
+                                    itemDesc={el.itemDesc}
+                                    itemText={el.itemText}
+                                    classNames={'management__item-list'}
+                                    handleClick={() => handleItemClick(el.id)}
+                                    textVisible={selectedItemId === el.id}
+                                />
+                            ))}
+                        </ul>
                     </div>
+                    <RecommendationCard
+                        cardText={
+                            '"Efficient productivity management in quality assurance enables you to save a ton of money on development. And that’s exactly what we get with DueFocus. This practical tool gives us a clear view of our KPIs and workflows. We get concise performance statistics that enables us to improve our project planning and establish transparent communication with clients."'
+                        }
+                        cardWrapperClassName="card__wrapper"
+                        cardTextClassName="card__text"
+                        starsClassName="stars"
+                        stars={[true, true, true, true, false]}
+                    >
+                        <div className="card__items-wrapper">
+                            <img src={SpecialistImg} alt="specialist image" className="specialist__img" />
+                            <div className="card__items">
+                                <CardSpecialistName text="Victoria V." classNames="specialist__name" />
+                                <CardSpecialistPosition
+                                    text={
+                                        <>
+                                            <span>Lead of Testing Department at</span> <a href="#!">TestFort</a>
+                                        </>
+                                    }
+                                    classNames="specialist__position"
+                                />
+                            </div>
+                        </div>
+                    </RecommendationCard>
                 </div>
             </div>
         </section>

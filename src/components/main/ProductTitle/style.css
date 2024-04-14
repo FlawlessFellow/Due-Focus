@@ -22,11 +22,11 @@
 }
 
 .timetracking__title {
-    margin: 0 auto 100px;
+    margin-bottom: 100px;
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 3.25rem;
-    line-height: 120%;
+    font-size: 52px;
+    line-height: 1.2;
     text-align: center;
     color: #2b323e;
 }

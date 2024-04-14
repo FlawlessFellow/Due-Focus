@@ -24,14 +24,21 @@ const RecommendationCard: FC<Props> = ({
 }) => {
     return (
         <div className={cardWrapperClassName}>
-            <p className={cardTextClassName}>{cardText}</p>
-            <div className={starsClassName}>
-                {stars &&
-                    stars.map((star, index) => (
-                        <img key={index} src={star ? CardStars : CardEmptyStar} alt="star img" className={starsImgClassName} />
-                    ))}
+            <div>
+                <p className={cardTextClassName}>{cardText}</p>
+                <div className={starsClassName}>
+                    {stars &&
+                        stars.map((star, index) => (
+                            <img
+                                key={index}
+                                src={star ? CardStars : CardEmptyStar}
+                                alt="star img"
+                                className={starsImgClassName}
+                            />
+                        ))}
+                </div>
+                {children}
             </div>
-            {children}
         </div>
     );
 };

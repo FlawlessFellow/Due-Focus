@@ -1,61 +1,67 @@
 .time__tracking {
-    padding-top: 120px;
-    margin-bottom: 155px;
+    min-height: 900px;
+    padding: 120px 0 0;
+    width: 80%;
+    max-width: 1470px;
+    margin: 0 auto;
+}
+
+.time__tracking-wrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
 }
 
 .content__blocks {
     display: flex;
-    column-gap: 80px;
 }
 
 .content__items-left {
-    display: flex;
     width: 50%;
 }
 
 .card__wrapper {
     min-height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     width: 50%;
+    margin-left: 80px;
     box-shadow: 2px 1px 24px 0 #eaeaea;
 }
 
 .card__text {
-    margin: 41.5px auto 0;
+    margin: 0 auto;
     max-width: 80%;
-    font-family: var(--second-family);
+    font-size: 20px;
     font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 150%;
+    font-family: Montserrat, sans-serif;
     color: #73787c;
 }
 
 .stars {
     display: flex;
     height: 30px;
-    margin: 20px 0 0 64px;
-    gap: 6px;
+    margin-left: 60px;
+    margin-top: 20px;
 }
 
 .card__items-wrapper {
     display: flex;
+    height: 83px;
     align-items: center;
     margin-top: 20px;
 }
 
 .card__items {
-    min-height: 83px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-left: 30px;
 }
 
-@media (max-width: 1150px) {
-    .time__tracking {
-        margin-bottom: 59px;
-    }
+@media screen and (max-width: 1280px) {
     .content__blocks {
-        display: flex;
         flex-wrap: wrap;
     }
     .content__items-left {
@@ -64,5 +70,36 @@
     .card__wrapper {
         width: 100%;
         margin-top: 70px;
+        margin-bottom: 70px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card__wrapper {
+        min-height: 370px;
+    }
+    .card__text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .timetracking__title {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .time__tracking {
+        max-width: 90%;
+        padding-top: 190px;
+    }
+    .stars {
+        margin-left: 40px;
+    }
+    .specialist__img {
+        max-width: 15%;
+        margin-left: 40px;
     }
 }

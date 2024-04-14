@@ -1,23 +1,20 @@
 .specialist__name {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    font-family: Montserrat, sans-serif;
     display: block;
-    margin-bottom: 7.75px;
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 120%;
     color: #2b323e;
+    font-weight: 700;
 }
 
 .specialist__position {
     font-family: var(--first-family);
-    font-weight: 400;
-    font-size: 0.9375rem;
-    line-height: 150%;
+    font-size: 15px;
     color: #73787c;
 }
 
 .specialist__img {
-    width: 62px;
-    height: 62px;
+    max-width: 9%;
     margin-left: 60px;
 }
