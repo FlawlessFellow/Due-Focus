@@ -1,21 +1,22 @@
 .get__started-section {
-    padding: 70px 0;
-    background-color: #e9f5ff;
+    margin-top: 40px;
+    background-color: #f2f9ff;
 }
 
 .get__started-container {
-    margin: 0 auto;
-    padding: 0 100px;
+    background-color: #e9f5ff;
+    padding: 70px 15px;
 }
 
 .started__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .started__items {
-    min-height: 120px;
     display: flex;
 }
 
@@ -25,6 +26,7 @@
 }
 
 .started__content {
+    min-height: 120px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -35,51 +37,46 @@
 .started__desc {
     font-family: var(--first-family);
     font-weight: 700;
-    font-size: 2.375rem;
-    line-height: 150%;
+    font-size: 38px;
     color: #212529;
 }
 
-.started__link a {
-    text-decoration: none;
+.started__link {
+    margin-bottom: 16px;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 150%;
+    font-size: 20px;
     color: #212529;
 }
 
-@media (max-width: 1085px) {
+@media screen and (max-width: 1024px) {
     .started__wrapper {
-        display: flex;
         flex-direction: column;
     }
 }
 
-@media (max-width: 900px) {
-    .started__link {
-        margin-bottom: 16px;
-    }
-    .started__button {
-        display: flex;
-    }
-}
-
-@media (max-width: 885px) {
+@media screen and (max-width: 765px) {
     .started__items {
         flex-direction: column;
-        align-items: center;
     }
     .started__logo {
-        margin: 0;
+        max-width: 120px;
+        margin: auto;
     }
     .started__content {
-        margin-top: 40px;
-        padding: 30px 0 0;
+        padding-left: 0;
+        margin-left: 0;
         border-left: 0;
+        margin-top: 40px;
+        padding-top: 30px;
         border-top: 1px solid #d8dce3;
-    }
-    .started__link {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .getStarted__blue-btn {
+        height: 60px;
+        width: 270px;
     }
 }
