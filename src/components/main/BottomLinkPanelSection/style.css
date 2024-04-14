@@ -1,0 +1,32 @@
+.bottom__link-panel {
+    background-color: #488eff;
+}
+
+.bottom__linkPanel-container {
+    width: 98%;
+    max-width: 1280px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
+}
+
+.bottom__linkPanel-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.bottomPanel-linkItem {
+    display: block;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+@media screen and (max-width: 767px) {
+    .bottom__link-panel {
+        display: none;
+    }
+}
