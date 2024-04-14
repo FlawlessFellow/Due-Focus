@@ -24,7 +24,7 @@ const MainSection: FC = () => {
             <GetStarted />
             <TimeTracking />
             <DataSecurity />
-            {/* <Recommendation /> */}
+            <Recommendation />
             {/* <LinkPanel /> */}
             {/* <Footer /> */}
         </>

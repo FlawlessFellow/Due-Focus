@@ -8,16 +8,12 @@ import RecommendationSlider from '../Slider/SlickSlider';
 const Recommendation = () => {
     return (
         <section className="recommendation__section">
-            <div className="recommendation__wrapper">
-                <div className="recommendation__desc">
-                    <ProductTitle text={'What Professionals Say'} classNames={'recommendation__title'} />
-                    <Link to="#!" className="recommendation__img-link">
-                        <img src={RecommendationDescImg} alt="product hunt image link" />
-                    </Link>
-                    <p className="recommendation__desc-text">Join the company of successful people</p>
-                </div>
-                <RecommendationSlider />
-            </div>
+            <ProductTitle text={'What Professionals Say'} classNames={'recommendation__title'} />
+            <Link to="#!" className="recommendation__img-link">
+                <img src={RecommendationDescImg} alt="product hunt image link" />
+            </Link>
+            <p className="recommendation__desc-text">Join the company of successful people</p>
+            <RecommendationSlider />
         </section>
     );
 };
