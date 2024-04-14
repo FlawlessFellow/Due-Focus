@@ -1,52 +1,56 @@
 .security__section {
-    margin-bottom: 100px;
+    max-width: 100%;
+    height: 730px;
 }
 
 .security__wrapper {
-    min-height: 730px;
-    display: flex;
-    flex-direction: column;
+    width: 80%;
+    max-width: 1470px;
+    margin: 0 auto;
     justify-content: center;
-    align-items: center;
+    min-height: 730px;
+    flex-direction: column;
+    display: flex;
     background-color: #1991eb;
+    align-items: center;
 }
 
 /* .security__title-wrapper {
 } */
 
 .security__title {
-    margin: 85px 0 100px;
-    font-family: var(--first-family);
-    font-weight: 700;
-    font-size: 2.75rem;
-    line-height: 120%;
-    color: #fff;
-}
-
-.security__content-items {
+    height: 60px;
+    max-width: 578px;
     margin-bottom: 100px;
-    padding-right: 170px;
+    font-family: Open Sans, sans-serif;
+    font-size: 44px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
 }
 
 .security__items-wrapper {
     display: flex;
-}
-
-.left__item-img {
-    margin-right: 58px;
+    margin-bottom: 100px;
 }
 
 .security__section-img {
+    max-width: 46%;
+    margin-right: 58px;
     margin-top: -67px;
 }
 
+.right__item-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .right__item-text {
+    height: 210px;
     max-width: 454px;
-    padding-bottom: 46.5px;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 112%;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 36px;
     color: #fff;
 }
 
@@ -60,7 +64,7 @@
 .right__item-text2 {
     font-family: var(--third-family);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 150%;
     color: #fff;
 }
@@ -74,66 +78,23 @@
     color: #fff;
 }
 
-@media screen and (max-width: 1210px) {
-    .security__content-items {
-        padding-right: 80px;
+.security__arrow-block {
+    justify-content: center;
+    display: flex;
+    margin-top: 16px;
+    margin-left: 170px;
+}
+
+@media screen and (max-width: 1566px) {
+    .security__arrow-block {
+        margin-left: 70px;
     }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
     .security__wrapper {
-        justify-content: inherit;
-    }
-    .security__title {
-        margin-top: 30px;
-        margin-bottom: 150px;
-        font-size: 37px;
-    }
-    .security__content-items {
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
-    .security__items-wrapper {
-        align-items: center;
-        flex-direction: column;
-    }
-    .left__item-img {
-        margin-right: 0;
-    }
-    .right__item-text {
-        height: 210px;
-        margin: 0 auto;
-        padding-bottom: 0;
-        display: flex;
+        width: 90%;
         text-align: center;
-        max-width: 60%;
-        font-size: 16px;
-        line-height: 36px;
-    }
-    .right__item-border {
-        margin: 0 auto 22px;
-        max-width: 90%;
-    }
-    .right__item-text2 {
-        font-size: 12px;
-        text-align: center;
-    }
-    .right__item-text3 {
-        font-size: 12px;
-        opacity: 0.5;
-        text-align: center;
-    }
-}
-
-@media (max-width: 900px) {
-    .security__section .container {
-        position: relative;
-        max-width: 1670px;
-        margin: 0 auto;
-        padding: 0 40px;
-    }
-    .security__section {
-        margin-bottom: 20px;
     }
     .security__title {
         margin-top: 30px;
@@ -141,34 +102,32 @@
         font-size: 37px;
         height: 100px;
     }
-    .security__content-items {
-        margin-top: 100px;
-        margin-bottom: 20px;
-    }
-    .security__content-items {
-        padding: 0;
-    }
     .security__items-wrapper {
+        flex-direction: column;
         align-items: center;
-        text-align: center;
-        flex-direction: column;
+        margin-bottom: 0;
     }
-    .left__item-img {
-        margin: 0;
-    }
-    .right__item-info {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+    .security__section-img {
+        max-width: 70%;
+        margin: 0 auto;
     }
     .right__item-text {
-        max-width: 502px;
-        text-align: center;
-        font-size: 1rem;
-        height: 210px;
-        line-height: 36px;
+        max-width: 60%;
+        margin: 0 auto;
+        font-size: 16px;
     }
     .right__item-text2 {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .security__section {
+        padding-top: 0;
+    }
+    .right__item-text {
+        align-items: center;
+        display: flex;
+        max-width: 85%;
     }
 }
