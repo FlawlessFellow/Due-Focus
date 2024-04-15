@@ -22,7 +22,7 @@ const BottomLinkPanel = () => {
                 <div className="bottom__linkPanel-list">
                     {linkItems.map((item) => (
                         <Link to="#!" target={'_blank'} className="bottomPanel-linkItem">
-                            <img src={item.img} alt={item.alt} />
+                            <img src={item.img} alt={item.alt} className='bottom__linkPanel-img'/>
                         </Link>
                     ))}
                 </div>

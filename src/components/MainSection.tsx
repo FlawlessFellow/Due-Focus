@@ -26,7 +26,7 @@ const MainSection: FC = () => {
             <Recommendation />
             <LinkPanel />
             <BottomLinkPanel />
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 };

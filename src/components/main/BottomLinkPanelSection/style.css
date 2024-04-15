@@ -25,6 +25,10 @@
     padding-right: 6px;
 }
 
+.bottom__linkPanel-img {
+    width: 100%;
+}
+
 @media screen and (max-width: 767px) {
     .bottom__link-panel {
         display: none;
