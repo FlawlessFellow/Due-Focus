@@ -3,9 +3,9 @@ import ProductTitle from '../ProductTitle/ProductTitle';
 import ManagementItemList from '../TeamManagementItemList/ManagementItem';
 import SpecialistImg from './../../../assets/images/time-tracking-personal-img.png';
 import CardSpecialistName from '../RecommendationCardName/CardSpecialistName';
-import CardSpecialistPosition from '../RecommendationCardJobTitle/CardSpecialistPosition';
 import TimeTrackingItems from './timeTrackingItems';
-import RecommendationCard from '../RecommendationCard/RecommendationCard';
+import CardStars from './../../../assets/images/stars.svg';
+import CardEmptyStar from './../../../assets/images/empty-star.svg';
 import './style.css';
 
 const TimeTracking = () => {
@@ -38,30 +38,32 @@ const TimeTracking = () => {
                             ))}
                         </ul>
                     </div>
-                    <RecommendationCard
-                        cardText={
-                            '"Efficient productivity management in quality assurance enables you to save a ton of money on development. And that’s exactly what we get with DueFocus. This practical tool gives us a clear view of our KPIs and workflows. We get concise performance statistics that enables us to improve our project planning and establish transparent communication with clients."'
-                        }
-                        cardWrapperClassName="card__wrapper"
-                        cardTextClassName="card__text"
-                        starsClassName="stars"
-                        stars={[true, true, true, true, false]}
-                    >
-                        <div className="card__items-wrapper">
-                            <img src={SpecialistImg} alt="specialist image" className="specialist__img" />
-                            <div className="card__items">
-                                <CardSpecialistName text="Victoria V." classNames="specialist__name" />
-                                <CardSpecialistPosition
-                                    text={
-                                        <>
-                                            <span>Lead of Testing Department at</span> <a href="#!">TestFort</a>
-                                        </>
-                                    }
-                                    classNames="specialist__position"
-                                />
+                    <div className="time__tracking-cardWrapper">
+                        <div className="time__tracking-itemsWrapper">
+                            <p className="time__tracking-cardText">
+                                "Efficient productivity management in quality assurance enables you to save a ton of money on
+                                development. And that’s exactly what we get with DueFocus. This practical tool gives us a clear
+                                view of our KPIs and workflows. We get concise performance statistics that enables us to improve
+                                our project planning and establish transparent communication with clients."
+                            </p>
+                            <div className="time__tracking-starsWrapper">
+                                <img src={CardStars} className="time__tracking-starImg" alt="card star" />
+                                <img src={CardStars} className="time__tracking-starImg" alt="card star" />
+                                <img src={CardStars} className="time__tracking-starImg" alt="card star" />
+                                <img src={CardStars} className="time__tracking-starImg" alt="card star" />
+                                <img src={CardEmptyStar} alt="empty card star" />
+                            </div>
+                            <div className="time__tracking-cardPersonalInfoWrapper">
+                                <img src={SpecialistImg} alt="#!" className="time__tracking-specialistImg" />
+                                <div className="time__tracking-personalInfoItems">
+                                    <CardSpecialistName text="Victoria V." classNames="time__tracking-specialistName" />
+                                    <span className="time__tracking-specialistPosition">
+                                        Lead of Testing Department at <a href="#!">TestFort</a>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </RecommendationCard>
+                    </div>
                 </div>
             </div>
         </section>

@@ -3,9 +3,8 @@ import './style.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import RecommendationCard from '../RecommendationCard/RecommendationCard';
+// import RecommendationCard from '../RecommendationCard/RecommendationCard';
 import CardSpecialistName from '../RecommendationCardName/CardSpecialistName';
-import CardSpecialistPosition from '../RecommendationCardJobTitle/CardSpecialistPosition';
 
 function SlickSlider() {
     const settings = {
@@ -44,7 +43,7 @@ function SlickSlider() {
     return (
         <div className="slider-container">
             <Slider {...settings}>
-                <RecommendationCard
+                {/* <RecommendationCard
                     cardText="“I'm really happy with this app because this is
                                 something I was looking for at cheap price and
                                 fortunately I found it. The plus is I'm getting features
@@ -141,7 +140,7 @@ function SlickSlider() {
                 >
                     <CardSpecialistName text="- Matthew S." classNames="card__specialist-name" />
                     <CardSpecialistPosition text="Founder of Chromakey.io" classNames="card__specialist-position" />
-                </RecommendationCard>
+                </RecommendationCard> */}
             </Slider>
         </div>
     );

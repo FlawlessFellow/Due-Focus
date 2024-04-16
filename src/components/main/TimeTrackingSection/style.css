@@ -20,44 +20,77 @@
     width: 50%;
 }
 
-.card__wrapper {
+.time__tracking-cardWrapper {
+    width: 50%;
     min-height: 460px;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 50%;
     margin-left: 80px;
+    user-select: none;
     box-shadow: 2px 1px 24px 0 #eaeaea;
 }
 
-.card__text {
+.time__tracking-itemsWrapper {
+    margin-top: 16px;
+}
+
+.time__tracking-cardText {
     margin: 0 auto;
     max-width: 80%;
     font-size: 20px;
     font-weight: 500;
+    line-height: 1.5;
     font-family: Montserrat, sans-serif;
     color: #73787c;
 }
 
-.stars {
-    display: flex;
+.time__tracking-starsWrapper {
     height: 30px;
+    display: flex;
     margin-left: 60px;
     margin-top: 20px;
 }
 
-.card__items-wrapper {
-    display: flex;
+.time__tracking-starImg {
+    margin-right: 6px;
+}
+
+.time__tracking-cardPersonalInfoWrapper {
     height: 83px;
+    display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.card__items {
+.time__tracking-specialistImg {
+    max-width: 9%;
+    margin-left: 60px;
+}
+
+.time__tracking-personalInfoItems {
     margin-left: 30px;
+}
+
+.time__tracking-specialistName {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    font-family: Montserrat, sans-serif;
+    display: block;
+    color: #2b323e;
+    font-weight: 700;
+}
+
+.time__tracking-specialistPosition {
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    color: #73787c;
+}
+
+.time__tracking-specialistPosition a {
+    color: #007bff;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1280px) {
@@ -67,19 +100,28 @@
     .content__items-left {
         width: 100%;
     }
-    .card__wrapper {
+    .time__tracking-cardWrapper {
         width: 100%;
         margin-top: 70px;
         margin-bottom: 70px;
         margin-left: 0;
     }
+    .time__tracking-cardText {
+        font-size: 20px;
+    }
+    .time__tracking-starsWrapper {
+        margin-left: 90px;
+    }
+    .time__tracking-specialistImg {
+        margin-left: 83px;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    .card__wrapper {
+    .time__tracking-cardWrapper {
         min-height: 370px;
     }
-    .card__text {
+    .time__tracking-cardText {
         font-size: 15px;
     }
 }
@@ -95,10 +137,10 @@
         max-width: 90%;
         padding-top: 190px;
     }
-    .stars {
+    .time__tracking-starsWrapper {
         margin-left: 40px;
     }
-    .specialist__img {
+    .time__tracking-specialistImg {
         max-width: 15%;
         margin-left: 40px;
     }
