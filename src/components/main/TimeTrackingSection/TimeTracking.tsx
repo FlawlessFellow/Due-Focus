@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProductTitle from '../ProductTitle/ProductTitle';
 import ManagementItemList from '../TeamManagementItemList/ManagementItem';
 import SpecialistImg from './../../../assets/images/time-tracking-personal-img.png';
-import CardSpecialistName from '../RecommendationCardName/CardSpecialistName';
+import CardSpecialistName from '../CardSpecialistName/CardSpecialistName';
 import TimeTrackingItems from './timeTrackingItems';
 import CardStars from './../../../assets/images/stars.svg';
 import CardEmptyStar from './../../../assets/images/empty-star.svg';
