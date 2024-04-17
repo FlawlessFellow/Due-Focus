@@ -7,6 +7,36 @@ import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
 import { Link } from 'gatsby';
 
+const links = [
+    { id: 1, text: 'Duefocus. Time tracking', href: '#', className: 'footer__link' },
+    { id: 2, text: 'Duecode. Engineering metrics', href: '#', className: 'footer__link' },
+    { id: 3, text: 'Duerank. Global developers leaderboard', href: '#', className: 'footer__link' },
+    { id: 4, text: 'Duelearn. Writing better code', href: '#', className: 'footer__link' },
+    { id: 5, text: 'Duetask. Set realistic estimates', href: '#', className: 'footer__link' },
+];
+
+const footerSecondBlockLinks = links.map((link) => (
+    <p className="footer__list-text" key={link.id}>
+        <Link to={link.href} target={'_blank'} className={link.className}>
+            <strong>{link.text}</strong>
+        </Link>
+    </p>
+));
+
+const navItems = [
+    { id: 1, text: 'Terms of Use', href: '#' },
+    { id: 2, text: 'Privacy Policy', href: '#' },
+    { id: 3, text: 'Cookie Policy', href: '#' },
+];
+
+const footerThirdLinks = navItems.map((link) => (
+    <p className="footer__list-text" key={link.id}>
+        <Link to={link.href} target={'_blank'} className="footer__link">
+            {link.text}
+        </Link>
+    </p>
+));
+
 const Footer = () => {
     return (
         <section className="footer">
@@ -37,49 +67,11 @@ const Footer = () => {
                                     Diligences family
                                 </Link>
                             </p>
-                            <p className="footer__list-text">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    <strong>Duefocus</strong>. Time tracking
-                                </Link>
-                            </p>
-                            <p className="footer__list-text">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    <strong>Duecode</strong>. Engineering metrics
-                                </Link>
-                            </p>
-                            <p className="footer__list-text">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    <strong>Duerank</strong>. Global developers leaderboard
-                                </Link>
-                            </p>
-                            <p className="footer__list-text">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    <strong>Duelearn</strong>. Writing better code
-                                </Link>
-                            </p>
-                            <p className="footer__list-lastText">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    <strong>Duetask</strong>. Set realistic estimates
-                                </Link>
-                            </p>
+                            {footerSecondBlockLinks}
                         </div>
                         <div className="footer__third-block">
                             <p className="footer__list-subtitleLink">About</p>
-                            <p className="footer__list-text">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    Terms of Use
-                                </Link>
-                            </p>
-                            <p className="footer__list-text">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    Privacy Policy
-                                </Link>
-                            </p>
-                            <p className="footer__list-lastText">
-                                <Link to="#!" target={'_blank'} className="footer__link">
-                                    Cookie Policy
-                                </Link>
-                            </p>
+                            {footerThirdLinks}
                         </div>
                         <div className="footer__fourth-block">
                             <p className="footer__list-subtitleLink">Contact us</p>

@@ -11,32 +11,32 @@ import sixthImg from './../../../assets/images/image6.png';
 import './style.css';
 
 const presentationItems = [
-    {
+    {   id: 1,
         imageUrl: firstItemImg,
         itemDesc: 'Multivariate Tracking',
         itemText: 'Track time with one-click, manually or against tasks',
     },
-    {
+    {   id: 2,
         imageUrl: secondImg,
         itemDesc: 'Embedded Task Tracker',
         itemText: 'Track work hours to your tasks and projects in one app',
     },
-    {
+    {   id: 3,
         imageUrl: thirdImg,
         itemDesc: 'Real-time Monitoring',
         itemText: 'Be aware of how your team members spend working time',
     },
-    {
+    {   id: 4,
         imageUrl: fourthImg,
         itemDesc: 'Easy Reporting',
         itemText: 'Send .xls reports to your task management tool, email, etc.',
     },
-    {
+    {   id: 5,
         imageUrl: fifthImg,
         itemDesc: 'Screenshots',
         itemText: 'Monitor performance & employees',
     },
-    {
+    {   id: 6,
         imageUrl: sixthImg,
         itemDesc: 'Stage Mapping',
         itemText: 'Change status and priority of tasks during the time tracking',
@@ -52,8 +52,8 @@ const Presentation = () => {
                 </div>
                 <div className="presentation__list-wrapper">
                     <ul className="presentation__list">
-                        {presentationItems.map((el, index) => (
-                            <PresentationList key={index} imageUrl={el.imageUrl} itemDesc={el.itemDesc} itemText={el.itemText} />
+                        {presentationItems.map((el) => (
+                            <PresentationList key={el.id} imageUrl={el.imageUrl} itemDesc={el.itemDesc} itemText={el.itemText} />
                         ))}
                     </ul>
                 </div>
