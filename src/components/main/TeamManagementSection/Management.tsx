@@ -29,7 +29,7 @@ const Management = () => {
                         <ul className="management__list">
                             {managementItems.map((el, index: number) => (
                                 <ManagementItemList
-                                    key={index}
+                                    key={el.id}
                                     itemDesc={el.itemDesc}
                                     itemText={el.itemText}
                                     classNames={'management__item-list'}
