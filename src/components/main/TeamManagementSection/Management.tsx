@@ -27,7 +27,7 @@ const Management = () => {
                     </div>
                     <div className="management__right-block">
                         <ul className="management__list">
-                            {managementItems.map((el, index: number) => (
+                            {managementItems.map((el) => (
                                 <ManagementItemList
                                     key={el.id}
                                     itemDesc={el.itemDesc}

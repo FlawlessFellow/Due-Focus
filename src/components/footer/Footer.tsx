@@ -7,6 +7,7 @@ import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
 import { Link } from 'gatsby';
 
+// Collection for footer__second-block
 const links = [
     { id: 1, text: 'Duefocus. Time tracking', href: '#', className: 'footer__link' },
     { id: 2, text: 'Duecode. Engineering metrics', href: '#', className: 'footer__link' },
@@ -23,6 +24,7 @@ const footerSecondBlockLinks = links.map((link) => (
     </p>
 ));
 
+// Collection for footer__third-block
 const navItems = [
     { id: 1, text: 'Terms of Use', href: '#' },
     { id: 2, text: 'Privacy Policy', href: '#' },

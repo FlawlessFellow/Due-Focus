@@ -8,11 +8,11 @@ import linkItem4 from '../../../assets/images/link4-image.png';
 import linkItem5 from '../../../assets/images/link5-image.png';
 
 const linkItems = [
-    { img: linkItem1, alt: 'time tracking image' },
-    { img: linkItem2, alt: 'engineering metrics' },
-    { img: linkItem3, alt: 'code quality ranking' },
-    { img: linkItem4, alt: 'writing better code' },
-    { img: linkItem5, alt: 'set realistic estimates' },
+    { id: 1, img: linkItem1, alt: 'time tracking image' },
+    { id: 2, img: linkItem2, alt: 'engineering metrics' },
+    { id: 3, img: linkItem3, alt: 'code quality ranking' },
+    { id: 4, img: linkItem4, alt: 'writing better code' },
+    { id: 5, img: linkItem5, alt: 'set realistic estimates' },
 ];
 
 const BottomLinkPanel = () => {
@@ -20,9 +20,9 @@ const BottomLinkPanel = () => {
         <div className="bottom__link-panel">
             <div className="bottom__linkPanel-container">
                 <div className="bottom__linkPanel-list">
-                    {linkItems.map((item) => (
-                        <Link to="#!" target={'_blank'} className="bottomPanel-linkItem">
-                            <img src={item.img} alt={item.alt} className='bottom__linkPanel-img'/>
+                    {linkItems.map((el) => (
+                        <Link to="#!" target={'_blank'} className="bottomPanel-linkItem" key={el.id}>
+                            <img src={el.img} alt={el.alt} className="bottom__linkPanel-img" />
                         </Link>
                     ))}
                 </div>

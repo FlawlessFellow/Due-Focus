@@ -26,7 +26,7 @@ const TimeTracking = () => {
                 <div className="content__blocks">
                     <div className="content__items-left">
                         <ul className="management__list">
-                            {TimeTrackingItems.map((el, index: number) => (
+                            {TimeTrackingItems.map((el) => (
                                 <ManagementItemList
                                     key={el.id}
                                     itemDesc={el.itemDesc}
