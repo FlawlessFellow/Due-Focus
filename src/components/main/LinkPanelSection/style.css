@@ -12,21 +12,6 @@
     text-align: center;
 }
 
-.link__panel-blueBtn {
-    width: 320px;
-    height: 72px;
-    margin-top: 30px;
-    border: none;
-    border-radius: 4px;
-    font-family: var(--first-family);
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    background-color: #1991eb;
-    color: #fff;
-}
-
 @media screen and (max-width: 560px) {
     .link__panel-itemsWrapper {
         text-align: center;

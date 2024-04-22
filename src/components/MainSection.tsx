@@ -7,7 +7,6 @@ import TimeTracking from './main/TimeTrackingSection/TimeTracking';
 import DataSecurity from './main/DataSecuritySection/DataSecurity';
 import Header from './Header/Header';
 import '../assets/styles/main.css';
-import '../assets/styles/hover.css';
 import Recommendation from './main/RecommendationSection/Recommendation';
 import LinkPanel from './main/LinkPanelSection/LinkPanel';
 import Footer from './Footer/Footer';

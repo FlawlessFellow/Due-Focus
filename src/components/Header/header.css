@@ -50,26 +50,23 @@
     letter-spacing: 0.03em;
     color: #00112c;
 }
-
 .header__nav-download::after {
-    content: '';
+    width: 120px;
+    height: 55px;
     position: absolute;
+    content: '';
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;
-    height: 55px;
     background-color: #f0f0f0;
     display: none;
     text-align: center;
-    line-height: 4rem;
+    line-height: 21px;
     z-index: -1;
 }
-
 .header__nav-download:hover::after {
     display: block;
 }
-
 .header__nav-download:hover {
     color: #1991eb;
     z-index: 1;

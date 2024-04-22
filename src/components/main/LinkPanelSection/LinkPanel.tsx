@@ -10,7 +10,7 @@ const LinkPanel = () => {
                 <div className="link__panel-imgWrapper">
                     <img src={LinkPanelTopBlockImg} alt="Chrome web store image" className="top__block-img" />
                 </div>
-                <BlueBtn text={'Get Started'} classNames={'link__panel-blueBtn hvr-float-shadow'} onClick={() => null} />
+                <BlueBtn text={'Get Started'} classNames={'link__panel-blueBtn'} onClick={() => null} />
             </div>
         </section>
     );

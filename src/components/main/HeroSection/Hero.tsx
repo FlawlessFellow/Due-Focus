@@ -11,7 +11,7 @@ const Hero = () => {
                     <h1 className="hero__left-title">Time Tracking & Productivity Chrome App You'll Actually Use</h1>
                     <p className="hero__left-text">Available on Google Web Store</p>
                     <div className="hero__left-btn">
-                        <BlueBtn text={'Sign Up For Free'} classNames={'hero__blue-btn hvr-float-shadow '} onClick={() => null} />
+                        <BlueBtn text={'Sign Up For Free'} classNames={'hero__blue-btn'} onClick={() => null} />
                     </div>
                 </div>
                 <div className="hero__right-block">
