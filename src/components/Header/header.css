@@ -94,10 +94,7 @@
     background: #fff;
     color: #a0abba;
 }
-
-.header__nav-greyBtn:hover,
-.header__nav-greyBtn:focus,
-.header__nav-greyBtn:active {
+.header__nav-greyBtn:hover {
     color: grey;
     border-color: grey;
 }
@@ -119,7 +116,6 @@
     transform: scale(1);
     background-color: #1991eb;
 }
-
 .header__burger::before,
 .header__burger::after {
     content: '';
@@ -130,20 +126,16 @@
     background-color: #1991eb;
     transition: all 0.3s ease 0s;
 }
-
 .header__burger::before {
     top: 7px;
 }
-
 .header__burger::after {
     bottom: 7px;
 }
-
 .header__burger.active::before {
     top: 50%;
     transform: rotate(-45deg) translate(0, -50%);
 }
-
 .header__burger.active::after {
     bottom: 50%;
     transform: rotate(45deg) translate(0, 50%);
