@@ -34,40 +34,61 @@ const SignUpSection = () => {
                             <img src={closeIcon} alt="" />
                         </div>
                         <div className="right__module-content">
-                            <h4>Create DueFocus Account</h4>
-                            <span>Already have an Account? Sign In</span>
+                            <h4 className="right__module-subtitle">Create DueFocus Account</h4>
+                            <span className="right__module-text">Already have an Account? Sign In</span>
                             <div className="right__form-wrapper">
                                 <form action="" className="right-form">
                                     <div className="email__input-wrapper">
-                                        <span className="email-desc"></span>
+                                        <span className="email-desc">Email</span>
                                         <input
                                             type="email"
+                                            id="correct-email"
                                             className="email-input"
                                             value={'email'}
                                             placeholder="name@email.com"
                                         />
+                                        <div className="email__popup-message">
+                                            <span id="first__popupMessage" className="first__popup-message">
+                                                It doesn't looks like an e-mail
+                                            </span>
+                                            <span id="second__popupMessage" className="second__popup-message">
+                                                This email is already registered
+                                            </span>
+                                        </div>
                                     </div>
                                     <div className="password__input-wrapper">
-                                        <span className="password-desc"></span>
+                                        <span className="password-desc">Password</span>
                                         <input
                                             type="password"
+                                            id="psw"
                                             className="password-input"
                                             value={'password'}
                                             placeholder="8+ Characters"
                                         />
                                         <img src={passwordIcon} className="password-image" alt="password-image" />
                                         <div className="password__errorMessage-wrapper">
-                                            <span className="password__error-message">Please select a strong password</span>
-                                        </div>
-                                        <div className="agreement-wrapper">
-                                            <input type="checkbox" className="agreement__checkbox-input" name="checkbox" />
-                                            <label htmlFor="checkbox"></label>
-                                            <div className="agreement__text">
-                                                I agree to the <a href="#!">Terms Of Use</a> and <a href="#!">Privacy Policy</a>,
-                                                and <a href="#!">Cookie Use</a> .
-                                            </div>
+                                            <span id="password__error-message">Please select a strong password</span>
                                         </div>
                                     </div>
+                                    <div className="agreement-wrapper">
+                                        <input type="checkbox" id="checkbox" name="checkbox" />
+                                        <label htmlFor="checkbox" className="agreement-text">
+                                            I agree to the{' '}
+                                            <a href="#!" className="agreement-link">
+                                                Terms Of Use
+                                            </a>{' '}
+                                            and{' '}
+                                            <a href="#!" className="agreement-link">
+                                                Privacy Policy
+                                            </a>
+                                            , and{' '}
+                                            <a href="#!" className="agreement-link">
+                                                Cookie Use
+                                            </a>
+                                            .
+                                        </label>
+                                    </div>
+                                    <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={() => {}} />
                                 </form>
                             </div>
                         </div>

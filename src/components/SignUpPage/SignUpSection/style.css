@@ -12,6 +12,7 @@
     background: #fff;
 }
 
+/* LEFT MODULE */
 .left__module-wrapper {
     display: flex;
     width: 25%;
@@ -55,4 +56,203 @@
     font-size: 12px;
     font-weight: 700;
     color: #394249;
+}
+
+/* RIGHT MODULE */
+.right__module-wrapper {
+    min-height: 900px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right__module-headerIcon {
+    width: 52px;
+    right: 88px;
+    position: absolute;
+    justify-content: center;
+    height: 52px;
+    flex-direction: column;
+    display: flex;
+    cursor: pointer;
+    bottom: 90%;
+    background: rgba(160, 171, 186, 0.822);
+    /* transition: all 0.4s ease-in-out; */
+}
+
+.right__module-content {
+    padding-top: 50px;
+}
+
+.right__module-subtitle {
+    margin-top: 30px;
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Open Sans, sans-serif;
+    color: #000;
+}
+
+.right__module-text {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+    color: #1991eb;
+}
+
+.right-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email__input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-desc {
+    width: 456px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    color: #323538;
+}
+
+.email-input {
+    width: 376px;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 60px;
+    border: 1px solid #b1b9c4;
+    border-radius: 4px;
+    outline: none;
+    text-align: left;
+    font-size: 16px;
+    font-family: Open Sans, sans-serif;
+    color: #b1b9c4;
+}
+
+.email__popup-message {
+    display: flex;
+    align-items: flex-start;
+}
+
+#first__popupMessage {
+    display: none;
+}
+.first__popup-message {
+    font-size: 12px;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    display: none;
+}
+
+#second__popupMessage {
+    display: none;
+}
+.second__popup-message {
+    font-size: 12px;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    display: none;
+}
+
+.password__input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-desc {
+    width: 456px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    color: #323538;
+}
+
+.password-input {
+    width: 376px;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 60px;
+    border: 1px solid #b1b9c4;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    color: #b1b9c4;
+}
+
+.password-image {
+    position: absolute;
+    top: 62px;
+    right: 24px;
+    cursor: pointer;
+    -webkit-filter: invert(50%);
+    filter: invert(50%);
+}
+
+.password__errorMessage-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+#password__error-message {
+    display: none;
+}
+
+.agreement-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+#checkbox {
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+}
+
+.agreement-text {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Open Sans, sans-serif;
+    cursor: pointer;
+}
+
+.agreement-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Open Sans, sans-serif;
+    color: #1991eb;
+}
+
+.agreement-btn {
+    width: 444px;
+    height: 64px;
+    margin: 32px 0 52px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Open Sans, sans-serif;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #1991eb;
 }
