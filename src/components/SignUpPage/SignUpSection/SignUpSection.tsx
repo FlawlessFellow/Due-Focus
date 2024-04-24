@@ -6,6 +6,9 @@ import successGreenIcon from '../../../assets/images/success-green-icon.svg';
 import closeIcon from '../../../assets/images/close-icon.png';
 import passwordIcon from '../../../assets/images/password-icon.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
+import trackerTrelloImg from '../../../assets/images/time-tracker-trello.svg';
+import appGitHubImg from '../../../assets/images/app-github.svg';
+import toolGitHubImg from '../../../assets/images/tool-github.svg';
 
 const SignUpSection = () => {
     return (
@@ -44,7 +47,7 @@ const SignUpSection = () => {
                                             type="email"
                                             id="correct-email"
                                             className="email-input"
-                                            value={'email'}
+                                            // value={'email'}
                                             placeholder="name@email.com"
                                         />
                                         <div className="email__popup-message">
@@ -62,7 +65,7 @@ const SignUpSection = () => {
                                             type="password"
                                             id="psw"
                                             className="password-input"
-                                            value={'password'}
+                                            // value={password}
                                             placeholder="8+ Characters"
                                         />
                                         <img src={passwordIcon} className="password-image" alt="password-image" />
@@ -90,6 +93,42 @@ const SignUpSection = () => {
                                     </div>
                                     <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={() => {}} />
                                 </form>
+                                <div className="right__module-bottomDesc">
+                                    <div className="bottom-border"></div>
+                                    <span className="bottom-desc">Or Sign Up With</span>
+                                </div>
+                                <div className="trackers-2sd"></div>
+                                <div className="trackers-wrapper">
+                                    <div className="trackers-items">
+                                        <div className="item-logo">
+                                            <a href="#!" className="item-link">
+                                                <img
+                                                    src={trackerTrelloImg}
+                                                    style={{ width: '33px', height: '33px' }}
+                                                    alt="time-tracker-trello"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div className="item-logo">
+                                            <a href="#!" className="item-link">
+                                                <img
+                                                    src={appGitHubImg}
+                                                    style={{ width: '33px', height: '33px' }}
+                                                    alt="app-github-image"
+                                                />
+                                            </a>
+                                        </div>
+                                        <div className="last__item-logo">
+                                            <a href="#!" className="item-link">
+                                                <img
+                                                    src={toolGitHubImg}
+                                                    style={{ width: '33px', height: '33px' }}
+                                                    alt="tool-github-image"
+                                                />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

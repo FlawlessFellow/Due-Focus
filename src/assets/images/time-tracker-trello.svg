@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Logo/tracker/trello</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0.3125%" x2="50%" y2="99.6875%" id="linearGradient-1">
+            <stop stop-color="#0091E6" offset="0%"></stop>
+            <stop stop-color="#0079BF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0004.-Landing--Integration-Desktop-#01" transform="translate(-993.000000, -3092.000000)">
+            <g id="Block/integrations" transform="translate(-1.000000, 1960.000000)">
+                <g id="Block/tracker-dropdiwn" transform="translate(974.000000, 1112.000000)">
+                    <g id="Logo/tracker/trello" transform="translate(20.000000, 20.000000)">
+                        <g id="trello-19f8a52c7c7f889a6b86e3bb8ee63534e1e5fa25086744687f076af0e5b33706">
+                            <path d="M8,0 L56,0 C60.418278,0 64,3.581722 64,8 L64,56 C64,60.418278 60.418278,64 56,64 L8,64 C3.581722,64 0,60.418278 0,56 L0,8 C0,3.581722 3.581722,0 8,0 Z" id="Path" fill="url(#linearGradient-1)"></path>
+                            <path d="M40,8.32 L51.84,8.32 C53.9607734,8.32 55.68,10.0392266 55.68,12.16 L55.68,32.48 C55.68,34.6007734 53.9607734,36.32 51.84,36.32 L40,36.32 C37.8792266,36.32 36.16,34.6007734 36.16,32.48 L36.16,12.16 C36.16,10.04 37.878,8.32 40,8.32 Z M12.16,8.32 L24,8.32 C26.1207734,8.32 27.84,10.0392266 27.84,12.16 L27.84,48.48 C27.84,50.6007734 26.1207734,52.32 24,52.32 L12.16,52.32 C10.0392266,52.32 8.32,50.6007734 8.32,48.48 L8.32,12.16 C8.32,10.04 10.04,8.32 12.16,8.32 L12.16,8.32 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

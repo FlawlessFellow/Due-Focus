@@ -141,6 +141,9 @@
     font-family: Open Sans, sans-serif;
     color: #b1b9c4;
 }
+.email-input::placeholder {
+    opacity: 0.4;
+}
 
 .email__popup-message {
     display: flex;
@@ -197,6 +200,9 @@
     font-family: Open Sans, sans-serif;
     color: #b1b9c4;
 }
+.password-input::placeholder {
+    opacity: 0.4;
+}
 
 .password-image {
     position: absolute;
@@ -219,7 +225,7 @@
 .agreement-wrapper {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
 #checkbox {
@@ -246,7 +252,7 @@
 .agreement-btn {
     width: 444px;
     height: 64px;
-    margin: 32px 0 52px;
+    margin: 45px 0 52px;
     font-weight: 700;
     font-size: 16px;
     font-family: Open Sans, sans-serif;
@@ -255,4 +261,108 @@
     border: none;
     border-radius: 4px;
     background-color: #1991eb;
+}
+
+.bottom-border {
+    width: 552px;
+    height: 1px;
+    background: #dededf;
+}
+
+.bottom-desc {
+    position: absolute;
+    margin-top: -11px;
+    margin-left: -88px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Open Sans, sans-serif;
+    color: #394249;
+    background: #fff;
+}
+
+.trackers-2sd {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.trackers-wrapper {
+    width: 240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trackers-items {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.item-logo {
+    width: 70px;
+    height: 48px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #e3e4e6;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.item-link {
+    text-decoration: none;
+    color: #6b7c93;
+}
+
+.last__item-logo {
+    cursor: pointer;
+    width: 70px;
+    justify-content: center;
+    height: 48px;
+    display: flex;
+    border: 1px solid #e3e4e6;
+    border-radius: 4px;
+    background-color: #fff;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+    .task__tracker-img {
+        top: -110px;
+    }
+
+    .left__bottom-text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .left__bottom-text {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .left__module-wrapper {
+        display: none;
+    }
+
+    .right__module-wrapper {
+        width: 100%;
+        height: 700px;
+    }
+
+    .right__module-content {
+        padding-top: 0;
+    }
 }
