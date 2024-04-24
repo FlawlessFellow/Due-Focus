@@ -91,6 +91,12 @@
     }
 }
 
+@media screen and (max-width: 1335px) {
+    .right__item-border {
+        margin-top: 15px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .security__wrapper {
         width: 90%;
@@ -116,6 +122,11 @@
         margin: 0 auto;
         font-size: 16px;
     }
+
+    .right__item-border {
+        margin-top: 0;
+    }
+
     .right__item-text2 {
         font-size: 12px;
     }
