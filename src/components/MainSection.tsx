@@ -11,11 +11,12 @@ import Recommendation from './main/RecommendationSection/Recommendation';
 import LinkPanel from './main/LinkPanelSection/LinkPanel';
 import Footer from './Footer/Footer';
 import BottomLinkPanel from './main/BottomLinkPanelSection/BottomLinkPanel';
+import SignUpSection from './SignUpPage/SignUpSection/SignUpSection';
 
 const MainSection: FC = () => {
     return (
         <>
-            <Header />
+            {/* <Header />
             <Hero />
             <Presentation />
             <Management />
@@ -25,7 +26,8 @@ const MainSection: FC = () => {
             <Recommendation />
             <LinkPanel />
             <BottomLinkPanel />
-            <Footer />
+            <Footer /> */}
+            <SignUpSection />
         </>
     );
 };
