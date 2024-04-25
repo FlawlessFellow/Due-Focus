@@ -1,5 +1,7 @@
-.sign__up-wrapper {
+#sign__up-section {
     display: flex;
+    color: #6b7c93;
+    background: #fff;
     width: 100%;
     position: fixed;
     top: 0;
@@ -8,19 +10,16 @@
     bottom: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    color: #6b7c93;
-    background: #fff;
 }
 
-/* LEFT MODULE */
 .left__module-wrapper {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 25%;
     min-height: 900px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #e4f2fd;
+    background-color: #e4f2fd;
 }
 
 .left__module-topImages {
@@ -31,15 +30,15 @@
 }
 
 .task__tracker-img {
+    max-width: 100%;
     position: relative;
     top: -66px;
-    max-width: 100%;
     z-index: 1000;
 }
 
 .hand-img {
-    margin-top: -187px;
     max-width: 100%;
+    margin-top: -187px;
 }
 
 .left__module-bottomContent {
@@ -52,13 +51,12 @@
 
 .left__bottom-text {
     margin-left: 8px;
-    font-family: Open Sans, sans-serif;
     font-size: 12px;
     font-weight: 700;
+    font-family: Open Sans, sans-serif;
     color: #394249;
 }
 
-/* RIGHT MODULE */
 .right__module-wrapper {
     min-height: 900px;
     width: 75%;
@@ -68,18 +66,19 @@
     text-align: center;
 }
 
-.right__module-headerIcon {
+.right__closeModule-wrapper {
     width: 52px;
-    right: 88px;
-    position: absolute;
-    justify-content: center;
     height: 52px;
-    flex-direction: column;
+    position: absolute;
+    right: 88px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
     bottom: 90%;
-    background: rgba(160, 171, 186, 0.822);
-    /* transition: all 0.4s ease-in-out; */
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    background-color: rgba(160, 171, 186, 0.822);
 }
 
 .right__module-content {
@@ -89,8 +88,8 @@
 .right__module-subtitle {
     margin-top: 30px;
     margin-bottom: 24px;
-    font-size: 36px;
     font-weight: 700;
+    font-size: 36px;
     font-family: Open Sans, sans-serif;
     color: #000;
 }
@@ -100,9 +99,11 @@
     font-weight: 700;
     text-align: center;
     cursor: pointer;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-        'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat';
     color: #1991eb;
+}
+.right__module-text:hover {
+    border-bottom: 1px solid #1991eb;
 }
 
 .right-form {
@@ -118,9 +119,9 @@
 }
 
 .email-desc {
-    width: 456px;
     margin-top: 24px;
     margin-bottom: 4px;
+    width: 456px;
     font-size: 14px;
     font-weight: 700;
     text-align: left;
@@ -129,20 +130,17 @@
 }
 
 .email-input {
-    width: 376px;
-    height: 48px;
     padding-left: 20px;
     padding-right: 60px;
-    border: 1px solid #b1b9c4;
+    width: 376px;
+    height: 48px;
     border-radius: 4px;
+    border: 1px solid #b1b9c4;
     outline: none;
-    text-align: left;
     font-size: 16px;
+    text-align: left;
     font-family: Open Sans, sans-serif;
     color: #b1b9c4;
-}
-.email-input::placeholder {
-    opacity: 0.4;
 }
 
 .email__popup-message {
@@ -150,9 +148,10 @@
     align-items: flex-start;
 }
 
-#first__popupMessage {
+.first__popupMessage {
     display: none;
 }
+
 .first__popup-message {
     font-size: 12px;
     text-align: left;
@@ -163,6 +162,7 @@
 #second__popupMessage {
     display: none;
 }
+
 .second__popup-message {
     font-size: 12px;
     text-align: left;
@@ -177,9 +177,9 @@
 }
 
 .password-desc {
-    width: 456px;
     margin-top: 24px;
     margin-bottom: 4px;
+    width: 456px;
     font-size: 14px;
     font-weight: 700;
     text-align: left;
@@ -188,20 +188,17 @@
 }
 
 .password-input {
-    width: 376px;
-    height: 48px;
     padding-left: 20px;
     padding-right: 60px;
-    border: 1px solid #b1b9c4;
+    width: 376px;
+    height: 48px;
     border-radius: 4px;
+    border: 1px solid #b1b9c4;
     outline: none;
     font-size: 16px;
     text-align: left;
     font-family: Open Sans, sans-serif;
     color: #b1b9c4;
-}
-.password-input::placeholder {
-    opacity: 0.4;
 }
 
 .password-image {
@@ -221,52 +218,86 @@
 #password__error-message {
     display: none;
 }
+.password__errorMessage {
+    font-size: 12px;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    display: none;
+}
 
 .agreement-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
-#checkbox {
-    width: 16px;
-    height: 16px;
-    margin-right: 15px;
+.check-box {
+    display: none;
 }
 
-.agreement-text {
+.agreement-label {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
     font-size: 14px;
     font-weight: 500;
-    font-family: Open Sans, sans-serif;
     cursor: pointer;
+    font-family: Open Sans, sans-serif;
+}
+.agreement-label::before {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    content: '\F096';
+    font-size: 21px;
+    font-family: 'Font Awesome 5 Free';
+}
+
+.agreement__label-wrapper {
+    margin-left: 16px;
+    margin-top: 4px;
 }
 
 .agreement-link {
-    text-decoration: none;
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none;
     font-family: Open Sans, sans-serif;
     color: #1991eb;
 }
 
+.agreement-label::after {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    max-width: 0;
+    font-size: 21px;
+    font-family: 'Font Awesome 5 Free';
+    overflow: hidden;
+    content: '\F046';
+    opacity: 0.5;
+    transition: all 0.3s;
+    color: #1991eb;
+}
+
 .agreement-btn {
+    margin-top: 32px;
+    margin-bottom: 52px;
     width: 444px;
     height: 64px;
-    margin: 45px 0 52px;
-    font-weight: 700;
-    font-size: 16px;
-    font-family: Open Sans, sans-serif;
-    cursor: pointer;
-    color: #fff;
     border: none;
     border-radius: 4px;
+    font-family: var(--first-family);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
     background-color: #1991eb;
+    color: #fff;
 }
 
 .bottom-border {
     width: 552px;
     height: 1px;
-    background: #dededf;
+    background-color: #dededf;
 }
 
 .bottom-desc {
@@ -280,19 +311,19 @@
     text-align: center;
     font-family: Open Sans, sans-serif;
     color: #394249;
-    background: #fff;
+    background-color: #fff;
 }
 
 .trackers-2sd {
-    display: flex;
-    justify-content: center;
     margin-top: 24px;
     margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
 }
 
 .trackers-wrapper {
-    width: 240px;
     margin: 0 auto;
+    width: 240px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -300,16 +331,16 @@
 }
 
 .trackers-items {
-    display: flex;
-    justify-content: center;
     margin-top: 24px;
     margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
 }
 
 .item-logo {
+    margin-right: 12px;
     width: 70px;
     height: 48px;
-    margin-right: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,19 +352,21 @@
 
 .item-link {
     text-decoration: none;
+    background-color: transparent;
     color: #6b7c93;
 }
 
 .last__item-logo {
-    cursor: pointer;
+    margin-right: 0;
     width: 70px;
-    justify-content: center;
     height: 48px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     border: 1px solid #e3e4e6;
     border-radius: 4px;
     background-color: #fff;
-    align-items: center;
 }
 
 @media screen and (max-width: 1500px) {
@@ -364,5 +397,151 @@
 
     .right__module-content {
         padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .right__module-wrapper {
+        width: 100%;
+    }
+
+    .right__closeModule-wrapper {
+        right: 32px;
+    }
+
+    .email__input-wrapper,
+    .password__input-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .email-desc,
+    .password-desc {
+        width: 65%;
+        margin: 24px auto 4px;
+    }
+
+    .email-input,
+    .password-input {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .password-image {
+        right: 120px;
+    }
+
+    .agreement-wrapper {
+        position: relative;
+        margin: 16px auto 0;
+        width: 60%;
+    }
+
+    .agreement-text {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .checkbox {
+        align-self: flex-start;
+        margin-top: 3px;
+        margin-right: 0;
+    }
+
+    .agreement-btn {
+        width: 308px;
+        height: 58px;
+    }
+
+    .trackers-2sd {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .trackers-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .item-logo,
+    .last__item-logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .right__module-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .right__closeModule-wrapper {
+        right: 18px;
+        top: 14px;
+        z-index: 1000;
+    }
+
+    .right__module-content {
+        margin-top: -118px;
+        padding-top: 0;
+    }
+
+    .right__module-subtitle {
+        font-size: 30px;
+    }
+
+    .right__module-text {
+        font-size: 15px;
+    }
+
+    .right__form-wrapper {
+        width: 93%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .right__module-subtitle {
+        width: 65%;
+        margin: 40px auto 24px;
+    }
+}
+
+@media screen and (max-width: 372px) {
+    .right__module-content {
+        padding-top: 90px;
+    }
+
+    .right__closeModule-wrapper {
+        display: none;
+    }
+
+    .right__form-wrapper {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .right__module-content {
+        max-width: 500px;
+    }
+
+    .agreement-btn {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .right__module-content {
+        max-width: 400px;
+    }
+
+    .email-input,
+    .password-input {
+        width: 75%;
     }
 }
