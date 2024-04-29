@@ -142,32 +142,16 @@
     font-family: Open Sans, sans-serif;
     color: #b1b9c4;
 }
-
-.email__popup-message {
-    display: flex;
-    align-items: flex-start;
+.email-input:focus {
+    border: 1px solid #1991eb;
+    color: #000;
 }
 
-.first__popupMessage {
-    display: none;
-}
-
-.first__popup-message {
+.email-error-message {
     font-size: 12px;
     text-align: left;
     font-family: Open Sans, sans-serif;
-    display: none;
-}
-
-#second__popupMessage {
-    display: none;
-}
-
-.second__popup-message {
-    font-size: 12px;
-    text-align: left;
-    font-family: Open Sans, sans-serif;
-    display: none;
+    color: #ed1d41;
 }
 
 .password__input-wrapper {
@@ -208,21 +192,6 @@
     cursor: pointer;
     -webkit-filter: invert(50%);
     filter: invert(50%);
-}
-
-.password__errorMessage-wrapper {
-    display: flex;
-    align-items: flex-start;
-}
-
-#password__error-message {
-    display: none;
-}
-.password__errorMessage {
-    font-size: 12px;
-    text-align: left;
-    font-family: Open Sans, sans-serif;
-    display: none;
 }
 
 .agreement-wrapper {

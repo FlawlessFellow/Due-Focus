@@ -12,6 +12,51 @@ import appGitHubImg from '../../../assets/images/app-github.svg';
 import toolGitHubImg from '../../../assets/images/tool-github.svg';
 
 const SignUpSection = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [isEmptyEmailValue, setIsEmptyEmailValue] = useState(false);
+    const [passwordValue, setPasswordValue] = useState(false);
+
+    const [isEmptyEmailError, setEmailError] = useState('This field cannot be empty');
+    const [passwordError, setPasswordError] = useState('This field cannot be empty');
+
+    const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
+        const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
+        if (!emailRegex.test(String(e.target.value))) {
+            setEmailError("It doesn't looks like an e-mail");
+            if (!e.target.value) {
+                setEmailError('This field cannot be empty');
+            }
+        } else {
+            setEmailError('');
+        }
+    };
+
+    const passwordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPassword(e.target.value);
+        if (e.target.value.length < 3 || e.target.value.length > 8) {
+            setPasswordError('Please select a strong password');
+            if (!e.target.value) {
+                setPasswordError('This field cannot be empty');
+            }
+        } else {
+            setPasswordError('');
+        }
+    };
+
+    const blurHandler = (e: React.FocusEvent<HTMLInputElement>) => {
+        switch (e.target.name) {
+            case 'email':
+                setIsEmptyEmailValue(true);
+                break;
+            case 'password':
+                setPasswordValue(true);
+                break;
+        }
+    };
+
     return (
         <section id="sign__up-section">
             <div className="left__module-wrapper">
@@ -43,41 +88,51 @@ const SignUpSection = () => {
                             <div className="email__input-wrapper">
                                 <span className="email-desc">Email</span>
                                 <input
-                                    type="email"
-                                    id="correct-email"
+                                    onChange={(e) => emailHandler(e)}
+                                    value={email}
+                                    onBlur={(e) => blurHandler(e)}
+                                    type="text"
+                                    name="email"
                                     className="email-input"
-                                    // value={'email'}
                                     placeholder="name@email.com"
                                 />
-                                <div className="email__popup-message">
-                                    <span id="first__popupMessage" className="first__popup-message">
-                                        It doesn't looks like an e-mail
-                                    </span>
-                                    <span id="second__popupMessage" className="second__popup-message">
-                                        This email is already registered
-                                    </span>
-                                </div>
+                                {isEmptyEmailValue && isEmptyEmailError && (
+                                    <div className="email-error-message">{isEmptyEmailError}</div>
+                                )}
                             </div>
                             <div className="password__input-wrapper">
                                 <span className="password-desc">Password</span>
                                 <input
+                                    onChange={(e) => passwordHandler(e)}
+                                    value={password}
                                     type="password"
-                                    id="psw"
+                                    name="password"
+                                    onBlur={(e) => blurHandler(e)}
                                     className="password-input"
-                                    // value={password}
                                     placeholder="8+ Characters"
                                 />
                                 <img src={passwordIcon} className="password-image" alt="password-image" />
-                                <div className="password__errorMessage-wrapper">
-                                    <span id="password__error-message" className="password__errorMessage">
-                                        Please select a strong password
-                                    </span>
-                                </div>
+                                {passwordError && passwordValue && <div className="email-error-message">{passwordError}</div>}
                             </div>
                             <div className="agreement-wrapper">
                                 <input type="checkbox" id="checkbox" className="check-box" name="checkbox" />
                                 <label htmlFor="checkbox" className="agreement-label">
-                                    <div className="agreement__label-wrapper">I agree to the<a href="#!" className="agreement-link"> Terms Of Use</a> and <a href="#!" className="agreement-link"> Privacy Policy</a>, and <a href="#!" className="agreement-link">Cookie Use</a>.
+                                    <div className="agreement__label-wrapper">
+                                        I agree to the
+                                        <a href="#!" className="agreement-link">
+                                            {' '}
+                                            Terms Of Use
+                                        </a>{' '}
+                                        and{' '}
+                                        <a href="#!" className="agreement-link">
+                                            {' '}
+                                            Privacy Policy
+                                        </a>
+                                        , and{' '}
+                                        <a href="#!" className="agreement-link">
+                                            Cookie Use
+                                        </a>
+                                        .
                                     </div>
                                 </label>
                             </div>
@@ -127,3 +182,9 @@ const SignUpSection = () => {
 };
 
 export default SignUpSection;
+
+// const redBorder = () => {
+//     if (isEmptyEmailError) {
+
+//     }
+// }
