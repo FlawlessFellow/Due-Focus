@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import MainSection from '../components/MainSection';
 
 const Main = () => {
-  return <MainSection />;
+    return <MainSection />;
 };
 
 export default Main;

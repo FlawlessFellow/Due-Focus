@@ -5,12 +5,30 @@ import taskTrackersImg from '../../../assets/images/tasktrackers.svg';
 import handImg from '../../../assets/images/hand.svg';
 import successGreenIcon from '../../../assets/images/success-green-icon.svg';
 import closeIcon from '../../../assets/images/close-icon.png';
+import passwordIcon from '../../../assets/images/password-icon.svg';
+import BlueBtn from '../../BlueBtn/BlueBtn';
 import trackerTrelloImg from '../../../assets/images/time-tracker-trello.svg';
 import appGitHubImg from '../../../assets/images/app-github.svg';
 import toolGitHubImg from '../../../assets/images/tool-github.svg';
-import SignUpForm from '../../main/SignUpForm/SignUpForm';
 
 const SignUpSection = () => {
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setFormData((state) => ({
+            ...state,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+    };
+
     return (
         <section id="sign__up-section">
             <div className="left__module-wrapper">
@@ -38,7 +56,55 @@ const SignUpSection = () => {
                     <h4 className="right__module-subtitle">Create DueFocus Account</h4>
                     <span className="right__module-text">Already have an Account? Sign In</span>
                     <div className="right__form-wrapper">
-                        <SignUpForm />
+                        <form onSubmit={handleSubmit} className="right-form">
+                            <div className="email__input-wrapper">
+                                <span className="email-desc">Email</span>
+                                <input
+                                    type="text"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    name="email"
+                                    className="email-input"
+                                    placeholder="name@email.com"
+                                />
+                            </div>
+                            <div className="password__input-wrapper">
+                                <span className="password-desc">Password</span>
+                                <input
+                                    type="password"
+                                    value={formData.password}
+                                    onChange={handleInputChange}
+                                    name="password"
+                                    className="password-input"
+                                    placeholder="8+ Characters"
+                                />
+                                <img src={passwordIcon} className="password-image" alt="password-image" />
+                            </div>
+                            <div className="agreement-wrapper">
+                                <input type="checkbox" id="checkbox" className="check-box" name="checkbox" />
+                                <label htmlFor="checkbox" className="agreement-label">
+                                    <div className="agreement__label-wrapper">
+                                        I agree to the
+                                        <a href="#!" className="agreement-link">
+                                            {' '}
+                                            Terms Of Use
+                                        </a>{' '}
+                                        and{' '}
+                                        <a href="#!" className="agreement-link">
+                                            {' '}
+                                            Privacy Policy
+                                        </a>
+                                        , and{' '}
+                                        <a href="#!" className="agreement-link">
+                                            Cookie Use
+                                        </a>
+                                        .
+                                    </div>
+                                </label>
+                            </div>
+                            <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={() => {}} />
+                        </form>
+
                         <div className="right__module-bottomDesc">
                             <div className="bottom-border"></div>
                             <span className="bottom-desc">Or Sign Up With</span>
@@ -83,3 +149,9 @@ const SignUpSection = () => {
 };
 
 export default SignUpSection;
+
+// const redBorder = () => {
+//     if (isEmptyEmailError) {
+
+//     }
+// }

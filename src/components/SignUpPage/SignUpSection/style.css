@@ -112,8 +112,7 @@
     align-items: center;
 }
 
-.email__input-wrapper {
-    position: relative;
+.input-wrapper {
     display: flex;
     flex-direction: column;
 }
@@ -146,18 +145,26 @@
     border: 1px solid #1991eb;
     color: #000;
 }
+.error-input {
+    padding-left: 20px;
+    padding-right: 60px;
+    width: 376px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #ed1d41;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    color: #b1b9c4;
+}
 
-.email-error-message {
-    font-size: 12px;
+.error-message {
+    margin-bottom: 15px;
+    font-size: 16px;
     text-align: left;
     font-family: Open Sans, sans-serif;
     color: #ed1d41;
-}
-
-.password__input-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .password-desc {

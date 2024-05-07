@@ -11,7 +11,7 @@ type Props = {
 const BlueBtn: FC<Props> = ({ text, onClick, classNames, disabled }) => {
   return (
     <button
-      type="button"
+      type="submit"
       className={`${classNames}`}
       onClick={onClick}
       disabled={disabled}
