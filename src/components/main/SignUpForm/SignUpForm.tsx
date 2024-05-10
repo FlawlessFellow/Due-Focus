@@ -1,8 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, FieldErrors } from 'react-hook-form';
+import { UncontrolledPopover, PopoverBody } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { DevTool } from '@hookform/devtools';
 import passwordIcon from '../../../assets/images/password-icon.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
+import acceptImg from '../../../assets/images/accept.svg';
+import rejectImg from '../../../assets/images/reject.svg';
 
 type FormValues = {
     email: string;
@@ -10,22 +14,34 @@ type FormValues = {
 };
 
 const SignUpForm = () => {
-    const form = useForm<FormValues>();
-    const { register, control, handleSubmit, formState } = form;
+    const form = useForm<FormValues>({
+        defaultValues: {
+            email: '',
+            password: '',
+        },
+        mode: 'onChange',
+    });
+    const { register, control, handleSubmit, formState, getValues, setValue } = form;
     const { errors } = formState;
 
     const onSubmit = (data: FormValues) => {
         console.log('Form submitted', data);
     };
 
+    const onError = (errors: FieldErrors<FormValues>) => {
+        console.log('Form errors', errors);
+    };
+
+    const accept = <img src={acceptImg} alt="#!" />;
+    const reject = <img src={rejectImg} alt="#!" />;
+
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)} className="right-form" noValidate>
+            <form onSubmit={handleSubmit(onSubmit, onError)} className="right-form" noValidate>
                 <div className="input-wrapper">
                     <label htmlFor="email" className="email-desc">
                         Email
                     </label>
-                    {/* INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT */}
                     <input
                         type="text"
                         {...register('email', {
@@ -33,26 +49,20 @@ const SignUpForm = () => {
                                 value: /^[a-zA-Z0-9.!#$%&’*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                                 message: 'Please enter a valid email address',
                             },
-                            validate: {
-                                errorBorder: (fieldValue) => {
-                                    const regEx = /^[a-zA-Z0-9.!#$%&’*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-                                    if (!regEx.test(fieldValue)) {
-                                        return '';
-                                    }
-                                },
+                            required: {
+                                value: true,
+                                message: 'Email is required',
                             },
                         })}
-                        className={errors.email ? 'error-input' : 'email-input'}
+                        className={errors.email ? 'input-error' : 'input'}
                         placeholder="name@email.com"
                     />
                     <p className="error-message">{errors.email?.message}</p>
-                    {/* INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT */}
                 </div>
                 <div className="input-wrapper">
                     <label htmlFor="password" className="password-desc">
                         Password
                     </label>
-                    {/* INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT */}
                     <input
                         type="password"
                         {...register('password', {
@@ -61,19 +71,34 @@ const SignUpForm = () => {
                                 message: 'Please select a strong password',
                             },
                             validate: {
-                                errorBorder: (fieldValue) => {
-                                    const validPassword = /^(?=.*[a-z])(?=.*[A-Z])|(?=.*\d)[a-zA-Z\d]{8,64}$/;
-                                    if (!validPassword.test(fieldValue)) {
-                                        return '';
-                                    }
-                                },
+                                minLength: (value) => value.length >= 8,
+                            },
+                            required: {
+                                value: true,
+                                message: 'Password is required',
                             },
                         })}
-                        className={errors.password ? 'error-input' : 'email-input'}
+                        id="psw"
+                        className={errors.password ? 'input-error' : 'input'}
                         placeholder="8+ Characters"
                     />
+                    <UncontrolledPopover trigger="focus" placement="top" target="psw">
+                        <PopoverBody className="popover">
+                            <li>
+                                {/.{8,64}/.test(getValues('password')) ? accept : reject} {'8-64 characters'}
+                            </li>
+                            <li>
+                                {/[A-Z|А-Я|Ё]+/.test(getValues('password')) || /\d+/.test(getValues('password'))
+                                    ? accept
+                                    : reject}{' '}
+                                {'numbers or UPPER case letter '}
+                            </li>
+                            <li>
+                                {/[a-z|а-я|ё]+/.test(getValues('password')) ? accept : reject} {'lower case letter'}
+                            </li>
+                        </PopoverBody>
+                    </UncontrolledPopover>
                     <p className="error-message">{errors.password?.message}</p>
-                    {/* INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT INPUT */}
                     <img src={passwordIcon} className="password-image" alt="password-image" />
                 </div>
                 <div className="agreement-wrapper">

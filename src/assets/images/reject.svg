@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Icon/s/arrow-down/gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/s/arrow-down/error" transform="translate(-2.000000, -2.000000)">
+            <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z" id="Oval" fill="#FF5E7A" fill-rule="nonzero"></path>
+            <g id="Icon/s/arrow-down/gray" stroke-width="1" fill-rule="evenodd" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+                <path d="M4.72919736,4 L7.16666667,6.43746931 L6.43746931,7.16666667 L4,4.72919736 L1.56253069,7.16666667 L0.833333333,6.43746931 L3.27080264,4 L0.833333333,1.56253069 L1.56253069,0.833333333 L4,3.27080264 L6.43746931,0.833333333 L7.16666667,1.56253069 L4.72919736,4 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

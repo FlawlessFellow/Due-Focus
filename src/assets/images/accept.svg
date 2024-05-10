@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Icon/s/arrow-down/gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/s/arrow-down/gray" transform="translate(-2.000000, -2.000000)">
+            <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z" id="Oval" fill="#73C546" fill-rule="nonzero"></path>
+            <g id="icon" stroke-width="1" fill-rule="evenodd" transform="translate(8.000000, 9.000000)" fill="#FFFFFF">
+                <polygon id="path" fill-rule="nonzero" transform="translate(4.000000, 3.000000) rotate(-270.000000) translate(-4.000000, -3.000000) " points="5.56527309 4.61851286 1 -0.237025721 1.71736346 -1 7 4.61851286 4.76087885 7 4.04351539 6.23702572"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
