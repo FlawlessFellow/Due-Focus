@@ -4,6 +4,7 @@ import { UncontrolledPopover, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DevTool } from '@hookform/devtools';
 import passwordIcon from '../../../assets/images/password-icon.svg';
+import showPasswordIcon from '../../../assets/images/show-password.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
 import acceptImg from '../../../assets/images/accept.svg';
 import rejectImg from '../../../assets/images/reject.svg';
@@ -21,7 +22,7 @@ const SignUpForm = () => {
         },
         mode: 'onChange',
     });
-    const { register, control, handleSubmit, formState, getValues, setValue } = form;
+    const { register, control, handleSubmit, formState, getValues } = form;
     const { errors } = formState;
 
     const onSubmit = (data: FormValues) => {
@@ -34,6 +35,19 @@ const SignUpForm = () => {
 
     const accept = <img src={acceptImg} alt="#!" />;
     const reject = <img src={rejectImg} alt="#!" />;
+
+    const showPassword = () => {
+        const pass = document.getElementById('psw') as HTMLInputElement;
+        const eye = document.getElementById('pswIcon') as HTMLImageElement;
+
+        if (pass.type === 'text') {
+            pass.type = 'password';
+            eye.src = passwordIcon;
+        } else {
+            pass.type = 'text';
+            eye.src = showPasswordIcon;
+        }
+    };
 
     return (
         <div>
@@ -99,7 +113,7 @@ const SignUpForm = () => {
                         </PopoverBody>
                     </UncontrolledPopover>
                     <p className="error-message">{errors.password?.message}</p>
-                    <img src={passwordIcon} className="password-image" alt="password-image" />
+                    <img src={passwordIcon} onClick={showPassword} id="pswIcon" className="password-image" alt="password-image" />
                 </div>
                 <div className="agreement-wrapper">
                     <input type="checkbox" id="checkbox" className="check-box" name="checkbox" />

@@ -187,6 +187,10 @@
     -webkit-filter: invert(50%);
     filter: invert(50%);
 }
+.password-image:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
 
 .popover {
     width: 220px;
