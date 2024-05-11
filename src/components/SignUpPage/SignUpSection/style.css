@@ -205,7 +205,9 @@
 }
 
 .check-box {
-    display: none;
+    padding: 0;
+    margin-left: -10px;
+    margin-right: 10px;
 }
 
 .agreement-label {
@@ -217,17 +219,8 @@
     cursor: pointer;
     font-family: Open Sans, sans-serif;
 }
-.agreement-label::before {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    content: '\F096';
-    font-size: 21px;
-    font-family: 'Font Awesome 5 Free';
-}
 
 .agreement__label-wrapper {
-    margin-left: 16px;
     margin-top: 4px;
 }
 
@@ -236,20 +229,6 @@
     font-weight: 500;
     text-decoration: none;
     font-family: Open Sans, sans-serif;
-    color: #1991eb;
-}
-
-.agreement-label::after {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    max-width: 0;
-    font-size: 21px;
-    font-family: 'Font Awesome 5 Free';
-    overflow: hidden;
-    content: '\F046';
-    opacity: 0.5;
-    transition: all 0.3s;
     color: #1991eb;
 }
 

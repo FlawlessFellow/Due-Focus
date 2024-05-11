@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useForm, FieldErrors } from 'react-hook-form';
 import { UncontrolledPopover, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,10 +8,13 @@ import showPasswordIcon from '../../../assets/images/show-password.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
 import acceptImg from '../../../assets/images/accept.svg';
 import rejectImg from '../../../assets/images/reject.svg';
+import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
+// const API_URL = 'https://jsonplaceholder.typicode.com';
 
 type FormValues = {
     email: string;
     password: string;
+    checkboxValid: boolean;
 };
 
 const SignUpForm = () => {
@@ -22,19 +25,40 @@ const SignUpForm = () => {
         },
         mode: 'onChange',
     });
-    const { register, control, handleSubmit, formState, getValues } = form;
-    const { errors } = formState;
+    const {
+        register,
+        control,
+        handleSubmit,
+        getValues,
+        formState: { errors },
+        setError,
+    } = form;
 
     const onSubmit = (data: FormValues) => {
-        console.log('Form submitted', data);
+        try {
+            throw new Error();
+        } catch (error) {
+            setError('email', {
+                message: 'This email already taken',
+            });
+        }
     };
 
-    const onError = (errors: FieldErrors<FormValues>) => {
-        console.log('Form errors', errors);
+    const handleGetValues = () => {
+        console.log('Get Values', getValues());
     };
 
-    const accept = <img src={acceptImg} alt="#!" />;
-    const reject = <img src={rejectImg} alt="#!" />;
+    // useEffect(() => {
+    //     const fetchPosts = async () => {
+    //         const response = await fetch(`${API_URL}/posts`);
+    //         const posts = (await response.json()) as FormValues[];
+
+    //         getValues();
+    //     };
+    // }, []);
+
+    const accept = <img src={acceptImg} alt="#!" />; //Password Icon
+    const reject = <img src={rejectImg} alt="#!" />; //Password Icon
 
     const showPassword = () => {
         const pass = document.getElementById('psw') as HTMLInputElement;
@@ -49,9 +73,29 @@ const SignUpForm = () => {
         }
     };
 
+    const label = (
+        <div className="agreement__label-wrapper">
+            I agree to the
+            <a href="#!" className="agreement-link">
+                {' '}
+                Terms Of Use
+            </a>{' '}
+            and{' '}
+            <a href="#!" className="agreement-link">
+                {' '}
+                Privacy Policy
+            </a>
+            , and{' '}
+            <a href="#!" className="agreement-link">
+                Cookie Use
+            </a>
+            .
+        </div>
+    );
+
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit, onError)} className="right-form" noValidate>
+            <form onSubmit={handleSubmit(onSubmit)} className="right-form" noValidate>
                 <div className="input-wrapper">
                     <label htmlFor="email" className="email-desc">
                         Email
@@ -116,28 +160,18 @@ const SignUpForm = () => {
                     <img src={passwordIcon} onClick={showPassword} id="pswIcon" className="password-image" alt="password-image" />
                 </div>
                 <div className="agreement-wrapper">
-                    <input type="checkbox" id="checkbox" className="check-box" name="checkbox" />
-                    <label htmlFor="checkbox" className="agreement-label">
-                        <div className="agreement__label-wrapper">
-                            I agree to the
-                            <a href="#!" className="agreement-link">
-                                {' '}
-                                Terms Of Use
-                            </a>{' '}
-                            and{' '}
-                            <a href="#!" className="agreement-link">
-                                {' '}
-                                Privacy Policy
-                            </a>
-                            , and{' '}
-                            <a href="#!" className="agreement-link">
-                                Cookie Use
-                            </a>
-                            .
-                        </div>
-                    </label>
+                    <FormGroup>
+                        <FormControlLabel
+                            className="agreement-label"
+                            control={
+                                <Checkbox style={{ padding: '0', top: '1px', left: '30px', marginRight: '40px' }} size="small" />
+                            }
+                            label={label}
+                        />
+                    </FormGroup>
+                    {/* <Checkbox {...label} size="small" className="check-box" /> */}
                 </div>
-                <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={() => {}} />
+                <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={handleGetValues} />
             </form>
             <DevTool control={control} />
         </div>
