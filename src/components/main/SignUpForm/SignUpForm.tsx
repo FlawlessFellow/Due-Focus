@@ -97,9 +97,7 @@ const SignUpForm = () => {
         <div>
             <form onSubmit={handleSubmit(onSubmit)} className="right-form" noValidate>
                 <div className="input-wrapper">
-                    <label htmlFor="email" className="email-desc">
-                        Email
-                    </label>
+                    <span className="email-desc">Email</span>
                     <input
                         type="text"
                         {...register('email', {
@@ -118,9 +116,7 @@ const SignUpForm = () => {
                     <p className="error-message">{errors.email?.message}</p>
                 </div>
                 <div className="input-wrapper">
-                    <label htmlFor="password" className="password-desc">
-                        Password
-                    </label>
+                    <span className="password-desc">Password</span>
                     <input
                         type="password"
                         {...register('password', {
@@ -163,13 +159,10 @@ const SignUpForm = () => {
                     <FormGroup>
                         <FormControlLabel
                             className="agreement-label"
-                            control={
-                                <Checkbox style={{ padding: '0', top: '1px', left: '30px', marginRight: '40px' }} size="small" />
-                            }
+                            control={<Checkbox id="check-box" size="small" />}
                             label={label}
                         />
                     </FormGroup>
-                    {/* <Checkbox {...label} size="small" className="check-box" /> */}
                 </div>
                 <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={handleGetValues} />
             </form>

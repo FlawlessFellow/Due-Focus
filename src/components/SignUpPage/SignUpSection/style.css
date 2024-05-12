@@ -204,10 +204,11 @@
     margin-top: 16px;
 }
 
-.check-box {
+#check-box {
+    position: relative;
     padding: 0;
-    margin-left: -10px;
-    margin-right: 10px;
+    top: 1px;
+    left: 20px;
 }
 
 .agreement-label {
@@ -221,6 +222,7 @@
 }
 
 .agreement__label-wrapper {
+    font-size: 14px;
     margin-top: 4px;
 }
 
@@ -363,8 +365,7 @@
         right: 32px;
     }
 
-    .email__input-wrapper,
-    .password__input-wrapper {
+    .input-wrapper {
         width: 100%;
         margin: 0 auto;
     }
@@ -375,8 +376,7 @@
         margin: 24px auto 4px;
     }
 
-    .email-input,
-    .password-input {
+    .input {
         width: 60%;
         margin: 0 auto;
     }
@@ -388,7 +388,7 @@
     .agreement-wrapper {
         position: relative;
         margin: 16px auto 0;
-        width: 60%;
+        width: 65%;
     }
 
     .agreement-text {
@@ -396,8 +396,8 @@
         margin: 0 auto;
     }
 
-    .checkbox {
-        align-self: flex-start;
+    #check-box {
+        /* align-self: flex-start; */
         margin-top: 3px;
         margin-right: 0;
     }
@@ -494,8 +494,7 @@
         max-width: 400px;
     }
 
-    .email-input,
-    .password-input {
+    .input {
         width: 75%;
     }
 }
