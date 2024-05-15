@@ -111,8 +111,7 @@
     align-items: center;
 }
 
-.input-wrapper {
-    position: relative;
+.input-email-wrapper {
     display: flex;
     flex-direction: column;
 }
@@ -139,6 +138,8 @@
     font-size: 16px;
     text-align: left;
     font-family: Open Sans, sans-serif;
+}
+.input::placeholder {
     color: #b1b9c4;
 }
 .input:focus {
@@ -166,6 +167,12 @@
     text-align: left;
     font-family: Open Sans, sans-serif;
     color: #ed1d41;
+}
+
+.input-password-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .password-desc {
@@ -213,12 +220,13 @@
 
 .agreement-label {
     position: relative;
-    display: inline-block;
-    margin-bottom: 0.5rem;
+    /* display: inline-block; */
+    margin: 0 0 0.5rem;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     font-family: Open Sans, sans-serif;
+    letter-spacing: 0 !important;
 }
 
 .agreement__label-wrapper {
@@ -365,7 +373,8 @@
         right: 32px;
     }
 
-    .input-wrapper {
+    .input-email-wrapper,
+    .input-password-wrapper {
         width: 100%;
         margin: 0 auto;
     }
@@ -381,6 +390,10 @@
         margin: 0 auto;
     }
 
+    .error-message {
+        margin-left: 112px;
+    }
+
     .password-image {
         right: 120px;
     }
@@ -391,15 +404,17 @@
         width: 65%;
     }
 
+    .agreement-label {
+        align-items: flex-start !important;
+    }
+
     .agreement-text {
         width: 80%;
         margin: 0 auto;
     }
 
-    #check-box {
-        /* align-self: flex-start; */
-        margin-top: 3px;
-        margin-right: 0;
+    .agreement__label-wrapper {
+        margin-top: 0;
     }
 
     .agreement-btn {
@@ -456,6 +471,10 @@
         width: 93%;
         margin: 0 auto;
     }
+
+    .error-message {
+        margin-left: 105px;
+    }
 }
 
 @media screen and (max-width: 385px) {
@@ -477,6 +496,10 @@
     .right__form-wrapper {
         width: 85%;
     }
+
+    .error-message {
+        margin-left: 95px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -486,15 +509,5 @@
 
     .agreement-btn {
         max-width: 250px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .right__module-content {
-        max-width: 400px;
-    }
-
-    .input {
-        width: 75%;
     }
 }

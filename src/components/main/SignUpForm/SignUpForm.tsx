@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useForm, FieldErrors } from 'react-hook-form';
 import { UncontrolledPopover, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { DevTool } from '@hookform/devtools';
+// import { DevTool } from '@hookform/devtools';
 import passwordIcon from '../../../assets/images/password-icon.svg';
 import showPasswordIcon from '../../../assets/images/show-password.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
@@ -39,7 +39,7 @@ const SignUpForm = () => {
             throw new Error();
         } catch (error) {
             setError('email', {
-                message: 'This email already taken',
+                message: 'Please enter a valid Email',
             });
         }
     };
@@ -96,7 +96,7 @@ const SignUpForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)} className="right-form" noValidate>
-                <div className="input-wrapper">
+                <div className="input-email-wrapper">
                     <span className="email-desc">Email</span>
                     <input
                         type="text"
@@ -110,12 +110,12 @@ const SignUpForm = () => {
                                 message: 'Email is required',
                             },
                         })}
-                        className={errors.email ? 'input-error' : 'input'}
+                        className={errors.email ? 'input-error input' : 'input'}
                         placeholder="name@email.com"
                     />
                     <p className="error-message">{errors.email?.message}</p>
                 </div>
-                <div className="input-wrapper">
+                <div className="input-password-wrapper">
                     <span className="password-desc">Password</span>
                     <input
                         type="password"
@@ -133,7 +133,7 @@ const SignUpForm = () => {
                             },
                         })}
                         id="psw"
-                        className={errors.password ? 'input-error' : 'input'}
+                        className={errors.password ? 'input-error input' : 'input'}
                         placeholder="8+ Characters"
                     />
                     <UncontrolledPopover trigger="focus" placement="top" target="psw">
@@ -152,21 +152,25 @@ const SignUpForm = () => {
                             </li>
                         </PopoverBody>
                     </UncontrolledPopover>
-                    <p className="error-message">{errors.password?.message}</p>
                     <img src={passwordIcon} onClick={showPassword} id="pswIcon" className="password-image" alt="password-image" />
+                    <p className="error-message">{errors.password?.message}</p>
                 </div>
                 <div className="agreement-wrapper">
-                    <FormGroup>
-                        <FormControlLabel
-                            className="agreement-label"
-                            control={<Checkbox id="check-box" size="small" />}
-                            label={label}
-                        />
-                    </FormGroup>
+                    <FormControlLabel
+                        className="agreement-label"
+                        control={
+                            <Checkbox
+                                style={{ padding: '0', marginRight: '-5px', top: '2px', left: '-15px' }}
+                                id="check-box"
+                                size="small"
+                            />
+                        }
+                        label={label}
+                    />
                 </div>
                 <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={handleGetValues} />
             </form>
-            <DevTool control={control} />
+            {/* <DevTool control={control} /> */}
         </div>
     );
 };
