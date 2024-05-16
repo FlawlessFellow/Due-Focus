@@ -9,7 +9,15 @@ import BlueBtn from '../../BlueBtn/BlueBtn';
 import acceptImg from '../../../assets/images/accept.svg';
 import rejectImg from '../../../assets/images/reject.svg';
 import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
-// const API_URL = 'https://jsonplaceholder.typicode.com';
+// import { useSignupStore } from '../../../zustand-state/ZustandState';
+
+const API_URL = 'https://jsonplaceholder.org/posts';
+
+// const setData = useSignupStore((store) => store.setValue);
+
+// const email = useSignupStore((store) => store.email);
+
+// const password = useSignupStore((store) => store.password);
 
 type FormValues = {
     email: string;
@@ -34,28 +42,29 @@ const SignUpForm = () => {
         setError,
     } = form;
 
-    const onSubmit = (data: FormValues) => {
-        try {
-            throw new Error();
-        } catch (error) {
-            setError('email', {
-                message: 'Please enter a valid Email',
-            });
-        }
+    const onSubmit = async (data: FormValues) => {
+        const response = await fetch(`${API_URL}`, {
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            body: JSON.stringify(data),
+        });
+        console.log(await response.json());
+
+        // try {
+        //     throw new Error();
+        // } catch (error) {
+        //     setError('email', {
+        //         message: 'Please enter a valid Email',
+        //     });
+        // }
     };
 
     const handleGetValues = () => {
         console.log('Get Values', getValues());
     };
-
-    // useEffect(() => {
-    //     const fetchPosts = async () => {
-    //         const response = await fetch(`${API_URL}/posts`);
-    //         const posts = (await response.json()) as FormValues[];
-
-    //         getValues();
-    //     };
-    // }, []);
 
     const accept = <img src={acceptImg} alt="#!" />; //Password Icon
     const reject = <img src={rejectImg} alt="#!" />; //Password Icon
