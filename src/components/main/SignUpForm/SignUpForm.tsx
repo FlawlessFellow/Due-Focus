@@ -111,7 +111,7 @@ const SignUpForm = () => {
                         type="text"
                         {...register('email', {
                             pattern: {
-                                value: /^[a-zA-Z0-9.!#$%&’*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                                value: /^([a-z0-9_.!#$%^&*-+()])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,6}$/i,
                                 message: 'Please enter a valid email address',
                             },
                             required: {
