@@ -17,19 +17,19 @@ import MobileMenu from './main/MobileMenu/MobileMenu';
 const MainSection: FC = () => {
     return (
         <>
-            {/* <Header />
-            <Hero />
-            <Presentation />
-            <Management />
-            <GetStarted />
-            <TimeTracking />
-            <DataSecurity />
-            <Recommendation />
-            <LinkPanel />
-            <BottomLinkPanel />
-            <Footer />
-            <MobileMenu /> */}
-            <SignUpSection />
+            <Header />
+            {/* <Hero /> */}
+            {/* <Presentation /> */}
+            {/* <Management /> */}
+            {/* <GetStarted /> */}
+            {/* <TimeTracking /> */}
+            {/* <DataSecurity /> */}
+            {/* <Recommendation /> */}
+            {/* <LinkPanel /> */}
+            {/* <BottomLinkPanel /> */}
+            {/* <Footer /> */}
+            <MobileMenu />
+            {/* <SignUpSection /> */}
         </>
     );
 };

@@ -10,7 +10,6 @@ import acceptImg from '../../../assets/images/accept.svg';
 import rejectImg from '../../../assets/images/reject.svg';
 import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
 import { LoginStore, useLoginStore } from '../../../zustand-state/ZustandState';
-
 const API_URL = 'https://jsonplaceholder.org/posts';
 
 type FormValues = {
