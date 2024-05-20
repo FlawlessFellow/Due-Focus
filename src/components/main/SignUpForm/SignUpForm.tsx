@@ -9,15 +9,9 @@ import BlueBtn from '../../BlueBtn/BlueBtn';
 import acceptImg from '../../../assets/images/accept.svg';
 import rejectImg from '../../../assets/images/reject.svg';
 import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
-// import { useSignupStore } from '../../../zustand-state/ZustandState';
+import { LoginStore, useLoginStore } from '../../../zustand-state/ZustandState';
 
 const API_URL = 'https://jsonplaceholder.org/posts';
-
-// const setData = useSignupStore((store) => store.setValue);
-
-// const email = useSignupStore((store) => store.email);
-
-// const password = useSignupStore((store) => store.password);
 
 type FormValues = {
     email: string;
@@ -26,6 +20,10 @@ type FormValues = {
 };
 
 const SignUpForm = () => {
+    const setData = useLoginStore((store) => store.setValue);
+    const store = useLoginStore((store) => store);
+    // console.log('💀 ~ SignUpForm ~ setData:', store);
+
     const form = useForm<FormValues>({
         defaultValues: {
             email: '',
@@ -43,25 +41,26 @@ const SignUpForm = () => {
     } = form;
 
     const onSubmit = async (data: FormValues) => {
-        const response = await fetch(`${API_URL}`, {
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-            },
-            method: 'POST',
-            body: JSON.stringify(data),
-        });
-        console.log(await response.json());
+        try {
+            const response = await fetch(API_URL, {
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                method: 'POST',
+                body: JSON.stringify(data),
+            });
 
-        // try {
-        //     throw new Error();
-        // } catch (error) {
-        //     setError('email', {
-        //         message: 'Please enter a valid Email',
-        //     });
-        // }
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const responseBody = (await response.json()) as Omit<LoginStore, 'setValue'>;
+            setData(responseBody.email, responseBody.password, responseBody.accessToken);
+        } catch (error) {
+            console.log('onSubmit login error:', error);
+        }
     };
-
     const handleGetValues = () => {
         console.log('Get Values', getValues());
     };

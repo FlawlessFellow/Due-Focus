@@ -11,8 +11,7 @@ const Header = () => {
         if (!headerRef.current) return;
         if (window.scrollY >= 70) {
             headerRef.current.classList.add('header-fixed');
-        }
-        if (window.scrollY === 0) {
+        } else if (window.scrollY === 0) {
             headerRef.current.classList.remove('header-fixed');
         }
     };
@@ -24,6 +23,33 @@ const Header = () => {
         };
     }, [isHeaderFixed]);
 
+    const menuActive = () => {
+        const hamburger = document.getElementById('burger-menu');
+        if (hamburger?.className === 'open') {
+            hamburger.removeAttribute('class');
+        } else {
+            hamburger?.classList.add('open');
+        }
+        return false;
+    };
+
+    const handleOpenMenu = () => {
+        window.scrollTo(0, 0);
+        if (document.getElementById('burger-menu')?.className === 'burger_menu open') {
+            document.getElementById('mobile_menu')?.classList.add('menu-open');
+            document.body.classList.add('modal-active');
+        } else {
+            document.getElementById('mobile_menu')?.classList.remove('menu-open');
+            document.body.removeAttribute('class');
+        }
+    };
+
+    const handleCloseMenu = () => {
+        document.getElementById('mobile_menu')?.classList.remove('menu-open');
+        document.body.removeAttribute('class');
+        document.getElementById('burger-menu')?.removeAttribute('class');
+    };
+
     return (
         <header id="header" ref={headerRef}>
             <div className="header__wrapper">
@@ -32,11 +58,18 @@ const Header = () => {
                         <Link to="#!" target={'_blank'}>
                             <img src={headerLogo} alt="logo" className="header__nav-logo" />
                         </Link>
-                        <Link to="#!" target={'_blank'} className="header__nav-download hvr-grow">
+                        <Link to="#!" target={'_blank'} onClick={handleCloseMenu} className="header__nav-download hvr-grow">
                             Downloads
                         </Link>
-                        <div className="header__burger">
-                            <span></span>
+                        <div onClick={handleOpenMenu} className="mobile-menu">
+                            <div onClick={menuActive} id="burger-menu" className="burger_menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                     <div className="header__nav-actions">

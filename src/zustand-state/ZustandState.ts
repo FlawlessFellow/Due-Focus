@@ -1,13 +1,29 @@
 import { create } from 'zustand';
 
-type SignupStore = {
+export type LoginStore = {
     email: string;
     password: string;
-    setValue: (email: string, password: string) => void;
+    accessToken: string;
+    setValue: (email: string, password: string, accessToken: string) => void;
 };
 
-export const useSignupStore = create<SignupStore>((set) => ({
-    email: '',
-    password: '',
-    setValue: (email, password) => set({ email, password }),
-}));
+const useLoginStore = create<LoginStore>((set) => {
+    const storedData = localStorage.getItem('loginStore');
+    const initialState = storedData
+        ? JSON.parse(storedData)
+        : {
+              email: '',
+              password: '',
+              accessToken: '',
+          };
+    return {
+        ...initialState,
+        setValue: (email, password, accessToken) => {
+            const newState = { email, password, accessToken };
+            set(newState);
+            localStorage.setItem('loginStore', JSON.stringify(newState));
+        },
+    };
+});
+
+export { useLoginStore };

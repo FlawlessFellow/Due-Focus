@@ -12,6 +12,7 @@ import LinkPanel from './main/LinkPanelSection/LinkPanel';
 import Footer from './Footer/Footer';
 import BottomLinkPanel from './main/BottomLinkPanelSection/BottomLinkPanel';
 import SignUpSection from './SignUpPage/SignUpSection/SignUpSection';
+import MobileMenu from './main/MobileMenu/MobileMenu';
 
 const MainSection: FC = () => {
     return (
@@ -26,7 +27,8 @@ const MainSection: FC = () => {
             <Recommendation />
             <LinkPanel />
             <BottomLinkPanel />
-            <Footer /> */}
+            <Footer />
+            <MobileMenu /> */}
             <SignUpSection />
         </>
     );

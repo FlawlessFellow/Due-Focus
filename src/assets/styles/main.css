@@ -72,3 +72,7 @@ img {
     overflow-clip-margin: content-box;
     overflow: clip;
 }
+
+.modal-active {
+    overflow: hidden;
+}
