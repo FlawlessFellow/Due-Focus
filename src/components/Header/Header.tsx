@@ -1,11 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import './header.css';
 import BlueBtn from '../BlueBtn/BlueBtn';
 import headerLogo from '../../assets/images/header-logo.webp';
+import MobileMenu from '../main/MobileMenu/MobileMenu';
 
 const Header = () => {
     const headerRef = useRef<HTMLDivElement>(null);
+    const burgerMenuRef = useRef<HTMLDivElement>(null);
+    const mobileMenuRef = useRef<HTMLDivElement>(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const isHeaderFixed = () => {
         if (!headerRef.current) return;
@@ -23,31 +27,34 @@ const Header = () => {
         };
     }, [isHeaderFixed]);
 
-    const menuActive = () => {
-        const hamburger = document.getElementById('burger-menu');
-        if (hamburger?.className === 'open') {
-            hamburger.removeAttribute('class');
-        } else {
-            hamburger?.classList.add('open');
+    const toggleMenu = () => {
+        if (burgerMenuRef.current) {
+            if (burgerMenuRef.current.classList.contains('open')) {
+                burgerMenuRef.current.classList.remove('open');
+                setIsMenuOpen(false); // Закрываем меню
+            } else {
+                burgerMenuRef.current.classList.add('open');
+                setIsMenuOpen(true); // Открываем меню
+            }
         }
-        return false;
     };
 
     const handleOpenMenu = () => {
         window.scrollTo(0, 0);
-        if (document.getElementById('burger-menu')?.className === 'burger_menu open') {
-            document.getElementById('mobile_menu')?.classList.add('menu-open');
+        if (burgerMenuRef.current?.classList.contains('open')) {
+            mobileMenuRef.current?.classList.add('menu-open');
             document.body.classList.add('modal-active');
         } else {
-            document.getElementById('mobile_menu')?.classList.remove('menu-open');
-            document.body.removeAttribute('class');
+            mobileMenuRef.current?.classList.remove('menu-open');
+            document.body.classList.remove('modal-active');
         }
     };
 
     const handleCloseMenu = () => {
-        document.getElementById('mobile_menu')?.classList.remove('menu-open');
-        document.body.removeAttribute('class');
-        document.getElementById('burger-menu')?.removeAttribute('class');
+        mobileMenuRef.current?.classList.remove('menu-open');
+        document.body.classList.remove('modal-active');
+        burgerMenuRef.current?.classList.remove('open');
+        setIsMenuOpen(false); // Закрываем меню
     };
 
     return (
@@ -61,8 +68,8 @@ const Header = () => {
                         <Link to="#!" target={'_blank'} onClick={handleCloseMenu} className="header__nav-download hvr-grow">
                             Downloads
                         </Link>
-                        <div onClick={handleOpenMenu} className="mobile-menu">
-                            <div onClick={menuActive} id="burger-menu" className="burger_menu">
+                        <div onClick={handleOpenMenu} ref={mobileMenuRef} className="mobile-menu">
+                            <div onClick={toggleMenu} ref={burgerMenuRef} id="burger-menu" className="burger_menu">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -80,6 +87,7 @@ const Header = () => {
                     </div>
                 </nav>
             </div>
+            <MobileMenu isOpen={isMenuOpen} />
         </header>
     );
 };

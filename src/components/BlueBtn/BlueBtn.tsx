@@ -3,7 +3,7 @@ import "./style.css";
 
 type Props = {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
   classNames?: string;
   disabled?: boolean;
 };

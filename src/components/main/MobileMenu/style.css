@@ -8,7 +8,7 @@
     transition: all 0.25s ease-in-out;
     -webkit-transform: translateX(150%);
     transform: translateX(150%);
-    top: 50px;
+    top: 80px;
     right: 0;
     position: fixed;
     overflow-y: auto;
@@ -44,6 +44,10 @@
     border-bottom: 1px solid #e1e2e3;
     color: #00112c;
 }
+.mobile_menu-links:hover {
+    color: #1991eb;
+    border-bottom: 1px solid #1991eb;
+}
 
 .mobile_menu-buttonsWrapper {
     display: flex;
@@ -66,4 +70,10 @@
 }
 .mobile-menu_blueBtn:hover {
     opacity: 0.7;
+}
+
+.menu-open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
 }

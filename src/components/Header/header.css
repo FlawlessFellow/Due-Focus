@@ -205,12 +205,6 @@
     top: 18px;
 }
 
-.menu-open {
-    -webkit-transform: translateX(0);
-    transform: translateX(0) !important;
-    visibility: visible !important;
-}
-
 /* .header__burger {
     display: none;
     position: relative;

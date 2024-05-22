@@ -12,12 +12,11 @@ import LinkPanel from './main/LinkPanelSection/LinkPanel';
 import Footer from './Footer/Footer';
 import BottomLinkPanel from './main/BottomLinkPanelSection/BottomLinkPanel';
 import SignUpSection from './SignUpPage/SignUpSection/SignUpSection';
-import MobileMenu from './main/MobileMenu/MobileMenu';
 
 const MainSection: FC = () => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             {/* <Hero /> */}
             {/* <Presentation /> */}
             {/* <Management /> */}
@@ -28,8 +27,7 @@ const MainSection: FC = () => {
             {/* <LinkPanel /> */}
             {/* <BottomLinkPanel /> */}
             {/* <Footer /> */}
-            <MobileMenu />
-            {/* <SignUpSection /> */}
+            <SignUpSection />
         </>
     );
 };

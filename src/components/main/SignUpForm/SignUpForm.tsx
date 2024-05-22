@@ -1,15 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useForm, FieldErrors } from 'react-hook-form';
+import React, { useState, useRef } from 'react';
+import { useForm } from 'react-hook-form';
 import { UncontrolledPopover, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { DevTool } from '@hookform/devtools';
 import passwordIcon from '../../../assets/images/password-icon.svg';
 import showPasswordIcon from '../../../assets/images/show-password.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
 import acceptImg from '../../../assets/images/accept.svg';
 import rejectImg from '../../../assets/images/reject.svg';
-import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
+import { FormControlLabel, Checkbox } from '@mui/material';
 import { LoginStore, useLoginStore } from '../../../zustand-state/ZustandState';
+
 const API_URL = 'https://jsonplaceholder.org/posts';
 
 type FormValues = {
@@ -21,25 +21,34 @@ type FormValues = {
 const SignUpForm = () => {
     const setData = useLoginStore((store) => store.setValue);
     const store = useLoginStore((store) => store);
-    // console.log('💀 ~ SignUpForm ~ setData:', store);
+    const [acceptTnC, setAcceptTnC] = useState(false);
 
     const form = useForm<FormValues>({
         defaultValues: {
             email: '',
             password: '',
+            checkboxValid: false,
         },
         mode: 'onChange',
     });
     const {
         register,
-        control,
         handleSubmit,
         getValues,
         formState: { errors },
         setError,
+        clearErrors,
     } = form;
 
     const onSubmit = async (data: FormValues) => {
+        if (!acceptTnC) {
+            setError('checkboxValid', {
+                type: 'manual',
+                message: 'You must agree to the terms',
+            });
+            return;
+        }
+
         try {
             const response = await fetch(API_URL, {
                 headers: {
@@ -60,12 +69,17 @@ const SignUpForm = () => {
             console.log('onSubmit login error:', error);
         }
     };
-    const handleGetValues = () => {
-        console.log('Get Values', getValues());
+
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setAcceptTnC(event.target.checked);
+        if (event.target.checked) {
+            clearErrors('checkboxValid');
+        }
+        console.log('acceptTnC:', event.target.checked);
     };
 
-    const accept = <img src={acceptImg} alt="#!" />; //Password Icon
-    const reject = <img src={rejectImg} alt="#!" />; //Password Icon
+    const accept = <img src={acceptImg} alt="#!" />; // Password Icon
+    const reject = <img src={rejectImg} alt="#!" />; // Password Icon
 
     const showPassword = () => {
         const pass = document.getElementById('psw') as HTMLInputElement;
@@ -167,6 +181,8 @@ const SignUpForm = () => {
                         className="agreement-label"
                         control={
                             <Checkbox
+                                checked={acceptTnC}
+                                onChange={handleCheckboxChange}
                                 style={{ padding: '0', marginRight: '-5px', top: '2px', left: '-15px' }}
                                 id="check-box"
                                 size="small"
@@ -174,10 +190,10 @@ const SignUpForm = () => {
                         }
                         label={label}
                     />
+                    <p className="error-message">{errors.checkboxValid?.message}</p>
                 </div>
-                <BlueBtn text="Create Free Account" classNames="agreement-btn" onClick={handleGetValues} />
+                <BlueBtn text="Create Free Account" classNames="agreement-btn" />
             </form>
-            {/* <DevTool control={control} /> */}
         </div>
     );
 };
