@@ -65,6 +65,7 @@ const SignUpForm = () => {
 
             const responseBody = (await response.json()) as Omit<LoginStore, 'setValue'>;
             setData(responseBody.email, responseBody.password, responseBody.accessToken);
+            alert('Succes');
         } catch (error) {
             console.log('onSubmit login error:', error);
         }
@@ -163,13 +164,10 @@ const SignUpForm = () => {
                                 {/.{8,64}/.test(getValues('password')) ? accept : reject} {'8-64 characters'}
                             </li>
                             <li>
-                                {/[A-Z|А-Я|Ё]+/.test(getValues('password')) || /\d+/.test(getValues('password'))
-                                    ? accept
-                                    : reject}{' '}
-                                {'numbers or UPPER case letter '}
+                                {/[A-ZА-ЯЁ\d]+/.test(getValues('password')) ? accept : reject} {'numbers or UPPER case letter'}
                             </li>
                             <li>
-                                {/[a-z|а-я|ё]+/.test(getValues('password')) ? accept : reject} {'lower case letter'}
+                                {/[a-zа-яё]+/.test(getValues('password')) ? accept : reject} {'lower case letter'}
                             </li>
                         </PopoverBody>
                     </UncontrolledPopover>
