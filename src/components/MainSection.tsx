@@ -16,18 +16,18 @@ import SignUpSection from './SignUpPage/SignUpSection/SignUpPage';
 const MainSection: FC = () => {
     return (
         <>
-            {/* <Header /> */}
-            {/* <Hero /> */}
-            {/* <Presentation /> */}
-            {/* <Management /> */}
-            {/* <GetStarted /> */}
-            {/* <TimeTracking /> */}
-            {/* <DataSecurity /> */}
-            {/* <Recommendation /> */}
-            {/* <LinkPanel /> */}
-            {/* <BottomLinkPanel /> */}
-            {/* <Footer /> */}
-            <SignUpSection />
+            <Header />
+            <Hero />
+            <Presentation />
+            <Management />
+            <GetStarted />
+            <TimeTracking />
+            <DataSecurity />
+            <Recommendation />
+            <LinkPanel />
+            <BottomLinkPanel />
+            <Footer />
+            {/* <SignUpSection /> */}
         </>
     );
 };

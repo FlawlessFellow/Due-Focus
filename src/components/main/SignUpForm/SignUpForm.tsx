@@ -10,7 +10,7 @@ import rejectImg from '../../../assets/images/reject.svg';
 import { FormControlLabel, Checkbox } from '@mui/material';
 import { LoginStore, useLoginStore } from '../../../zustand-state/ZustandState';
 
-const API_URL = 'https://jsonplaceholder.org/posts';
+const API_URL = 'https://eo1ahyv4yhhcnmc.m.pipedream.net';
 
 type FormValues = {
     email: string;
@@ -20,7 +20,6 @@ type FormValues = {
 
 const SignUpForm = () => {
     const setData = useLoginStore((store) => store.setValue);
-    const store = useLoginStore((store) => store);
     const [acceptTnC, setAcceptTnC] = useState(false);
 
     const form = useForm<FormValues>({
@@ -64,7 +63,7 @@ const SignUpForm = () => {
             }
 
             const responseBody = (await response.json()) as Omit<LoginStore, 'setValue'>;
-            setData(responseBody.email, responseBody.password, responseBody.accessToken);
+            setData(responseBody.name, responseBody.lastName, responseBody.accessToken);
             alert('Succes');
         } catch (error) {
             console.log('onSubmit login error:', error);
