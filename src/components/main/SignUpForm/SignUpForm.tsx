@@ -63,8 +63,7 @@ const SignUpForm = () => {
             }
 
             const responseBody = (await response.json()) as Omit<LoginStore, 'setValue'>;
-            setData(responseBody.name, responseBody.lastName, responseBody.accessToken);
-            alert('Succes');
+            setData(responseBody.name, responseBody.lastName, responseBody.accessToken, true);
         } catch (error) {
             console.log('onSubmit login error:', error);
         }
@@ -180,7 +179,12 @@ const SignUpForm = () => {
                             <Checkbox
                                 checked={acceptTnC}
                                 onChange={handleCheckboxChange}
-                                style={{ padding: '0', marginRight: '-5px', top: '2px', left: '-15px' }}
+                                style={{
+                                    padding: '0',
+                                    marginRight: '-5px',
+                                    top: '2px',
+                                    left: '-15px',
+                                }}
                                 id="check-box"
                                 size="small"
                             />

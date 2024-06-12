@@ -4,7 +4,8 @@ export type LoginStore = {
     name: string;
     lastName: string;
     accessToken: string;
-    setValue: (name: string, lastName: string, accessToken: string) => void;
+    isUserLogin: boolean;
+    setValue: (name: string, lastName: string, accessToken: string, isUserLogin: boolean) => void;
 };
 
 const useLoginStore = create<LoginStore>((set) => {
@@ -12,14 +13,16 @@ const useLoginStore = create<LoginStore>((set) => {
     const initialState = storedData
         ? JSON.parse(storedData)
         : {
-              email: '',
-              password: '',
+              name: '',
+              lastName: '',
               accessToken: '',
+              isUserLogin: false,
           };
+
     return {
         ...initialState,
-        setValue: (name, lastName, accessToken) => {
-            const newState = { name, lastName, accessToken };
+        setValue: (name, lastName, accessToken, isUserLogin) => {
+            const newState = { name, lastName, accessToken, isUserLogin };
             set(newState);
             localStorage.setItem('loginStore', JSON.stringify(newState));
         },
