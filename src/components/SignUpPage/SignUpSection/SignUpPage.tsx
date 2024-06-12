@@ -10,7 +10,7 @@ import appGitHubImg from '../../../assets/images/app-github.svg';
 import toolGitHubImg from '../../../assets/images/tool-github.svg';
 import SignUpForm from '../../main/SignUpForm/SignUpForm';
 
-const SignUpSection = () => {
+const SignUpPage = () => {
     return (
         <section id="sign__up-section">
             <div className="left__module-wrapper">
@@ -82,4 +82,4 @@ const SignUpSection = () => {
     );
 };
 
-export default SignUpSection;
+export default SignUpPage;
