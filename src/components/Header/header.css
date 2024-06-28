@@ -7,6 +7,10 @@
     position: fixed;
     top: 0;
     transition: all 0.15s ease-in-out;
+    background: #fff;
+}
+#header:hover {
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.10196078431372549);
 }
 
 .header-fixed {
@@ -39,6 +43,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-logo {
+    transition: all 0.4s;
+}
+.header-logo:hover {
+    opacity: 0.7;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .header__nav-download {
@@ -203,6 +216,37 @@
 #burger-menu.open span:nth-child(6) {
     left: calc(50% - 5px);
     top: 18px;
+}
+
+.loginStore-userInfoWrapper {
+    margin-left: 50px;
+    padding: 3px;
+    height: 30px;
+    width: 55px;
+    border-radius: 5px;
+    font-weight: 500;
+    user-select: none;
+    color: #fff;
+    background-color: #1991eb;
+}
+
+.loginStore-userInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-out-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: 500;
+    user-select: none;
+    color: #fff;
+    background-color: #1991eb;
 }
 
 /* .header__burger {

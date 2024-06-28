@@ -11,23 +11,23 @@ import Recommendation from './main/RecommendationSection/Recommendation';
 import LinkPanel from './main/LinkPanelSection/LinkPanel';
 import Footer from './Footer/Footer';
 import BottomLinkPanel from './main/BottomLinkPanelSection/BottomLinkPanel';
-import SignUpSection from './SignUpPage/SignUpSection/SignUpPage';
+import BlogPage from './BlogPage/BlogPage';
 
 const MainSection: FC = () => {
     return (
         <>
-            <Header />
-            <Hero />
-            <Presentation />
-            <Management />
-            <GetStarted />
-            <TimeTracking />
-            <DataSecurity />
-            <Recommendation />
-            <LinkPanel />
-            <BottomLinkPanel />
-            <Footer />
-            {/* <SignUpSection /> */}
+            {/* <Header /> */}
+            {/* <Hero /> */}
+            {/* <Presentation /> */}
+            {/* <Management /> */}
+            {/* <GetStarted /> */}
+            {/* <TimeTracking /> */}
+            {/* <DataSecurity /> */}
+            {/* <Recommendation /> */}
+            {/* <LinkPanel /> */}
+            {/* <BottomLinkPanel /> */}
+            {/* <Footer /> */}
+            <BlogPage />
         </>
     );
 };

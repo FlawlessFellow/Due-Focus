@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon/add</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0007.-Landing--Blog--Desktop-#01" transform="translate(-1494.000000, -1794.000000)" fill-rule="nonzero">
+            <g id="Blok/blog-01" transform="translate(1208.000000, 1547.000000)">
+                <g id="Group" transform="translate(286.000000, 247.000000)">
+                    <g id="Icon/add">
+                        <g id="search" fill="#000000" opacity="0">
+                            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                        <g id="comment" transform="translate(3.000000, 4.000000)" fill="#1991EB">
+                            <path d="M-0,11 L-0,2 C-2.83453816e-14,0.9 0.9,0 2,0 L17,0 C18.1045695,1.48154947e-13 19,0.8954305 19,2 L19,16 C18.9943799,16.4000752 18.7508257,16.7582884 18.3808485,16.910632 C18.0108712,17.0629755 17.5857003,16.9801197 17.3,16.7 L13.58,13 L2,13 C0.8954305,13 -2.83453816e-14,12.1045695 -0,11 Z M17,2 L2,2 L2,11 L14,11 C14.2637693,11.003757 14.5153695,11.1115857 14.7,11.3 L17,13.59 L17,2 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

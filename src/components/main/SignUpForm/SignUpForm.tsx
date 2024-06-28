@@ -93,6 +93,10 @@ const SignUpForm = () => {
         }
     };
 
+    // const handlePageChange = () => {
+        
+    // };
+
     const label = (
         <div className="agreement__label-wrapper">
             I agree to the
@@ -179,13 +183,8 @@ const SignUpForm = () => {
                             <Checkbox
                                 checked={acceptTnC}
                                 onChange={handleCheckboxChange}
-                                style={{
-                                    padding: '0',
-                                    marginRight: '-5px',
-                                    top: '2px',
-                                    left: '-15px',
-                                }}
-                                id="check-box"
+                                className="check-box"
+                                // id="check-box"
                                 size="small"
                             />
                         }

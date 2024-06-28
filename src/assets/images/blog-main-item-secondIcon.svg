@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon/add</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0007.-Landing--Blog--Desktop-#01" transform="translate(-1559.000000, -1794.000000)" fill="#1991EB" fill-rule="nonzero">
+            <g id="Blok/blog-01" transform="translate(1208.000000, 1547.000000)">
+                <g id="Group" transform="translate(286.000000, 247.000000)">
+                    <g id="Icon/add" transform="translate(65.000000, 0.000000)">
+                        <path d="M12,9.66666667 C12,10.9546667 10.992,12 9.75,12 C9.75,13.288 10.758,14.3333333 12,14.3333333 C13.242,14.3333333 14.25,13.288 14.25,12 C14.25,10.712 13.242,9.66666667 12,9.66666667 Z M12,5 C7.38525,5 3,10.4226667 3,12 C3,13.5773333 7.38525,19 12,19 C16.61475,19 21,13.5773333 21,12 C21,10.4226667 16.61475,5 12,5 Z M12,16.6666667 C9.514875,16.6666667 7.5,14.5771667 7.5,12 C7.5,9.42283333 9.514875,7.33333333 12,7.33333333 C14.485125,7.33333333 16.5,9.42283333 16.5,12 C16.5,14.5771667 14.485125,16.6666667 12,16.6666667 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

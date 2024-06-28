@@ -1,16 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import taskTrackersImg from '../../../assets/images/tasktrackers.svg';
-import handImg from '../../../assets/images/hand.svg';
-import successGreenIcon from '../../../assets/images/success-green-icon.svg';
-import closeIcon from '../../../assets/images/close-icon.png';
-import trackerTrelloImg from '../../../assets/images/time-tracker-trello.svg';
-import appGitHubImg from '../../../assets/images/app-github.svg';
-import toolGitHubImg from '../../../assets/images/tool-github.svg';
-import SignUpForm from '../../main/SignUpForm/SignUpForm';
+import taskTrackersImg from '../../assets/images/tasktrackers.svg';
+import handImg from '../../assets/images/hand.svg';
+import successGreenIcon from '../../assets/images/success-green-icon.svg';
+import closeIcon from '../../assets/images/close-icon.png';
+import trackerTrelloImg from '../../assets/images/time-tracker-trello.svg';
+import appGitHubImg from '../../assets/images/app-github.svg';
+import toolGitHubImg from '../../assets/images/tool-github.svg';
+import SignUpForm from '../main/SignUpForm/SignUpForm';
 
 const SignUpPage = () => {
+    const handleBack = () => {
+        window.history.back();
+    };
+
     return (
         <section id="sign__up-section">
             <div className="left__module-wrapper">
@@ -31,7 +35,7 @@ const SignUpPage = () => {
             </div>
 
             <div className="right__module-wrapper">
-                <div className="right__closeModule-wrapper">
+                <div onClick={handleBack} className="right__closeModule-wrapper">
                     <img src={closeIcon} alt="close-icon" />
                 </div>
                 <div className="right__module-content">

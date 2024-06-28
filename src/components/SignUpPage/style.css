@@ -211,11 +211,15 @@
     margin-top: 16px;
 }
 
-#check-box {
-    position: relative;
-    padding: 0;
-    top: 1px;
-    left: 20px;
+/* #check-box {
+    
+} */
+
+.check-box {
+    padding: 0 !important;
+    margin-left: 15px !important;
+    top: 2px !important;
+    left: -15px !important;
 }
 
 .agreement-label {
@@ -226,7 +230,6 @@
     font-weight: 500;
     cursor: pointer;
     font-family: Open Sans, sans-serif;
-    letter-spacing: 0 !important;
 }
 
 .agreement__label-wrapper {
@@ -404,6 +407,10 @@
         width: 65%;
     }
 
+    .check-box {
+        margin-left: 25px !important;
+    }
+
     .agreement-label {
         align-items: flex-start !important;
     }
@@ -475,12 +482,25 @@
     .error-message {
         margin-left: 105px;
     }
+
+    .check-box {
+        margin-left: 40px !important;
+    }
 }
 
 @media screen and (max-width: 385px) {
     .right__module-subtitle {
         width: 65%;
         margin: 40px auto 24px;
+    }
+
+    .check-box {
+        top: 2px !important;
+    }
+
+    .agreement__label-wrapper {
+        position: relative;
+        left: -10px;
     }
 }
 

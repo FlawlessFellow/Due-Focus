@@ -39,6 +39,23 @@ const footerThirdLinks = navItems.map((link) => (
     </p>
 ));
 
+// Collection for footer__fourth-block
+const footerTexts = [
+    { id: 1, className: 'footer__list-subtitleLink', text: 'Contact us' },
+    { id: 2, className: 'footer__list-text', text: '297 NV-207 Stateline, NV 89449 USA' },
+    { id: 3, className: 'footer__list-text', text: '+1 310-388-9334' },
+];
+
+const footerImages = [
+    { id: 1, src: FooterFacebookImg, alt: '' },
+    { id: 2, src: FooterTwitterImg, alt: '' },
+];
+
+const lastBlockImages = [
+    { id: 1, src: LastBlockFirstImg, alt: 'footer logo' },
+    { id: 2, src: LastBlockSecondImg, alt: 'footer logo' },
+];
+
 const Footer = () => {
     return (
         <section className="footer">
@@ -76,37 +93,33 @@ const Footer = () => {
                             {footerThirdLinks}
                         </div>
                         <div className="footer__fourth-block">
-                            <p className="footer__list-subtitleLink">Contact us</p>
-                            <p className="footer__list-text">297 NV-207 Stateline, NV 89449 USA</p>
-                            <p className="footer__list-text">+1 310-388-9334</p>
+                            {footerTexts.map((item) => (
+                                <p key={item.id} className={item.className}>
+                                    {item.text}
+                                </p>
+                            ))}
                             <p className="footer__list-lastText">
                                 <Link to="#!" target={'_blank'} className="footer__link">
                                     support@diligences.com
                                 </Link>
                             </p>
                             <div className="fourth__block-imagesWrapper">
-                                <div className="first__block-images">
-                                    <Link to="#!" target={'_blank'} className="footer__link">
-                                        <img src={FooterFacebookImg} alt="" />
-                                    </Link>
-                                </div>
-                                <div className="first__block-images">
-                                    <Link to="#!" target={'_blank'} className="footer__link">
-                                        <img src={FooterTwitterImg} alt="" />
-                                    </Link>
-                                </div>
+                                {footerImages.map((image) => (
+                                    <div key={image.id} className="first__block-images">
+                                        <Link to="#!" target={'_blank'} className="footer__link">
+                                            <img src={image.src} alt={image.alt} />
+                                        </Link>
+                                    </div>
+                                ))}
                             </div>
                             <div className="footer__lastBlock-images">
-                                <div className="lastBlock__first-img">
-                                    <Link to="#!" target={'_blank'} className="footer__link">
-                                        <img src={LastBlockFirstImg} alt="footer logo" />
-                                    </Link>
-                                </div>
-                                <div className="lastBlock__second-img">
-                                    <Link to="#!" target={'_blank'} className="footer__link">
-                                        <img src={LastBlockSecondImg} alt="footer logo" />
-                                    </Link>
-                                </div>
+                                {lastBlockImages.map((image) => (
+                                    <div key={image.id} className={`lastBlock__${image.id === 1 ? 'first' : 'second'}-img`}>
+                                        <Link to="#!" target={'_blank'} className="footer__link">
+                                            <img src={image.src} alt={image.alt} />
+                                        </Link>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
