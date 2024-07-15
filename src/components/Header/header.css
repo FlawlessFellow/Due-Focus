@@ -14,8 +14,7 @@
 }
 
 .header-fixed {
-    background: #fff !important;
-    z-index: 1000 !important;
+    /* background: #fff !important; */
     height: 80px !important;
     border-bottom: 1px solid #e1e2e3;
     box-shadow: 0px 7px 25px 0px #0000001a;

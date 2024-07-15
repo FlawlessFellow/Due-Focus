@@ -4,18 +4,17 @@ import './header.css';
 import BlueBtn from '../BlueBtn/BlueBtn';
 import headerLogo from '../../assets/images/header-logo.webp';
 import MobileMenu from '../main/MobileMenu/MobileMenu';
-import { navigate } from '@reach/router';
 import { useLoginStore } from '../../zustand-state/ZustandState';
 import logOutIcon from '../../assets/images/log-out-arrow.svg';
 import { CSSProperties } from 'styled-components';
 
 interface HeaderProps {
-    headerNav?: CSSProperties;
-    headerNavDownload?: CSSProperties;
-    headerNavActions?: CSSProperties;
+    headerNavClass?: CSSProperties;
+    headerNavDownloadClass?: CSSProperties;
+    headerNavActionsClass?: CSSProperties;
 }
 
-const Header: React.FC<HeaderProps> = ({ headerNav, headerNavDownload, headerNavActions }) => {
+const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass, headerNavActionsClass }) => {
     const headerRef = useRef<HTMLDivElement>(null);
     const burgerMenuRef = useRef<HTMLDivElement>(null);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -77,12 +76,18 @@ const Header: React.FC<HeaderProps> = ({ headerNav, headerNavDownload, headerNav
     return (
         <header id="header" ref={headerRef}>
             <div className="header__wrapper">
-                <nav className="header__nav" style={headerNav}>
+                <nav className="header__nav" style={headerNavClass}>
                     <div className="header__nav-links">
                         <Link to="#!" target={'_blank'} className="header-logo">
                             <img src={headerLogo} alt="logo" className="header__nav-logo" />
                         </Link>
-                        <Link to="#!" target={'_blank'} onClick={handleCloseMenu} className="header__nav-download hvr-grow" style={headerNavDownload}>
+                        <Link
+                            to="#!"
+                            target={'_blank'}
+                            onClick={handleCloseMenu}
+                            className="header__nav-download hvr-grow"
+                            style={headerNavDownloadClass}
+                        >
                             Downloads
                         </Link>
                         <div onClick={handleOpenMenu} ref={mobileMenuRef} className="mobile-menu">
@@ -111,11 +116,13 @@ const Header: React.FC<HeaderProps> = ({ headerNav, headerNavDownload, headerNav
                             </button>
                         </div>
                     ) : (
-                        <div className="header__nav-actions" style={headerNavActions}>
+                        <div className="header__nav-actions" style={headerNavActionsClass}>
                             <button type="button" className="header__nav-greyBtn">
                                 Log In
                             </button>
-                            <BlueBtn text={'Sign Up'} classNames={'header__nav-blueBtn'} onClick={() => navigate('/sign-up/')} />
+                            <Link to="/sign-up">
+                                <BlueBtn text={'Sign Up'} classNames={'header__nav-blueBtn'} />
+                            </Link>
                         </div>
                     )}
                 </nav>

@@ -1,11 +1,16 @@
 import type { GatsbyConfig } from 'gatsby';
 
+const dotenv = require('dotenv');
+if (process.env.NODE_ENV !== 'production') {
+    dotenv.config();
+}
+
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `My Gatsby Site`,
         siteUrl: `https://www.yourdomain.tld`,
     },
-    
+
     graphqlTypegen: true,
     plugins: [
         'gatsby-plugin-image',
@@ -45,6 +50,13 @@ const config: GatsbyConfig = {
                 path: './src/pages/',
             },
             __key: 'pages',
+        },
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: `1dv2x2c2xnsp`,
+                accessToken: '6_kRNutfDKKOERdwo1MC7WfssDwATAHhotZFQ3MSqA4',
+            },
         },
     ],
 };
