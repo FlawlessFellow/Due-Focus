@@ -78,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
             <div className="header__wrapper">
                 <nav className="header__nav" style={headerNavClass}>
                     <div className="header__nav-links">
-                        <Link to="#!" target={'_blank'} className="header-logo">
+                        <Link to="/" target={'_blank'} className="header-logo">
                             <img src={headerLogo} alt="logo" className="header__nav-logo" />
                         </Link>
                         <Link

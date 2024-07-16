@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import blogMainItemIcon from '../../assets/images/blog-main-item-icon.svg';
 import blogMainSecondItemIcon from '../../assets/images/blog-main-item-secondIcon.svg';
+import linkedinIcon from '../../assets/images/linkedin-icon.svg';
+import twitterIcon from '../../assets/images/twitter-icon.svg';
+import facebookIcon from '../../assets/images/facebook-icon.svg';
 
 type Post = {
     fields: {
@@ -45,6 +48,19 @@ const PostCards: React.FC<PostCardsProps> = ({ posts }) => {
                             className="mainBlog-item-appearingIcon"
                         />
                         <span className="mainBlog-item-appearingText">{post.fields.authorName}</span>
+                    </div>
+                    <div className="mainBlog-item-appearingIcons">
+                        <a href="#!" className="mainBlog-item-appearingLinks">
+                            <img src={linkedinIcon} alt="linked in" className="searchBlog-socialMedia-icon" />
+                        </a>
+                        <a href="#!" className="mainBlog-item-appearingLinks">
+                            <img src={twitterIcon} alt="twitter" className="searchBlog-socialMedia-icon" />
+                        </a>
+                        <div className="mainBlog-item-appearingLinks">
+                            <a href="facebook">
+                                <img src={facebookIcon} alt="facebook" className="searchBlog-socialMedia-icon" />
+                            </a>
+                        </div>
                     </div>
                     <div style={{ padding: '32px' }}>
                         <Link to={`/blog/${post.fields.md}/`} className="mainBlog-item-lowerContent">

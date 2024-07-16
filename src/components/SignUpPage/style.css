@@ -79,6 +79,9 @@
     transition: all 0.4s ease-in-out;
     background-color: rgba(160, 171, 186, 0.822);
 }
+.right__closeModule-wrapper:hover {
+    background-color: #1991eb;
+}
 
 .right__module-content {
     padding-top: 50px;
@@ -211,10 +214,6 @@
     margin-top: 16px;
 }
 
-/* #check-box {
-    
-} */
-
 .check-box {
     padding: 0 !important;
     margin-left: 15px !important;
@@ -259,6 +258,9 @@
     cursor: pointer;
     background-color: #1991eb;
     color: #fff;
+}
+.agreement-btn:hover {
+    background-color: #48adfa;
 }
 
 .bottom-border {
@@ -316,6 +318,9 @@
     border-radius: 4px;
     background-color: #fff;
 }
+.item-logo:hover {
+    background: #f1f2f3;
+}
 
 .item-link {
     text-decoration: none;
@@ -334,6 +339,9 @@
     border: 1px solid #e3e4e6;
     border-radius: 4px;
     background-color: #fff;
+}
+.last__item-logo:hover {
+    background: #f1f2f3;
 }
 
 @media screen and (max-width: 1500px) {

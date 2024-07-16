@@ -119,12 +119,14 @@
 }
 
 .leftSide-text {
+    font-family: Montserrat, sans-serif;
     font-size: 12px;
     color: #73787c;
     text-align: left;
 }
 
 .author-name {
+    font-family: Open Sans, sans-serif;
     font-size: 24px;
     color: #000;
     text-align: left;
@@ -163,4 +165,59 @@
 .rightSide-icons {
     filter: brightness(0) invert(1);
     max-width: 100%;
+}
+
+.rightSide-button {
+    height: 36px;
+    width: 141px;
+    background-color: #fff;
+    border: 2px solid #1991eb;
+    border-radius: 4px;
+    font-family: Open Sans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1991eb;
+    text-align: center;
+    outline: none;
+    margin-left: 23px;
+}
+
+.content {
+    width: 60%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.content-title {
+    width: 80%;
+    margin: 0 auto 36px;
+    font-size: 36px;
+    text-align: left;
+    font-weight: 700;
+    font-family: Open Sans, sans-serif;
+    color: #000;
+}
+
+.descriptionImg-1 {
+    max-width: 100%;
+    margin-bottom: 52px;
+    margin-top: 52px;
+}
+
+.description {
+    font-family: Open Sans;
+    font-size: 20px;
+    color: #000;
+    text-align: left;
+}
+.description p {
+    margin-bottom: 25px;
+}
+.description h3 {
+    font-size: 24px;
+    color: #000;
+    text-align: left;
+    font-weight: 700;
+    font-family: Open Sans, sans-serif;
+    margin-bottom: 24px;
 }

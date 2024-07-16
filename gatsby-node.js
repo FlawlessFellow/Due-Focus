@@ -23,7 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
                 path: `/blog/${edge.node.md}/`,
                 component: slash(blogPostTemplate),
                 context: {
-                    slug: edge.node.md,
+                    md: edge.node.md,
                 },
             });
         });

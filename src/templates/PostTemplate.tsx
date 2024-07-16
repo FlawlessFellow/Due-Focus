@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import { graphql } from 'gatsby';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
+import { BLOCKS } from '@contentful/rich-text-types';
 import Header from '../components/Header/Header';
 import ProgressBar from '../components/common/ProgressBar';
 import linkedInIcon from '../assets/images/linkedin-icon.svg';
@@ -26,6 +26,11 @@ type PostTemplateProps = {
             };
             authorName: string;
             authorPosition: string;
+            descriptionImage: {
+                file: {
+                    url: string;
+                };
+            };
             description: {
                 raw: any;
             };
@@ -37,7 +42,12 @@ type PostTemplateProps = {
 };
 
 const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
-    const { title, previewImg, avatar, authorName, authorPosition, description, date, category, md } = data.contentfulPost;
+    if (!data?.contentfulPost) {
+        return <div>Post not found</div>;
+    }
+
+    const { title, previewImg, avatar, authorName, authorPosition, descriptionImage, description, date, category } =
+        data.contentfulPost;
 
     const options = {
         renderNode: {
@@ -49,7 +59,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                     const imageAlt = title || 'Embedded Image';
                     return `<img src='${imageUrl}' alt='${imageAlt}' />`;
                 }
-                return ''; // Возврат пустой строки, если нет данных
+                return '';
             },
         },
     };
@@ -92,14 +102,14 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                     <div className="right-side">
                         <div className="rightSide-linksWrapper">
                             <a href="#!" className="rightSide-link">
-                                <img src={linkedInIcon} alt="linked in" className='rightSide-icons' /> //Тут остановился//
+                                <img src={linkedInIcon} alt="linked in" className="rightSide-icons" />
                             </a>
                             <a href="#!" className="rightSide-link">
-                                <img src={twitterIcon} alt="twitter" className='rightSide-icons' />
+                                <img src={twitterIcon} alt="twitter" className="rightSide-icons" />
                             </a>
-                            <div className="rightSide-lastLink">
+                            <div className="rightSide-link">
                                 <a href="facebook">
-                                    <img src={facebookIcon} alt="facebook" className='rightSide-icons' />
+                                    <img src={facebookIcon} alt="facebook" className="rightSide-icons" />
                                 </a>
                             </div>
                         </div>
@@ -108,6 +118,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                 </div>
                 <div className="content">
                     <h2 className="content-title">{title}</h2>
+                    <img src={descriptionImage.file.url} alt="description" className="descriptionImg-1" />
                     <div className="description" dangerouslySetInnerHTML={{ __html: text }}></div>
                 </div>
             </div>
@@ -118,8 +129,8 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
 export default PostTemplate;
 
 export const query = graphql`
-    query ($slug: String!) {
-        contentfulPost(md: { eq: $slug }) {
+    query ($md: String!) {
+        contentfulPost(md: { eq: $md }) {
             title
             previewText
             previewImg {
@@ -134,6 +145,11 @@ export const query = graphql`
             }
             authorName
             authorPosition
+            descriptionImage {
+                file {
+                    url
+                }
+            }
             description {
                 raw
             }
