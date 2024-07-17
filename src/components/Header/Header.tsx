@@ -81,15 +81,14 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
                         <Link to="/" target={'_blank'} className="header-logo">
                             <img src={headerLogo} alt="logo" className="header__nav-logo" />
                         </Link>
-                        <Link
-                            to="#!"
-                            target={'_blank'}
+                        <a
+                            href="#!"
                             onClick={handleCloseMenu}
                             className="header__nav-download hvr-grow"
                             style={headerNavDownloadClass}
                         >
                             Downloads
-                        </Link>
+                        </a>
                         <div onClick={handleOpenMenu} ref={mobileMenuRef} className="mobile-menu">
                             <div onClick={toggleMenu} ref={burgerMenuRef} id="burger-menu" className="burger_menu">
                                 <span></span>

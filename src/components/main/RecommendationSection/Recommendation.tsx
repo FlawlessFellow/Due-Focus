@@ -9,9 +9,9 @@ const Recommendation = () => {
     return (
         <section className="recommendation__section">
             <ProductTitle text={'What Professionals Say'} classNames={'recommendation__title'} />
-            <Link to="#!" className="recommendation__img-link">
+            <a href="#!" className="recommendation__img-link">
                 <img src={RecommendationDescImg} alt="product hunt image link" />
-            </Link>
+            </a>
             <p className="recommendation__desc-text">Join the company of successful people</p>
             <RecommendationSlider />
         </section>

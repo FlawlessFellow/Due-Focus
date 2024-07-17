@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-import { Link } from 'gatsby';
 import linkItem1 from '../../../assets/images/link1-image.png';
 import linkItem2 from '../../../assets/images/link2-image.png';
 import linkItem3 from '../../../assets/images/link3-image.png';
@@ -21,9 +20,9 @@ const BottomLinkPanel = () => {
             <div className="bottom__linkPanel-container">
                 <div className="bottom__linkPanel-list">
                     {linkItems.map((el) => (
-                        <Link to="#!" target={'_blank'} className="bottomPanel-linkItem" key={el.id}>
+                        <a href="#!" className="bottomPanel-linkItem" key={el.id}>
                             <img src={el.img} alt={el.alt} className="bottom__linkPanel-img" />
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>

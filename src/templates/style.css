@@ -205,19 +205,62 @@
 }
 
 .description {
-    font-family: Open Sans;
-    font-size: 20px;
     color: #000;
-    text-align: left;
 }
 .description p {
-    margin-bottom: 25px;
+    margin-bottom: 32px !important;
+    font-size: 20px;
+    font-family: Open Sans;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
 }
 .description h3 {
+    width: 80%;
+    margin: 0 auto;
     font-size: 24px;
     color: #000;
     text-align: left;
     font-weight: 700;
     font-family: Open Sans, sans-serif;
     margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1280px) {
+    .topContent-title {
+        width: auto;
+    }
+    .block {
+        width: 80%;
+    }
+    .content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .topContent-title {
+        font-size: 38px;
+    }
+    .content-title {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .block {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .left-side {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .right-side {
+        margin-bottom: 20px;
+    }
+    .content-title {
+        font-size: 26px;
+    }
 }

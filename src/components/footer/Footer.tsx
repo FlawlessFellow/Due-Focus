@@ -5,7 +5,6 @@ import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
 import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
-import { Link } from 'gatsby';
 
 // Collection for footer__second-block
 const links = [
@@ -18,11 +17,12 @@ const links = [
 
 const footerSecondBlockLinks = links.map((link) => (
     <p className="footer__list-text" key={link.id}>
-        <Link to={link.href} target={'_blank'} className={link.className}>
+        <a href={link.href} className={link.className}>
             <strong>{link.text}</strong>
-        </Link>
+        </a>
     </p>
 ));
+// Collection for footer__second-block
 
 // Collection for footer__third-block
 const navItems = [
@@ -33,11 +33,12 @@ const navItems = [
 
 const footerThirdLinks = navItems.map((link) => (
     <p className="footer__list-text" key={link.id}>
-        <Link to={link.href} target={'_blank'} className="footer__link">
+        <a href={link.href} className="footer__link">
             {link.text}
-        </Link>
+        </a>
     </p>
 ));
+// Collection for footer__third-block
 
 // Collection for footer__fourth-block
 const footerTexts = [
@@ -63,28 +64,28 @@ const Footer = () => {
                 <div className="footer__wrapper">
                     <div className="footer__content">
                         <div className="footer__first-block">
-                            <Link to="#!" target={'_blank'} className="footer__link">
+                            <a href="#!" className="footer__link">
                                 <img src={FooterLinkLogo} alt="footer link logo" />
-                            </Link>
+                            </a>
                             <p className="first__block-text">Track work hours with a single button</p>
                             <div className="first__block-imagesWrapper">
                                 <div className="first__block-images">
-                                    <Link to="#!" target={'_blank'} className="footer__link">
+                                    <a href="#!" className="footer__link">
                                         <img src={FooterFacebookImg} alt="" />
-                                    </Link>
+                                    </a>
                                 </div>
                                 <div className="first__block-images">
-                                    <Link to="#!" target={'_blank'} className="footer__link">
+                                    <a href="#!" className="footer__link">
                                         <img src={FooterTwitterImg} alt="" />
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div className="footer__second-block">
                             <p className="footer__list-subtitleLink">
-                                <Link to="#!" target={'_blank'} className="footer__link">
+                                <a href="#!" className="footer__link">
                                     Diligences family
-                                </Link>
+                                </a>
                             </p>
                             {footerSecondBlockLinks}
                         </div>
@@ -99,25 +100,25 @@ const Footer = () => {
                                 </p>
                             ))}
                             <p className="footer__list-lastText">
-                                <Link to="#!" target={'_blank'} className="footer__link">
+                                <a href="#!" className="footer__link">
                                     support@diligences.com
-                                </Link>
+                                </a>
                             </p>
                             <div className="fourth__block-imagesWrapper">
                                 {footerImages.map((image) => (
                                     <div key={image.id} className="first__block-images">
-                                        <Link to="#!" target={'_blank'} className="footer__link">
+                                        <a href="#!" className="footer__link">
                                             <img src={image.src} alt={image.alt} />
-                                        </Link>
+                                        </a>
                                     </div>
                                 ))}
                             </div>
                             <div className="footer__lastBlock-images">
                                 {lastBlockImages.map((image) => (
                                     <div key={image.id} className={`lastBlock__${image.id === 1 ? 'first' : 'second'}-img`}>
-                                        <Link to="#!" target={'_blank'} className="footer__link">
+                                        <a href="#!" className="footer__link">
                                             <img src={image.src} alt={image.alt} />
-                                        </Link>
+                                        </a>
                                     </div>
                                 ))}
                             </div>
