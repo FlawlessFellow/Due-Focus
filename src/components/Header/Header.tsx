@@ -73,6 +73,10 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
         setValue('', '', '', false);
     };
 
+    const goToDashboard = () => {
+        return window.location.href = 'https://web.duefocus.com/login'
+    }
+
     return (
         <header id="header" ref={headerRef}>
             <div className="header__wrapper">
@@ -116,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
                         </div>
                     ) : (
                         <div className="header__nav-actions" style={headerNavActionsClass}>
-                            <button type="button" className="header__nav-greyBtn">
+                            <button type="button" onClick={goToDashboard} className="header__nav-greyBtn">
                                 Log In
                             </button>
                             <Link to="/sign-up">

@@ -204,6 +204,12 @@
     margin-top: 52px;
 }
 
+.descriptionImg-2 {
+    max-width: 100%;
+    margin-bottom: 52px;
+    margin-top: 52px;
+}
+
 .description {
     color: #000;
 }
@@ -224,6 +230,34 @@
     font-weight: 700;
     font-family: Open Sans, sans-serif;
     margin-bottom: 24px;
+}
+
+.relatedPost-wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.relatedPost-subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.relatedPost-subtitle h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    font-family: Open Sans, sans-serif;
+    color: #000;
+}
+.relatedPost-subtitle span {
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    font-family: Open Sans, sans-serif;
+    color: #1991eb;
 }
 
 @media screen and (max-width: 1280px) {

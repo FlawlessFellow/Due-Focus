@@ -20,14 +20,19 @@
     color: #2b323e;
 }
 
+.links-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 25px auto 0;
+}
+
 .recommendation__img-link {
-    align-self: center;
-    margin-top: 5px;
+    margin-right: 23px;
 }
 
 .recommendation__desc-text {
     padding-bottom: 50px;
-    margin: 5px auto 0;
+    margin: 25px auto 0;
     font-weight: 500;
     font-size: 20px;
     font-family: Montserrat, sans-serif;
@@ -51,5 +56,51 @@
     }
     .recommendation__title {
         font-size: 28px;
+    }
+    .recommendation__img-link {
+        width: 160px;
+    }
+    .recommendation-linkImg {
+        width: 90%;
+    }
+    .responsive {
+        max-width: 40%;
+        max-height: 90%;
+    }
+}
+
+@media screen and (max-width: 422px) {
+    .links-wrapper {
+        max-width: 70%;
+    }
+    .recommendation__img-link {
+        margin-right: 5px;
+    }
+    .responsive {
+        max-height: 80%;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .links-wrapper {
+        margin-top: 65px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .recommendation-linkImg {
+        margin-bottom: 2px;
+    }
+    .responsive {
+        font-size: 8px;
+        max-height: 55%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .recommendation-linkImg {
+        margin-bottom: 3px;
     }
 }

@@ -8,6 +8,8 @@ import ProgressBar from '../components/common/ProgressBar';
 import linkedInIcon from '../assets/images/linkedin-icon.svg';
 import twitterIcon from '../assets/images/twitter-icon.svg';
 import facebookIcon from '../assets/images/facebook-icon.svg';
+import BottomLinkPanel from '../components/main/BottomLinkPanelSection/BottomLinkPanel';
+import Footer from '../components/Footer/Footer';
 
 type PostTemplateProps = {
     data: {
@@ -34,6 +36,11 @@ type PostTemplateProps = {
             description: {
                 raw: any;
             };
+            secondDescriptionImage: {
+                file: {
+                    url: string;
+                };
+            };
             date: string;
             category: string;
             md: string;
@@ -46,8 +53,18 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
         return <div>Post not found</div>;
     }
 
-    const { title, previewImg, avatar, authorName, authorPosition, descriptionImage, description, date, category } =
-        data.contentfulPost;
+    const {
+        title,
+        previewImg,
+        avatar,
+        authorName,
+        authorPosition,
+        descriptionImage,
+        description,
+        secondDescriptionImage,
+        date,
+        category,
+    } = data.contentfulPost;
 
     const options = {
         renderNode: {
@@ -120,7 +137,16 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                     <h2 className="content-title">{title}</h2>
                     <img src={descriptionImage.file.url} alt="description" className="descriptionImg-1" />
                     <div className="description" dangerouslySetInnerHTML={{ __html: text }}></div>
+                    <img src={secondDescriptionImage.file.url} alt="description" className="descriptionImg-2" />
                 </div>
+                <div className="relatedPost-wrapper">
+                    <div className="relatedPost-subtitle">
+                        <h3>Related Posts</h3>
+                        <span onClick={() => window.history.back()}>See All</span>
+                    </div>
+                </div>
+                <BottomLinkPanel />
+                <Footer />
             </div>
         </>
     );
@@ -152,6 +178,11 @@ export const query = graphql`
             }
             description {
                 raw
+            }
+            secondDescriptionImage {
+                file {
+                    url
+                }
             }
             date(formatString: "MMMM Do, YYYY")
             category

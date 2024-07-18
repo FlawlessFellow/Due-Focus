@@ -17,7 +17,7 @@ import PostTemplate from '../templates/PostTemplate';
 const MainSection: FC = () => {
     return (
         <>
-            {/* <Header />
+            <Header />
             <Hero />
             <Presentation />
             <Management />
@@ -27,8 +27,8 @@ const MainSection: FC = () => {
             <Recommendation />
             <LinkPanel />
             <BottomLinkPanel />
-            <Footer /> */}
-            <BlogPage />
+            <Footer />
+            {/* <BlogPage /> */}
         </>
     );
 };

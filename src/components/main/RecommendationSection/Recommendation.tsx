@@ -9,9 +9,15 @@ const Recommendation = () => {
     return (
         <section className="recommendation__section">
             <ProductTitle text={'What Professionals Say'} classNames={'recommendation__title'} />
-            <a href="#!" className="recommendation__img-link">
-                <img src={RecommendationDescImg} alt="product hunt image link" />
-            </a>
+            <div className="links-wrapper">
+                <a
+                    href="https://www.producthunt.com/products/duefocus?utm_source=badge-top-post-badge&utm_medium=badge#duefocus"
+                    className="recommendation__img-link"
+                >
+                    <img src={RecommendationDescImg} alt="product hunt image link" className="recommendation-linkImg" />
+                </a>
+                <button className="searchBlog-button responsive">Blog Page</button>
+            </div>
             <p className="recommendation__desc-text">Join the company of successful people</p>
             <RecommendationSlider />
         </section>

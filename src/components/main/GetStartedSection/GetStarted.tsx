@@ -4,6 +4,11 @@ import getStartedLogo from './../../../assets/images/get-started-logo.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
 
 const GetStarted = () => {
+    const goToWebStore = () => {
+        return (window.location.href =
+            'https://chromewebstore.google.com/detail/duefocus-time-tracking-ap/jmjoillacjphggegfecfofhagpcfnhda');
+    };
+
     return (
         <section className="get__started-section">
             <div className="get__started-container">
@@ -22,7 +27,7 @@ const GetStarted = () => {
                         </div>
                     </div>
                     <div className="started__button">
-                        <BlueBtn text={'Start Now'} classNames={'getStarted__blue-btn'} onClick={() => null} />
+                        <BlueBtn text={'Start Now'} classNames={'getStarted__blue-btn'} onClick={goToWebStore} />
                     </div>
                 </div>
             </div>

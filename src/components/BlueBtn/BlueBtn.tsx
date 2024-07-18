@@ -12,8 +12,8 @@ const BlueBtn: FC<Props> = ({ text, onClick, classNames, disabled }) => {
   return (
     <button
       type="submit"
-      className={`${classNames}`}
       onClick={onClick}
+      className={`${classNames}`}
       disabled={disabled}
     >
       {text}
