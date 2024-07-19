@@ -13,10 +13,13 @@ const Recommendation = () => {
                 <a
                     href="https://www.producthunt.com/products/duefocus?utm_source=badge-top-post-badge&utm_medium=badge#duefocus"
                     className="recommendation__img-link"
+                    target="_blank"
                 >
                     <img src={RecommendationDescImg} alt="product hunt image link" className="recommendation-linkImg" />
                 </a>
-                <button className="searchBlog-button responsive">Blog Page</button>
+                <Link to="/blog" className="link-to-blogPage">
+                    <button className="searchBlog-button responsive">Blog Page</button>
+                </Link>
             </div>
             <p className="recommendation__desc-text">Join the company of successful people</p>
             <RecommendationSlider />

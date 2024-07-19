@@ -5,19 +5,25 @@ import FooterFacebookImg from '../../assets/images/footer-facebook-logo.png';
 import FooterTwitterImg from '../../assets/images/footer-twitter-logo.png';
 import LastBlockFirstImg from '../../assets/images/footer-last-block-img1.png';
 import LastBlockSecondImg from '../../assets/images/footer-last-block-img2.png';
+import { Link } from 'gatsby';
 
 // Collection for footer__second-block
 const links = [
     { id: 1, text: 'Duefocus. Time tracking', href: '#', className: 'footer__link' },
-    { id: 2, text: 'Duecode. Engineering metrics', href: '#', className: 'footer__link' },
-    { id: 3, text: 'Duerank. Global developers leaderboard', href: '#', className: 'footer__link' },
-    { id: 4, text: 'Duelearn. Writing better code', href: '#', className: 'footer__link' },
+    { id: 2, text: 'Duecode. Engineering metrics', href: 'https://duecode.io/', className: 'footer__link' },
+    {
+        id: 3,
+        text: 'Duerank. Global developers leaderboard',
+        href: 'https://duerank.com/leaderboard?country=G&lang=Go&max=10000&min=5000&page=1',
+        className: 'footer__link',
+    },
+    { id: 4, text: 'Duelearn. Writing better code', href: 'https://duelearn.com/', className: 'footer__link' },
     { id: 5, text: 'Duetask. Set realistic estimates', href: '#', className: 'footer__link' },
 ];
 
 const footerSecondBlockLinks = links.map((link) => (
     <p className="footer__list-text" key={link.id}>
-        <a href={link.href} className={link.className}>
+        <a href={link.href} className={link.className} target="blank">
             <strong>{link.text}</strong>
         </a>
     </p>
@@ -53,8 +59,8 @@ const footerImages = [
 ];
 
 const lastBlockImages = [
-    { id: 1, src: LastBlockFirstImg, alt: 'footer logo' },
-    { id: 2, src: LastBlockSecondImg, alt: 'footer logo' },
+    { id: 1, src: LastBlockFirstImg, href: 'https://cmmiinstitute.com/pars/appraisals/32381/historical', alt: 'footer logo' },
+    { id: 2, src: LastBlockSecondImg, href: '#!', alt: 'footer logo' },
 ];
 
 const Footer = () => {
@@ -64,26 +70,26 @@ const Footer = () => {
                 <div className="footer__wrapper">
                     <div className="footer__content">
                         <div className="footer__first-block">
-                            <a href="#!" className="footer__link">
-                                <img src={FooterLinkLogo} alt="footer link logo" />
-                            </a>
+                            <Link to="/index" className="footer__link">
+                                <img src={FooterLinkLogo} alt="logo" />
+                            </Link>
                             <p className="first__block-text">Track work hours with a single button</p>
                             <div className="first__block-imagesWrapper">
                                 <div className="first__block-images">
-                                    <a href="#!" className="footer__link">
-                                        <img src={FooterFacebookImg} alt="" />
+                                    <a href="https://www.facebook.com/DueFocusWeb" className="footer__link" target="blank">
+                                        <img src={FooterFacebookImg} alt="facebook" />
                                     </a>
                                 </div>
                                 <div className="first__block-images">
-                                    <a href="#!" className="footer__link">
-                                        <img src={FooterTwitterImg} alt="" />
+                                    <a href="https://x.com/DueFocus" className="footer__link" target="blank">
+                                        <img src={FooterTwitterImg} alt="twitter" />
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div className="footer__second-block">
                             <p className="footer__list-subtitleLink">
-                                <a href="#!" className="footer__link">
+                                <a href="https://diligences.com/" className="footer__link" target="blank">
                                     Diligences family
                                 </a>
                             </p>
@@ -116,7 +122,7 @@ const Footer = () => {
                             <div className="footer__lastBlock-images">
                                 {lastBlockImages.map((image) => (
                                     <div key={image.id} className={`lastBlock__${image.id === 1 ? 'first' : 'second'}-img`}>
-                                        <a href="#!" className="footer__link">
+                                        <a href={image.href} target="blank" className="footer__link">
                                             <img src={image.src} alt={image.alt} />
                                         </a>
                                     </div>

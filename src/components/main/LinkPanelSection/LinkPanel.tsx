@@ -5,8 +5,10 @@ import BlueBtn from '../../BlueBtn/BlueBtn';
 
 const LinkPanel = () => {
     const goToWebStore = () => {
-        return (window.location.href =
-            'https://chromewebstore.google.com/detail/duefocus-time-tracking-ap/jmjoillacjphggegfecfofhagpcfnhda');
+        window.open(
+            'https://chromewebstore.google.com/detail/duefocus-time-tracking-ap/jmjoillacjphggegfecfofhagpcfnhda',
+            '_blank'
+        );
     };
 
     return (

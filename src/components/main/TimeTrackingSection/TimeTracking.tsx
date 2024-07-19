@@ -58,7 +58,7 @@ const TimeTracking = () => {
                                 <div className="time__tracking-personalInfoItems">
                                     <CardSpecialistName text="Victoria V." classNames="time__tracking-specialistName" />
                                     <span className="time__tracking-specialistPosition">
-                                        Lead of Testing Department at <a href="#!">TestFort</a>
+                                        Lead of Testing Department at <a href="https://testfort.com/" target='_blank'>TestFort</a>
                                     </span>
                                 </div>
                             </div>

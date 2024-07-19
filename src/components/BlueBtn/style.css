@@ -99,3 +99,19 @@
     color: #fff;
     box-shadow: 0 21px 43px -10px rgba(0, 0, 0, 0.3);
 }
+
+/* DOWNLOAD BLUE BTN */
+.download-button {
+    width: 320px;
+    height: 65px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Open Sans, sans-serif;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #1991eb;
+}
+.download-button:hover {
+    opacity: 0.7;
+}

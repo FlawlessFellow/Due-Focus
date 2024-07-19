@@ -11,8 +11,6 @@ import Recommendation from './main/RecommendationSection/Recommendation';
 import LinkPanel from './main/LinkPanelSection/LinkPanel';
 import Footer from './Footer/Footer';
 import BottomLinkPanel from './main/BottomLinkPanelSection/BottomLinkPanel';
-import BlogPage from './BlogPage/BlogPage';
-import PostTemplate from '../templates/PostTemplate';
 
 const MainSection: FC = () => {
     return (
@@ -28,7 +26,6 @@ const MainSection: FC = () => {
             <LinkPanel />
             <BottomLinkPanel />
             <Footer />
-            {/* <BlogPage /> */}
         </>
     );
 };

@@ -74,8 +74,8 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
     };
 
     const goToDashboard = () => {
-        return window.location.href = 'https://web.duefocus.com/login'
-    }
+        return (window.location.href = 'https://web.duefocus.com/login');
+    };
 
     return (
         <header id="header" ref={headerRef}>
@@ -85,14 +85,14 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
                         <Link to="/" target={'_blank'} className="header-logo">
                             <img src={headerLogo} alt="logo" className="header__nav-logo" />
                         </Link>
-                        <a
-                            href="#!"
+                        <Link
+                            to="/download"
                             onClick={handleCloseMenu}
-                            className="header__nav-download hvr-grow"
+                            className="header__nav-download"
                             style={headerNavDownloadClass}
                         >
                             Downloads
-                        </a>
+                        </Link>
                         <div onClick={handleOpenMenu} ref={mobileMenuRef} className="mobile-menu">
                             <div onClick={toggleMenu} ref={burgerMenuRef} id="burger-menu" className="burger_menu">
                                 <span></span>

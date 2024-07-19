@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { UncontrolledPopover, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -93,9 +93,11 @@ const SignUpForm = () => {
         }
     };
 
-    // const handlePageChange = () => {
-        
-    // };
+    const handleBlur = (field: keyof FormValues) => {
+        if (!getValues(field)) {
+            clearErrors(field);
+        }
+    };
 
     const label = (
         <div className="agreement__label-wrapper">
@@ -136,6 +138,7 @@ const SignUpForm = () => {
                         })}
                         className={errors.email ? 'input-error input' : 'input'}
                         placeholder="name@email.com"
+                        onBlur={() => handleBlur('email')}
                     />
                     <p className="error-message">{errors.email?.message}</p>
                 </div>
@@ -159,6 +162,7 @@ const SignUpForm = () => {
                         id="psw"
                         className={errors.password ? 'input-error input' : 'input'}
                         placeholder="8+ Characters"
+                        onBlur={() => handleBlur('password')}
                     />
                     <UncontrolledPopover trigger="focus" placement="top" target="psw">
                         <PopoverBody className="popover">
@@ -180,13 +184,7 @@ const SignUpForm = () => {
                     <FormControlLabel
                         className="agreement-label"
                         control={
-                            <Checkbox
-                                checked={acceptTnC}
-                                onChange={handleCheckboxChange}
-                                className="check-box"
-                                // id="check-box"
-                                size="small"
-                            />
+                            <Checkbox checked={acceptTnC} onChange={handleCheckboxChange} className="check-box" size="small" />
                         }
                         label={label}
                     />
