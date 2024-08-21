@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import './style.css';
+import { Link } from 'gatsby';
 import '@fortawesome/fontawesome-free/css/all.css';
 import taskTrackersImg from '../../assets/images/tasktrackers.svg';
 import handImg from '../../assets/images/hand.svg';
@@ -35,9 +36,9 @@ const SignUpPage = () => {
             </div>
 
             <div className="right__module-wrapper">
-                <div onClick={handleBack} className="right__closeModule-wrapper">
+                <Link to="/" className="right__closeModule-wrapper">
                     <img src={closeIcon} alt="close-icon" />
-                </div>
+                </Link>
                 <div className="right__module-content">
                     <h4 className="right__module-subtitle">Create DueFocus Account</h4>
                     <span className="right__module-text">Already have an Account? Sign In</span>

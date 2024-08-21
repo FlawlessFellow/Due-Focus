@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { UncontrolledPopover, PopoverBody } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useForm } from 'react-hook-form';
 import passwordIcon from '../../../assets/images/password-icon.svg';
 import showPasswordIcon from '../../../assets/images/show-password.svg';
 import BlueBtn from '../../BlueBtn/BlueBtn';
-import acceptImg from '../../../assets/images/accept.svg';
-import rejectImg from '../../../assets/images/reject.svg';
 import { FormControlLabel, Checkbox } from '@mui/material';
 import { LoginStore, useLoginStore } from '../../../zustand-state/ZustandState';
+import Popover from '../Popover/Popover';
 
 const API_URL = 'https://eo1ahyv4yhhcnmc.m.pipedream.net';
 
@@ -21,6 +19,8 @@ type FormValues = {
 const SignUpForm = () => {
     const setData = useLoginStore((store) => store.setValue);
     const [acceptTnC, setAcceptTnC] = useState(false);
+    const [isPopoverVisible, setIsPopoverVisible] = useState(false);
+    const [password, setPassword] = useState('');
 
     const form = useForm<FormValues>({
         defaultValues: {
@@ -77,9 +77,6 @@ const SignUpForm = () => {
         console.log('acceptTnC:', event.target.checked);
     };
 
-    const accept = <img src={acceptImg} alt="#!" />; // Password Icon
-    const reject = <img src={rejectImg} alt="#!" />; // Password Icon
-
     const showPassword = () => {
         const pass = document.getElementById('psw') as HTMLInputElement;
         const eye = document.getElementById('pswIcon') as HTMLImageElement;
@@ -97,6 +94,7 @@ const SignUpForm = () => {
         if (!getValues(field)) {
             clearErrors(field);
         }
+        setIsPopoverVisible(false);
     };
 
     const label = (
@@ -148,7 +146,7 @@ const SignUpForm = () => {
                         type="password"
                         {...register('password', {
                             pattern: {
-                                value: /^(?=.*[a-z])(?=.*[A-Z])|(?=.*\d)[a-zA-Z\d]{8,64}$/,
+                                value: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/,
                                 message: 'Please select a strong password',
                             },
                             validate: {
@@ -158,25 +156,15 @@ const SignUpForm = () => {
                                 value: true,
                                 message: 'Password is required',
                             },
+                            onChange: (e) => setPassword(e.target.value),
                         })}
                         id="psw"
                         className={errors.password ? 'input-error input' : 'input'}
                         placeholder="8+ Characters"
+                        onFocus={() => setIsPopoverVisible(true)}
                         onBlur={() => handleBlur('password')}
                     />
-                    <UncontrolledPopover trigger="focus" placement="top" target="psw">
-                        <PopoverBody className="popover">
-                            <li>
-                                {/.{8,64}/.test(getValues('password')) ? accept : reject} {'8-64 characters'}
-                            </li>
-                            <li>
-                                {/[A-ZА-ЯЁ\d]+/.test(getValues('password')) ? accept : reject} {'numbers or UPPER case letter'}
-                            </li>
-                            <li>
-                                {/[a-zа-яё]+/.test(getValues('password')) ? accept : reject} {'lower case letter'}
-                            </li>
-                        </PopoverBody>
-                    </UncontrolledPopover>
+                    {isPopoverVisible && <Popover password={password} />}
                     <img src={passwordIcon} onClick={showPassword} id="pswIcon" className="password-image" alt="password-image" />
                     <p className="error-message">{errors.password?.message}</p>
                 </div>

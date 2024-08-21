@@ -19,6 +19,7 @@ const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass,
     const burgerMenuRef = useRef<HTMLDivElement>(null);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
     const loginStoreData = useLoginStore((store) => store);
     const setValue = useLoginStore((store) => store.setValue);
 

@@ -153,6 +153,7 @@
     text-align: center;
     outline: none;
     margin-left: 23px;
+    cursor: pointer;
 }
 .searchBlog-button:hover {
     background-color: #f2f9ff;
