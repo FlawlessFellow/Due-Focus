@@ -15,11 +15,11 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ headerNavClass, headerNavDownloadClass, headerNavActionsClass }) => {
-    const headerRef = useRef<HTMLDivElement>(null);
+    const headerRef = useRef<HTMLElement>(null);
     const burgerMenuRef = useRef<HTMLDivElement>(null);
     const mobileMenuRef = useRef<HTMLDivElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
+
     const loginStoreData = useLoginStore((store) => store);
     const setValue = useLoginStore((store) => store.setValue);
 

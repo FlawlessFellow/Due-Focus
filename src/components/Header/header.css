@@ -75,6 +75,7 @@
     text-align: center;
     line-height: 21px;
     z-index: -1;
+    border-radius: 15px;
 }
 .header__nav-download:hover::after {
     display: block;
